@@ -3,7 +3,9 @@ import Link from "next/link"
 import { ModeToggle } from "@/components/themes/toggle-mode";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { FaGithub } from "react-icons/fa";
-//import { useSession } from "next-auth/react"
+import { LogOut } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { LogoutLink } from '@kinde-oss/kinde-auth-nextjs/components'
 
 
 
@@ -143,14 +145,21 @@ export function Navbar() {
         </NavigationMenuItem>
       </NavigationMenuList>
       </NavigationMenu>
-              <ul className="flex items-center justify-between gap-4">
+          <ul className="flex items-center justify-between gap-4">
             <li className="border-r-2 pr-4">
-                <Link href="/">
+                <Link href="/dashboard">
                     <Avatar>
                     <AvatarImage src="https://github.com/shadcn.png" />
                     <AvatarFallback>CN</AvatarFallback>
                     </Avatar>
                 </Link>
+            </li>
+            <li className="border-r-2 pr-4">
+              <Button variant="outline" asChild>
+                <LogoutLink>
+                  <LogOut></LogOut>
+                </LogoutLink>
+              </Button>
             </li>
             <li className="border-r-2 pr-4 h-8 items-center flex">
             <Link href="/" className="flex shadow h-9 px-4 py-2 max-w-52 rounded-md
