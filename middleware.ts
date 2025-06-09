@@ -7,7 +7,7 @@ export default withAuth(
   },
   {
     // Middleware still runs on all routes, but doesn't protect the blog route
-    publicPaths: ["/legals/cookies", "/legals/privacy-policy", "/legals/terms", "/auth/login", "/auth/logout", "/auth/callback"],
+    publicPaths: ["/legals/cookies", "/legals/privacy-policy", "/legals/terms", "/"],
     isReturnToCurrentPage: true,
   }
 );
