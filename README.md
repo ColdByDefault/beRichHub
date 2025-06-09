@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# beRichHub
+
+beRichHub is a web platform that provides personalized learning roadmaps and curated resources to help developers reach their goals faster. It is built with Next.js and TypeScript, uses Tailwind CSS for styling, Drizzle ORM for database access, and Kinde for authentication.
+
+## Features
+
+- **Personalized roadmaps** tailored to each user's experience and interests
+- **Curated documentation** and tutorials collected in a searchable library
+- **Progress tracking** so learners can monitor their achievements
+- **Authentication** powered by [Kinde](https://kinde.com)
+- **Responsive UI** built with the Radix UI component library and Tailwind CSS
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/) 15 with the App Router
+- [React](https://react.dev/) and TypeScript
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [Drizzle ORM](https://orm.drizzle.team/) and PostgreSQL
+- [Kinde](https://kinde.com) for auth
+
+## Project Structure
+
+```
+actions/         // Server actions (e.g. update profile)
+app/             // Route handlers and pages
+components/      // Reusable UI components
+  ui/            // Radix-based component wrappers
+  landing/       // Landing page sections
+  profile/       // Dashboard profile components
+hooks/           // Custom React hooks
+lib/             // Utility functions and queries
+  queries/       // Database query helpers
+public/          // Static files and images
+db/              // Database schema and migrations
+```
+
+See [`db/README.md`](db/README.md) for details on setting up the database and running migrations.
 
 ## Getting Started
 
-First, run the development server:
+1. **Install dependencies**
+
+```bash
+npm install
+```
+
+2. **Create `.env.local`**
+
+Define the following environment variables:
+
+```
+DATABASE_URL=postgres://user:password@host:port/db
+KINDE_ISSUER_URL=<your-kinde-issuer>
+KINDE_MANAGEMENT_CLIENT_ID=<kinde-management-client-id>
+KINDE_MANAGEMENT_CLIENT_SECRET=<kinde-management-client-secret>
+```
+
+3. **Run database migrations**
+
+```bash
+npm run db:migrate
+```
+
+4. **Start the development server**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Useful Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` – start the dev server
+- `npm run build` – create a production build
+- `npm run start` – run the built app
+- `npm run lint` – run ESLint
+- `npm run db:migrate` – run pending database migrations
+- `npm run db:generate` – generate migration files from the schema
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+beRichHub can be deployed to any platform that supports Node.js. The project was initially created with the intention to deploy on [Vercel](https://vercel.com/), but any environment with the above environment variables will work.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Feel free to open issues or submit pull requests if you find problems or have suggestions.
