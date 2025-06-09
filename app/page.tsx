@@ -4,7 +4,6 @@ import Footer from "@/components/main/Footer";
 import BeRichHome from "@/components/landing/Landing-page";
 //import LLMProjectShowcase from "@/components/landing/llm-project-showcase";
 import BeRichHubShowcase from "@/components/landing/berrichhub-showcase";
-import { Navbar } from "@/components/main/Navbar";
 
 
 export default function Home() {
