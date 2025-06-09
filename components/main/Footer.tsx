@@ -10,24 +10,24 @@ export default function Footer() {
             <div className="space-y-4">
                 <h3 className="text-sm font-semibold text-prime dark:text-white uppercase tracking-wider">Legal</h3>
                 <ul className="space-y-3">
-                <li>
-                    <Link href="#"
-                    className="text-gray-600 dark:text-gray-300 hover:text-prime dark:hover:text-white transition-colors duration-200">
-                    Cookie Policy
+                  <li>
+                    <Link href="/cookies"
+                      className="text-gray-600 dark:text-gray-300 hover:text-prime dark:hover:text-white transition-colors duration-200">
+                      Cookie Policy
                     </Link>
-                </li>
-                <li>
-                    <Link href="#"
-                    className="text-gray-600 dark:text-gray-300 hover:text-prime dark:hover:text-white transition-colors duration-200">
-                    Privacy Policy
+                  </li>
+                  <li>
+                    <Link href="/privacy-policy"
+                      className="text-gray-600 dark:text-gray-300 hover:text-prime dark:hover:text-white transition-colors duration-200">
+                      Privacy Policy
                     </Link>
-                </li>
-                <li>
-                    <Link href="#"
-                    className="text-gray-600 dark:text-gray-300 hover:text-prime dark:hover:text-white transition-colors duration-200">
-                    Terms of Service
+                  </li>
+                  <li>
+                    <Link href="/terms"
+                      className="text-gray-600 dark:text-gray-300 hover:text-prime dark:hover:text-white transition-colors duration-200">
+                      Terms of Service
                     </Link>
-                </li>
+                  </li>
                 </ul>
             </div>
           <div className="space-y-4">

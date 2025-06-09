@@ -30,7 +30,7 @@ export default function BeRichHubShowcase() {
       icon: <BookOpen className="h-6 w-6" />,
       title: "Massive Document Library",
       description: "Access thousands of curated tutorials, guides, and documentation from industry experts",
-      highlight: "10,000+ Resources",
+      highlight: "500+ Resources",
     },
     {
       icon: <Target className="h-6 w-6" />,
@@ -47,17 +47,17 @@ export default function BeRichHubShowcase() {
   ]
 
   const learningPaths = [
-    { name: "Frontend Development", duration: "3-6 months", level: "Beginner", students: "12.5K" },
-    { name: "Backend Engineering", duration: "4-8 months", level: "Intermediate", students: "8.2K" },
-    { name: "Full-Stack Development", duration: "6-12 months", level: "Beginner", students: "15.7K" },
-    { name: "Mobile App Development", duration: "4-7 months", level: "Beginner", students: "6.3K" },
-    { name: "AI & Machine Learning", duration: "8-12 months", level: "Advanced", students: "4.1K" },
-    { name: "DevOps & Cloud", duration: "5-9 months", level: "Intermediate", students: "7.8K" },
+    { name: "Frontend Development", duration: "3-6 months", level: "Beginner", students: "3" },
+    { name: "Backend Engineering", duration: "4-8 months", level: "Intermediate", students: "5" },
+    { name: "Full-Stack Development", duration: "6-12 months", level: "Beginner", students: "1" },
+    { name: "Mobile App Development", duration: "4-7 months", level: "Beginner", students: "12" },
+    { name: "AI & Machine Learning", duration: "8-12 months", level: "Advanced", students: "3" },
+    { name: "DevOps & Cloud", duration: "5-9 months", level: "Intermediate", students: "4" },
   ]
 
   const stats = [
-    { number: "50K+", label: "Active Learners", icon: <Users className="h-5 w-5" /> },
-    { number: "10K+", label: "Documents", icon: <FileText className="h-5 w-5" /> },
+    { number: "50+", label: "Active Learners", icon: <Users className="h-5 w-5" /> },
+    { number: "300+", label: "Documents", icon: <FileText className="h-5 w-5" /> },
     { number: "500+", label: "Learning Paths", icon: <Map className="h-5 w-5" /> },
     { number: "95%", label: "Success Rate", icon: <Star className="h-5 w-5" /> },
   ]
@@ -70,7 +70,7 @@ export default function BeRichHubShowcase() {
           beRichHub Platform
         </Badge>
         <h2 className="text-4xl font-bold tracking-tight mb-4">
-          Your Digital Compass for <span className="text-primary">Developer Success</span>
+          Your Digital Hub for <span className="text-primary">Developer Success</span>
         </h2>
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
           Transform from coding beginner to confident developer with personalized roadmaps, comprehensive documentation,
@@ -254,7 +254,7 @@ export default function BeRichHubShowcase() {
           </Button>
         </div>
         <p className="text-xs text-muted-foreground mt-4">
-          No credit card required • 7-day free trial • Cancel anytime
+          No credit card required. Free forever.
         </p>
       </div>
     </section>

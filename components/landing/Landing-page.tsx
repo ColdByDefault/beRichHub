@@ -21,7 +21,6 @@ export default function BeRichHome() {
   return (
     <div className="flex flex-col flex-grow p-4 mt-12">
       <div className="mb-4 lg:mb-8 text-center">
-        For Developers, By Developers
       </div>
       <section className="mb-8">
         <div className="relative bg-white bg-opacity-30 backdrop-blur-md shadow-md shadow-[#25252566] rounded-lg p-6 flex flex-col items-center
@@ -37,7 +36,7 @@ export default function BeRichHome() {
             )}
           </div>
           <h4 className="text-sm text-center">
-            &quot;You can do anything you set your mind to.&quot;
+            &quot;For Developers, By Developers&quot;
           </h4>
         </div>
       </section>
@@ -47,7 +46,7 @@ export default function BeRichHome() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Why Choose beRich.Hub?</h2>
             <p className="text-lg   max-w-2xl mx-auto">
-              A digital library created to serve as a free and accessible hub for
+              A digital library created to serve as a free, accessible, and open-source hub for
               expanding your knowledge and skills.
             </p>
           </div>
