@@ -2,13 +2,8 @@ import { NextResponse } from "next/server";
 import jwksClient from "jwks-rsa";
 import jwt from "jsonwebtoken";
 
-import { drizzle } from "drizzle-orm/neon-http";
-import { users } from "@/db/schema";
+
 import "dotenv/config";
-
-
-const db = drizzle(process.env.DATABASE_URL!);
-
 
 const client = jwksClient({
   jwksUri: `${process.env.KINDE_ISSUER_URL}/.well-known/jwks.json`,
@@ -42,22 +37,6 @@ export async function POST(request: Request) {
         last_name: string;
         created_at: string;
       };
-
-
-      await db
-        .insert(users)
-        .values({
-          kindeId: u.id,
-          email: u.email,
-          firstName: u.first_name,
-          lastName: u.last_name,
-          createdAt: new Date(u.created_at),
-          password: "", // Password is not provided by Kinde
-          isActive: true, // Default to active
-        })
-        // to ignore duplicates:
-        // .onConflictDoNothing()
-        ;
     }
     return NextResponse.json({ status: "ok" });
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
