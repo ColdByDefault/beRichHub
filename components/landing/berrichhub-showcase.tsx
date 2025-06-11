@@ -6,13 +6,11 @@ import {
   Map,
   Users,
   Rocket,
-  FileText,
   TrendingUp,
   Code,
   Lightbulb,
   Target,
   Clock,
-  Star,
   ArrowRight,
   CheckCircle2,
   Zap,
@@ -55,42 +53,8 @@ export default function BeRichHubShowcase() {
     { name: "DevOps & Cloud", duration: "5-9 months", level: "Intermediate", students: "4" },
   ]
 
-  const stats = [
-    { number: "50+", label: "Active Learners", icon: <Users className="h-5 w-5" /> },
-    { number: "300+", label: "Documents", icon: <FileText className="h-5 w-5" /> },
-    { number: "500+", label: "Learning Paths", icon: <Map className="h-5 w-5" /> },
-    { number: "95%", label: "Success Rate", icon: <Star className="h-5 w-5" /> },
-  ]
-
   return (
     <section className="py-16 px-4 max-w-7xl mx-auto">
-      <div className="text-center mb-12">
-        <Badge variant="secondary" className="mb-4">
-          <Rocket className="h-4 w-4 mr-2" />
-          beRichHub Platform
-        </Badge>
-        <h2 className="text-4xl font-bold tracking-tight mb-4">
-          Your Digital Hub for <span className="text-primary">Developer Success</span>
-        </h2>
-        <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-          Transform from coding beginner to confident developer with personalized roadmaps, comprehensive documentation,
-          and a supportive learning ecosystem designed for your success.
-        </p>
-      </div>
-
-      {/* Stats Section */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-        {stats.map((stat, index) => (
-          <Card key={index} className="text-center border-2 hover:shadow-lg transition-shadow">
-            <CardContent className="pt-6">
-              <div className="flex justify-center mb-2 text-primary">{stat.icon}</div>
-              <div className="text-2xl font-bold text-primary">{stat.number}</div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-
       {/* Main Features */}
       <div className="mb-12">
         <h3 className="text-2xl font-bold text-center mb-8">Everything You Need to Start Your Developer Journey</h3>
@@ -115,7 +79,6 @@ export default function BeRichHubShowcase() {
           ))}
         </div>
       </div>
-
       {/* Learning Paths */}
       <Card className="mb-12 border-2">
         <CardHeader className="text-center">
@@ -162,7 +125,7 @@ export default function BeRichHubShowcase() {
 
       {/* How It Works */}
       <div className="mb-12">
-        <h3 className="text-2xl font-bold text-center mb-8">How beRichHub Accelerates Your Learning</h3>
+        <h3 className="text-2xl font-bold text-center mb-8">How beRichHub-AI Accelerates Your Learning</h3>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="text-center">
             <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
@@ -196,7 +159,7 @@ export default function BeRichHubShowcase() {
       </div>
 
       {/* Benefits */}
-      <Card className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-950/20 dark:to-blue-950/20 border-2 mb-12">
+      <Card className="bg-gradient-to-r from-blue-50 to-blue-50 dark:from-black/20 dark:to-blue-950/20 border-2 mb-12">
         <CardHeader className="text-center">
           <CardTitle className="flex items-center justify-center gap-2">
             <Zap className="h-5 w-5" />
