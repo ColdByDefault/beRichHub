@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Providers  } from "@/components/themes/providers";
 import { Orbitron } from 'next/font/google';
-/* import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from '@vercel/speed-insights/next'; */
+import { Analytics } from '@vercel/analytics/next';
 import {Navbar} from "@/components/main/Navbar";
 
 
@@ -69,8 +68,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
           </div>
           {children}
         </Providers>
-        {/* <Analytics />
-        <SpeedInsights /> */}
+        <Analytics />
       </body>
     </html>
   );
