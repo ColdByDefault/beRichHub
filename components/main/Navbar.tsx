@@ -2,7 +2,7 @@ import Link from "next/link"
 import { ModeToggle } from "@/components/themes/toggle-mode";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { FaGithub } from "react-icons/fa";
-import { LogOut, CircleUser } from "lucide-react";
+import { LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavbarHeader } from "@/components/main/navbar-header";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";      
