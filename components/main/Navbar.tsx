@@ -27,7 +27,6 @@ export async function Navbar() {
                     <AvatarImage src={user.picture || "https://github.com/shadcn.png"} alt="you" />
                     <AvatarFallback>YOU</AvatarFallback>
                   </Avatar>
-                  <p>Account</p>
                 </Link>
               )}
           </li>
