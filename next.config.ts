@@ -2,12 +2,13 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [
-      {
-        hostname: "https://github.com/shadcn.png"
-      }
-    ]
-  }
+      localPatterns: [
+        {
+          pathname: "/**",
+          search: "",
+        },
+      ],
+    },
 };
 
 export default nextConfig;

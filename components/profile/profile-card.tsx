@@ -85,7 +85,7 @@ export function ProfileCard({ user }: ProfileCardProps) {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <Avatar className="h-16 w-16">
-              <AvatarImage src={user.picture || "https://github.com/shadcn.png"} alt="you" />
+              <AvatarImage src={user.picture || "/avatars/avatar.png"} alt="you" />
               <AvatarFallback className="text-lg">
                 {getInitials(formData.given_name, formData.family_name)}
               </AvatarFallback>

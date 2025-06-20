@@ -24,7 +24,7 @@ export async function Navbar() {
               ) : (
                 <Link href="/dashboard" className="flex items-center gap-2">
                   <Avatar>
-                    <AvatarImage src={user.picture || "https://github.com/shadcn.png"} alt="you" />
+                    <AvatarImage src={user.picture || "/avatars/avatar.png"} alt="you" />
                     <AvatarFallback>YOU</AvatarFallback>
                   </Avatar>
                 </Link>
@@ -46,7 +46,10 @@ export async function Navbar() {
             )}
           </li>
           <li className="border-r-2 pr-4 h-8 items-center flex">
-          <Link href="/" className="flex shadow h-9 px-4 py-2 max-w-52 rounded-md
+          <Link href="https://github.com/ColdByDefault/simple-LLM-Agent" target="_blanck" 
+            rel='noopener noreferrer'
+            aria-label="GitHub"
+           className="flex shadow h-9 px-4 py-2 max-w-52 rounded-md
           hover:bg-black/90  hover:text-white dark:hover:bg-zinc-700 dark:hover:text-black">
               <FaGithub className="text-xl"/>
           </Link>
@@ -56,80 +59,3 @@ export async function Navbar() {
     </>
   )
 }
-
-/* another version */
-/* 
-"use client";
-import Link from "next/link";
-import { ModeToggle } from "@/components/themes/toggle-mode";
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage
-} from "@/components/ui/avatar";
-import { FaGithub } from "react-icons/fa";
-import { LogOut } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
-import {
-  LoginLink,
-  LogoutLink
-} from "@kinde-oss/kinde-auth-nextjs/components";
-import { NavbarHeader } from "@/components/main/navbar-header";
-export function Navbar() {
-  const { isAuthenticated, user, isLoading } = useKindeBrowserClient();
-  // Optionally render nothing while loading
-  if (isLoading) return null;
-  return (
-    <>
-      <NavbarHeader />
-      <ul className="flex items-center justify-between gap-4">
-        {!isAuthenticated ? (
-          <li>
-            <Button variant="ghost">
-              <LoginLink postLoginRedirectURL="/dashboard">
-                Sign In
-              </LoginLink>
-            </Button>
-          </li>
-        ) : (
-          <>
-            <li className="border-r-2 pr-4">
-              <Link href="/dashboard">
-                <Avatar>
-                  <AvatarImage
-                    src={user.picture ?? "https://github.com/shadcn.png"}
-                    alt={user.given_name}
-                  />
-                  <AvatarFallback>
-                    {user.given_name?.[0] ?? "U"}
-                  </AvatarFallback>
-                </Avatar>
-              </Link>
-            </li>
-            <li className="border-r-2 pr-4">
-              <Button variant="outline" asChild>
-                <LogoutLink>
-                  <LogOut />
-                </LogoutLink>
-              </Button>
-            </li>
-          </>
-        )}
-        <li className="border-r-2 pr-4 h-8 flex items-center">
-          <Link
-            href="/"
-            className="flex shadow h-9 px-4 py-2 max-w-52 rounded-md
-                       hover:bg-black/90 hover:text-white
-                       dark:hover:bg-zinc-700 dark:hover:text-black">
-            <FaGithub className="text-xl" />
-          </Link>
-        </li>
-        <li>
-          <ModeToggle />
-        </li>
-      </ul>
-    </>
-  );
-}
- */

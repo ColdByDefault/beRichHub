@@ -4,7 +4,7 @@ import { FaLinkedin, FaInstagramSquare  } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-gray-50 dark:bg-prime">
+    <footer className="w-full bg-gray-50 dark:bg-prime border-t ">
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8">
             <div className="space-y-4">
@@ -110,22 +110,30 @@ export default function Footer() {
               <span className="text-xs text-gray-600"> Stockholm - Sweden</span>
             </p>
             <div className="flex space-x-6">
-              <Link href="#"
+              <Link href="https://x.com/ccoldbydefault" target="_blanck" 
+                rel='noopener noreferrer'
+                aria-label="x"
                 className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 transition-colors duration-200">
-                <span className="sr-only">Twitter</span>
+                <span className="sr-only">X</span>
                 <FaSquareXTwitter />
               </Link>
-              <Link href="#"
+              <Link href="https://www.instagram.com/cold.by.default/#" target="_blanck" 
+                rel='noopener noreferrer'
+                aria-label="instagram"
                 className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 transition-colors duration-200">
                 <span className="sr-only">Instagram</span>
                 <FaInstagramSquare />
               </Link>
-              <Link href="#"
+              <Link href="https://github.com/ColdByDefault" target="_blanck" 
+                rel='noopener noreferrer'
+                aria-label="GitHub"
                 className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 transition-colors duration-200">
                 <span className="sr-only">GitHub</span>
                 <FaGithub />
               </Link>
-              <Link href="#"
+              <Link href="https://www.linkedin.com/in/yazan-a-a-465b44312/" target="_blanck" 
+                rel='noopener noreferrer'
+                aria-label="LinkedIn"
                 className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 transition-colors duration-200">
                 <span className="sr-only">LinkedIn</span>
                 <FaLinkedin />

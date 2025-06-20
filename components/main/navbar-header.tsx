@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/navigation-menu"
 
 
-const components: { title: string; href: string; description: string }[] = [
+/* const components: { title: string; href: string; description: string }[] = [
   {
     title: "Roadmaps",
     href: "/getting-started-roadmap",
@@ -38,7 +38,7 @@ const components: { title: string; href: string; description: string }[] = [
     description:
       "Introduction to common algorithms and data structures, including their implementation and use cases.",
   }
-]
+] */
 
 export function NavbarHeader() {
   return (
@@ -87,7 +87,7 @@ export function NavbarHeader() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <NavigationMenuTrigger>Docs</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
@@ -107,15 +107,15 @@ export function NavbarHeader() {
               ))}
             </ul>
           </NavigationMenuContent>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
 
-        <NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link href="/">Projects</Link>
           </NavigationMenuLink>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
 
-        <NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <NavigationMenuTrigger>More</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[300px] gap-4">
@@ -147,7 +147,7 @@ export function NavbarHeader() {
               </li>
             </ul>
           </NavigationMenuContent>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
       </NavigationMenuList>
     </NavigationMenu>
 )}
