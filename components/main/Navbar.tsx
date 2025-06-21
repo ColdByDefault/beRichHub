@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ModeToggle } from "@/components/themes/toggle-mode";
+import { ModeToggle } from "@/components/toggles/toggle-mode";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { FaGithub } from "react-icons/fa";
 import { LogOut } from "lucide-react";
@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { NavbarHeader } from "@/components/main/navbar-header";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";      
 import { LoginLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components"; 
-import LanguageSwitcher from "@/components/languages/language-switcher";
+import LanguageSwitcher from "@/components/toggles/language-switcher";
 
 
 export async function Navbar() {

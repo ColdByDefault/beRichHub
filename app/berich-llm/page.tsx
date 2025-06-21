@@ -1,11 +1,11 @@
 "use client"
-
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useChat } from "@ai-sdk/react"
 import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/chat-llm/app-sidebar"
 import { ChatInterface } from "@/components/chat-llm/chat-interface"
 import { ChatHeader } from "@/components/chat-llm/chat-header"
+import { LoadingScreen } from "@/components/motions/loading"
 
 export interface Chat {
   id: string
@@ -15,7 +15,8 @@ export interface Chat {
   createdAt: Date
 }
 
-export default function ChatPage() {
+
+function ChatPage() {
   const [chats, setChats] = useState<Chat[]>([])
   const [currentChatId, setCurrentChatId] = useState<string | null>(null)
   const [selectedModel, setSelectedModel] = useState("gpt-4o")
@@ -104,4 +105,34 @@ export default function ChatPage() {
       </div>
     </SidebarProvider>
   )
+}
+
+
+
+export default function Page() {
+  const [isLoading, setIsLoading] = useState(true)
+  const [progress, setProgress] = useState(0)
+
+  useEffect(() => {
+    // Simulate loading progress
+    const interval = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 200) {
+          clearInterval(interval)
+          // Hide loading screen after a brief delay
+          setTimeout(() => setIsLoading(false), 500)
+          return 100
+        }
+        return prev + Math.random() * 15 + 5 // Random increment between 5-20
+      })
+    }, 200)
+
+    return () => clearInterval(interval)
+  }, [])
+
+  if (isLoading) {
+    return <LoadingScreen progress={Math.min(progress, 100)} />
+  }
+
+  return <ChatPage />
 }

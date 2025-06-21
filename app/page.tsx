@@ -1,8 +1,6 @@
-
-import { Background } from "@/components/background/motion-background";
+import { Background } from "@/components/motions/motion-background";
 import Footer from "@/components/main/Footer";
 import BeRichHome from "@/components/landing/Landing-page";
-
 
 export default function Home() {
   return (
