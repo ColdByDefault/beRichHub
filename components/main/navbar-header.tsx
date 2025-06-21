@@ -60,13 +60,13 @@ export function NavbarHeader() {
                 <NavigationMenuLink asChild>
                   <Link className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md 
                   bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
-                   href="/berich-llm">
+                   href="/">
                     <span className="mt-4 mb-2 text-lg">
                       Online LLM-Agent with RAG
                     </span>
                     <p className="text-muted-foreground text-sm leading-tight">
-                      An online LLM-Agent with a RAG system, answer questions using both its trained 
-                      knowledge and up-to-date information from documents and databases.
+                      Online LLM-Agent with a RAG system, using both its trained 
+                      knowledge and up-to-date information from databases.
                     </p>
                   </Link>
                 </NavigationMenuLink>

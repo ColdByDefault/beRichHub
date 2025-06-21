@@ -29,10 +29,9 @@ export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps)
   return (
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="flex items-center space-x-2 w-32 h-10">
-          <Languages className="h-4 w-4" />
+        <Button variant="ghost" className="flex items-center w-12 h-10">
+          <Languages/>
           <span>{languages[currentLang].flag}</span>
-          <span>{languages[currentLang].name}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

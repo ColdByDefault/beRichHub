@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "all": "npm run lint && npm run build && npm run start" 
+    "all": "npm run lint && npm run build && npm run start"
   },
   "dependencies": {
     "@ai-sdk/openai": "^1.3.22",
