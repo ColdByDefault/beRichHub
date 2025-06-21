@@ -1,24 +1,21 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Providers  } from "@/components/themes/providers";
-import { Orbitron } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
 import {Navbar} from "@/components/main/Navbar";
-
-
-
-
-const orbitron = Orbitron({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  variable: '--font-orbitron', 
-});
+import { Orbitron } from 'next/font/google';
 
 
 export const metadata: Metadata = {
   title: "beRich-Hub",
   description: "Hub For Developers, By Developers",
 };
+
+const orbitron = Orbitron({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-orbitron', 
+});
 
 export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
   
@@ -27,7 +24,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
 
 
   return (
-    <html lang={defaultLang} className={`${orbitron.variable}`} suppressHydrationWarning>
+    <html lang={defaultLang} suppressHydrationWarning className={`${orbitron.variable}`}>
             <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
