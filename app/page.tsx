@@ -1,4 +1,4 @@
-'use client'
+
 import { Background } from "@/components/background/motion-background";
 import Footer from "@/components/main/Footer";
 import BeRichHome from "@/components/landing/Landing-page";
