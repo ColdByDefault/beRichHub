@@ -1,6 +1,7 @@
 "use client"
 import Link from "next/link"
-import { Brain } from 'lucide-react';
+import Image from "next/image";
+
 
 import {
   NavigationMenu,
@@ -45,12 +46,21 @@ export function NavbarHeader() {
     <NavigationMenu viewport={false}>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-              <Link href="/"><span>beRich.Hub<span>&#174;</span></span></Link>
-          </NavigationMenuLink>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-              <Link href="/berich-llm"><Brain className="text-blue-600"/></Link>
-          </NavigationMenuLink>
+            <ul className="flex gap-2 flex-row items-center">
+              <li>          
+                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                  <Link href="/">beRich.Hub&#174;</Link>
+                </NavigationMenuLink>
+              </li>
+              <li className="items-center flex">          
+                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                  <Link href="/berich-llm" rel='noopener noreferrer'
+                  aria-label="berich-llm">
+                    <Image src="/icons/brain.png" width={24} height={24} alt="AI"/>
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+            </ul>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger>LLM</NavigationMenuTrigger>

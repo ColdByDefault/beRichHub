@@ -1,19 +1,17 @@
 "use client";
 
-//import React, { useState, useEffect } from "react";
-//import { useTheme } from "next-themes";
-//import Image from "next/image";
+import React, { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 import { Badge } from "@/components/ui/badge";
 import { Rocket } from "lucide-react";
-import Logo from "@/components/landing/Logo";
 
 
 
 export default function BeRichHome() {
-  /* const { theme, resolvedTheme } = useTheme(); */
-  //const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const { theme, resolvedTheme } = useTheme();
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
-/*   const [mounted, setMounted] = useState(false);
+   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -24,14 +22,13 @@ export default function BeRichHome() {
     }
     window.addEventListener("mousemove", handleMouseMove)
     return () => window.removeEventListener("mousemove", handleMouseMove)
-  }, []) */
+  }, [])
 
   /* img logo */
-/*   const isDark = mounted && (theme === "dark" || resolvedTheme === "dark");
-  const logoSrc = isDark ? "/logos/logoDark.png" : "/logos/logoLight.png"; */
+  const isDark = mounted && (theme === "dark" || resolvedTheme === "dark"); 
 
   /* bg logo */
-/* const logoGradient   = isDark
+ const logoGradient   = isDark
   ? "bg-gradient-to-r from-blue-400/20 to-purple-400/20"
   : "bg-gradient-to-r from-blue-300/20 to-purple-300/20";
 
@@ -41,15 +38,31 @@ const logoGradient2  = isDark
 
 const logoGradient3  = isDark
   ? "bg-gradient-to-r from-green-400/10 to-blue-400/10"
-  : "bg-gradient-to-r from-blue-300/20 to-cyan-300/20"; */
+  : "bg-gradient-to-r from-blue-300/20 to-cyan-500/20";
 
-
+  const light = "from-black/90 to-gray-500"
 
 
   return (
     <div className="flex flex-col flex-grow p-4 mt-12">
-      <div className="">
-        <Logo />
+      <div className="fixed inset-0 pointer-events-none -z-1">
+          <div className={`absolute w-96 h-96  rounded-full blur-3xl animate-pulse ${logoGradient}`}
+            style={{
+              left: mousePosition.x - 192,
+              top: mousePosition.y - 192,
+              transition: "all 0.3s ease-out",
+            }}/>
+          <div className={`absolute top-1/4 left-1/4 w-64 h-64 rounded-full blur-2xl animate-bounce ${logoGradient2}`}
+            style={{ animationDuration: "3s" }}/>
+          <div className={`absolute bottom-1/4 right-1/4 w-48 h-48 rounded-full blur-2xl animate-pulse ${logoGradient3}`}
+            style={{ animationDelay: "3s" }}/>
+      </div>
+      <div className={`bg-gradient-to-r text-transparent flex justify-center text-8xl
+           ${light} bg-clip-text font-extrabold
+         dark:from-gray-400 dark:to-gray-100`}>
+            <span>beRich</span>
+            <span className="text-blue-400">.</span>
+            <span>Hub</span>
       </div>
       <section className="py-16 px-4">
         <div className="text-center mb-12">
@@ -69,38 +82,3 @@ const logoGradient3  = isDark
     </div>
   );
 }
-
-
-
-
-/* 
-<div className="fixed inset-0 pointer-events-none -z-1">
-          <div className={`absolute w-96 h-96  rounded-full blur-3xl animate-pulse ${logoGradient}`}
-            style={{
-              left: mousePosition.x - 192,
-              top: mousePosition.y - 192,
-              transition: "all 0.3s ease-out",
-            }}/>
-          <div className={`absolute top-1/4 left-1/4 w-64 h-64 rounded-full blur-2xl animate-bounce ${logoGradient2}`}
-            style={{ animationDuration: "3s" }}/>
-          <div className={`absolute bottom-1/4 right-1/4 w-48 h-48 rounded-full blur-2xl animate-pulse ${logoGradient3}`}
-            style={{ animationDelay: "3s" }}/>
-      </div>
-      <section className="mb-8">
-        <div className="relative bg-white bg-opacity-30 backdrop-blur-md shadow-md shadow-[#25252566] rounded-lg p-6 flex flex-col items-center
-        dark:bg-prime dark:backdrop-blur-3xl dark:bg-opacity-30 dark:shadow-lg dark:shadow-zinc-900/50">
-          <div className="h-48 w-full flex justify-center items-center mb-4">
-            {mounted && (
-              <Image
-                src={logoSrc}
-                width={400}
-                height={400}
-                alt="beRich.Hub Logo"
-              />
-            )}
-          </div>
-          <h4 className="text-sm text-center">
-            &quot;For Developers, By Developers&quot;
-          </h4>
-        </div>
-      </section> */
