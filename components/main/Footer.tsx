@@ -110,7 +110,7 @@ export default function Footer() {
         <div className="border-t border-gray-200 dark:border-gray-800 py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              © {new Date().getFullYear()} beRich.Hub. All rights reserved.
+              {new Date().getFullYear()} beRich.Hub&#174;. All rights reserved © .
               <span className="text-xs text-gray-600"> Stockholm - Sweden</span>
             </p>
             <div className="flex space-x-6">

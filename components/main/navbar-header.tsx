@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link"
-import { House, Brain } from 'lucide-react';
+import { Brain } from 'lucide-react';
 
 import {
   NavigationMenu,
@@ -46,7 +46,7 @@ export function NavbarHeader() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-              <Link href="/"><House /></Link>
+              <Link href="/"><span>beRich.Hub<span>&#174;</span></span></Link>
           </NavigationMenuLink>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
               <Link href="/berich-llm"><Brain className="text-blue-600"/></Link>

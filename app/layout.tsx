@@ -3,19 +3,24 @@ import "./globals.css";
 import { Providers  } from "@/components/themes/providers";
 import { Analytics } from '@vercel/analytics/next';
 import {Navbar} from "@/components/main/Navbar";
-import { Orbitron } from 'next/font/google';
-
+//import { Archivo_Narrow as Archive_Narrow } from "next/font/google"
+import { Urbanist as Urbanist } from "next/font/google"
 
 export const metadata: Metadata = {
   title: "beRich-Hub",
   description: "Hub For Developers, By Developers",
 };
 
-const orbitron = Orbitron({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  variable: '--font-orbitron', 
-});
+
+
+/* const archiveNarrow = Archive_Narrow({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+}) */
+const urbanist = Urbanist({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+})
 
 export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
   
@@ -24,7 +29,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
 
 
   return (
-    <html lang={defaultLang} suppressHydrationWarning className={`${orbitron.variable}`}>
+    <html lang={defaultLang} suppressHydrationWarning className={`${urbanist.className}`}>
             <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
