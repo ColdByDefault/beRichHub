@@ -1,7 +1,7 @@
 import { Background } from "@/components/motions/motion-background";
 import Footer from "@/components/main/Footer";
 import BeRichHome from "@/components/landing/Hero";
-import History from "@/components/landing/History";
+import { Timeline } from "@/components/landing/History";
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
       <Background />
       <div className="flex-grow grid items-center justify-items-center p-8 pb-20 gap-16 sm:p-20">
         <BeRichHome />
-        <History />
+        <Timeline />
       </div>
       <Footer />
     </div>
