@@ -21,7 +21,6 @@ export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps)
   const pathname = usePathname()
 
   const switchLanguage = (newLang: "en" | "de") => {
-    // Replace the current language in the pathname with the new one
     const newPathname = pathname.replace(`/${currentLang}`, `/${newLang}`)
     router.push(newPathname)
   }
@@ -49,3 +48,41 @@ export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps)
     </DropdownMenu>
   )
 }
+
+
+/* 'use client'
+
+import React, { useEffect, useState} from "react"
+import { Button } from "@/components/ui/button"
+import { useRouter } from "next/navigation"
+
+
+const LanguageSwitcher = () => {
+  const [ locale, setLocale ] = useState<string>("")
+  const router = useRouter()
+  useEffect(() => {
+    const cookiesLocale = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("BERICHHUBVERSIONLATEST_LOCALE="))
+    ?.split("=")[1];
+    if(cookiesLocale) {
+      setLocale(cookiesLocale);
+    } else {
+      const browserLocale = navigator.language.slice(0, 2);
+      setLocale(browserLocale);
+      document.cookie = `BERICHHUBVERSIONLATEST_LOCALE=${browserLocale};`;
+      router.refresh();
+    }
+  }, [router])
+
+  return (
+    <div>
+      <Button variant="outline">
+        EN
+      </Button>
+      <Button variant="outline">
+        DE
+      </Button>
+    </div>
+  )
+} */

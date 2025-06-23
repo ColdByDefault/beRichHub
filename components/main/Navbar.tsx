@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { NavbarHeader } from "@/components/main/navbar-header";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";      
 import { LoginLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components"; 
-import LanguageSwitcher from "@/components/toggles/language-switcher";
+import LanguageSwitcher2 from "@/components/toggles/language-switcher-2";
 
 
 export async function Navbar() {
@@ -46,7 +46,7 @@ export async function Navbar() {
             )}
           </li>
           <li><ModeToggle /></li>
-          <li><LanguageSwitcher currentLang="en"/></li>
+          <li><LanguageSwitcher2/></li>
       </ul>
     </>
   )

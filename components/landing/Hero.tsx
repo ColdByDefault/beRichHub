@@ -4,12 +4,15 @@ import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { Badge } from "@/components/ui/badge";
 import { Rocket } from "lucide-react";
+import {useTranslations} from 'next-intl';
 
 
 
 export default function BeRichHome() {
   const { theme, resolvedTheme } = useTheme();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+
+  const t = useTranslations('BeRichHome');
 
    const [mounted, setMounted] = useState(false);
   useEffect(() => {
@@ -71,7 +74,8 @@ const logoGradient3  = isDark
             beRichHub
           </Badge>
           <h2 className="text-4xl font-bold tracking-tight mb-4">
-            Your Digital Hub for <span className="text-primary">Developer Success</span>
+            {/* Your Digital Hub for <span className="text-primary">Developer Success</span> */}
+            {t('title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Transform from coding beginner to confident developer with personalized roadmaps, comprehensive documentation,

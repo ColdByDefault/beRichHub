@@ -3,8 +3,10 @@ import "./globals.css";
 import { Providers  } from "@/components/themes/providers";
 import { Analytics } from '@vercel/analytics/next';
 import {Navbar} from "@/components/main/Navbar";
-//import { Archivo_Narrow as Archive_Narrow } from "next/font/google"
 import { Urbanist as Urbanist } from "next/font/google"
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale, getMessages } from "next-intl/server";
+
 
 export const metadata: Metadata = {
   title: "beRich-Hub",
@@ -13,23 +15,22 @@ export const metadata: Metadata = {
 
 
 
-/* const archiveNarrow = Archive_Narrow({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-}) */
 const urbanist = Urbanist({
   subsets: ["latin"],
   weight: ["400", "700"],
 })
 
-export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
+export default async function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
   
-  const defaultLang = 'en'; 
-  const alternateLang = 'de';
+  //const defaultLang = 'en'; 
+  //const alternateLang = 'de';
+
+  const messages = await getMessages();
+  const locale = await getLocale();
 
 
   return (
-    <html lang={defaultLang} suppressHydrationWarning className={`${urbanist.className}`}>
+    <html lang={locale} suppressHydrationWarning className={`${urbanist.className}`}>
             <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,7 +46,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
         <meta name="twitter:description" content="beRich.Hub" />
         <meta name="twitter:image" content="/logoDark.png" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="alternate" hrefLang={alternateLang} href="https://www.berich-hub.org/de" /> 
+        <link rel="alternate" hrefLang={locale} href="https://www.berich-hub.org/de" /> 
         <script type="application/ld+json">
           {`
             {
@@ -63,13 +64,17 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
         <title>beRichHub</title>
       </head>
       <body suppressHydrationWarning className="animated-loader">
+            <NextIntlClientProvider messages={messages}>
         <Providers>
-          <div className="z-50 fixed flex items-center justify-between top-0 left-0 right-0
-          px-12 py-2 shadow-md bg-white dark:bg-prime">
-            <Navbar />
-          </div>
-          {children}
+
+                <div className="z-50 fixed flex items-center justify-between top-0 left-0 right-0
+                px-12 py-2 shadow-md bg-white dark:bg-prime">
+                  <Navbar />
+                </div>
+                {children}
         </Providers>
+
+            </NextIntlClientProvider>
         <Analytics />
       </body>
     </html>
