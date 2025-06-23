@@ -70,7 +70,7 @@ export default function PrivacyPolicyPage() {
                   <div>
                     <p className="font-medium text-sm">Technical Data</p>
                     <p className="text-sm text-muted-foreground">
-                      IP address and browser type for security and performance monitoring
+                      Public IP and browser type for security and performance monitoring
                     </p>
                   </div>
                 </div>
@@ -135,7 +135,7 @@ export default function PrivacyPolicyPage() {
             <div className="p-4 rounded-lg border border-indigo-200 dark:border-indigo-800">
               <p className="text-sm leading-relaxed">
                 Personal data is retained only as long as necessary to fulfill the purposes described here, and in
-                compliance with EU and UK adequacy decisions for transfers to our London-based server.
+                compliance with EU adequacy decisions for transfers to our server hosted on Vercel.
               </p>
             </div>
           </CardContent>

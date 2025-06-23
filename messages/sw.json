@@ -63,6 +63,9 @@
     "cookiePolicy": "Cookiepolicy",
     "privacyPolicy": "Integritetspolicy",
     "termsofService": "Användarvillkor",
-    "impressum": "Utgivningsinformation "
+    "impressum": "Utgivningsinformation ",
+    "moreAbout": "Mer om mig",
+    "resources": "Resurser",
+    "allRights": "Alla rättigheter förbehållna"
   }
 }

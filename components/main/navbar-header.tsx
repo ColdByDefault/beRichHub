@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
 import Image from "next/image";
-
+import { navbarMenuDocs } from "@/data/navbarMenu";
 
 import {
   NavigationMenu,
@@ -14,32 +14,7 @@ import {
 } from "@/components/ui/navigation-menu"
 
 
-/* const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Roadmaps",
-    href: "/getting-started-roadmap",
-    description:
-      "Collection of roadmaps to help you navigate your learning journey in software development.",
-  },
-  {
-    title: "Basic PC Knowledge",
-    href: "/getting-started-pc",
-    description:
-      "Essential knowledge about personal computers, including hardware components, software, and troubleshooting.",
-  },
-  {
-    title: "Programming Langiuages",
-    href: "/basic-programming",
-    description:
-      "Overview of popular programming languages, their syntax, and use cases.",
-  },
-  {
-    title: "Algorithms",
-    href: "/basic-algorithms",
-    description:
-      "Introduction to common algorithms and data structures, including their implementation and use cases.",
-  }
-] */
+
 
 export function NavbarHeader() {
   return (
@@ -97,19 +72,19 @@ export function NavbarHeader() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        {/* <NavigationMenuItem>
+        <NavigationMenuItem>
           <NavigationMenuTrigger>Docs</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              {components.map((component) => (
-                <li key={component.title} className="p-2">
-                  <Link href={component.href}>
+              {navbarMenuDocs.map((navbarMenuDocs) => (
+                <li key={navbarMenuDocs.title} className="p-2">
+                  <Link href={navbarMenuDocs.href}>
                     <span className="block">
                       <h3 className="text-lg font-semibold">
-                        {component.title}
+                        {navbarMenuDocs.title}
                       </h3>
                       <p className="text-muted-foreground text-sm leading-tight">
-                        {component.description}
+                        {navbarMenuDocs.description}
                       </p>
                     </span>
                   </Link>
@@ -117,46 +92,12 @@ export function NavbarHeader() {
               ))}
             </ul>
           </NavigationMenuContent>
-        </NavigationMenuItem> */}
+        </NavigationMenuItem>
 
         {/* <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link href="/">Projects</Link>
           </NavigationMenuLink>
-        </NavigationMenuItem> */}
-
-        {/* <NavigationMenuItem>
-          <NavigationMenuTrigger>More</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[300px] gap-4">
-              <li>
-                <NavigationMenuLink asChild>
-                  <Link href="#">
-                    <span className="">Components</span>
-                    <span className="text-muted-foreground">
-                      Browse all components in the library.
-                    </span>
-                  </Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#">
-                    <span className="">Documentation</span>
-                    <span className="text-muted-foreground">
-                      Learn how to use the library.
-                    </span>
-                  </Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#">
-                    <span className="">Blog</span>
-                    <span className="text-muted-foreground">
-                      Read our latest blog posts.
-                    </span>
-                  </Link>
-                </NavigationMenuLink>
-              </li>
-            </ul>
-          </NavigationMenuContent>
         </NavigationMenuItem> */}
       </NavigationMenuList>
     </NavigationMenu>

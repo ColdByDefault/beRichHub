@@ -83,15 +83,6 @@ export default function CookiePolicyPage() {
                       </p>
                     </div>
                   </div>
-
-                  <div className="flex items-start gap-3 p-3 bg-muted/50 rounded-lg">
-                    <div>
-                      <p className="font-medium text-sm">Database Connectivity</p>
-                      <p className="text-sm text-muted-foreground">
-                        Supabase connectivity cookies for secure communication with our London-based database server
-                      </p>
-                    </div>
-                  </div>
                 </div>
               </div>
 

@@ -63,6 +63,9 @@
     "cookiePolicy": "Cookie-Richtlinie",
     "privacyPolicy": "Datenschutzerklärung",
     "termsofService": "Nutzungsbedingungen",
-    "impressum": "Impressum"
+    "impressum": "Impressum",
+    "moreAbout": "Mehr über mich",
+    "resources": "Ressourcen",
+    "allRights": "Alle Rechte vorbehalten"
   }
 }
