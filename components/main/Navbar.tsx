@@ -46,7 +46,7 @@ export async function Navbar() {
             )}
           </li>
           <li><ModeToggle /></li>
-          <li><LanguageSwitcher currentLang="en"/></li>
+          <li><LanguageSwitcher/></li>
       </ul>
     </>
   )

@@ -1,51 +1,72 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { Languages } from "lucide-react"
-import { useRouter, usePathname } from "next/navigation"
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
+import { Languages } from "lucide-react";
 
-interface LanguageSwitcherProps {
-  currentLang: "en" | "de"
-}
+const languages: Record<string, { name: string; flag: string }> = {
+  en: { name: "English",    flag: "🇬🇧" },
+  de: { name: "Deutsch",    flag: "🇩🇪" },
+  es: { name: "Español",    flag: "🇪🇸" },
+  sw: { name: "Svenska",    flag: "🇸🇪" },
+};
 
-const languages = {
-  en: { name: "English", flag: "🇺🇸" },
-  de: { name: "Deutsch", flag: "🇩🇪" },
-  es: { name: "Español", flag: "🇪🇸" },
-  sv: { name: "Svenska", flag: "🇸🇪" },
-}
+const LanguageSwitcher = () => {
+  // 1. State must be declared before use
+  const [locale, setLocale] = useState<string>("en");
+  const router = useRouter();
 
-export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps) {
-  const router = useRouter()
-  const pathname = usePathname()
+  useEffect(() => {
+    // 2. Read existing cookie
+    const cookieLocale = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("BERICHHUBVERSIONLATEST_LOCALE="))
+      ?.split("=")[1];
 
-  const switchLanguage = (newLang: "en" | "de") => {
-    // Replace the current language in the pathname with the new one
-    const newPathname = pathname.replace(`/${currentLang}`, `/${newLang}`)
-    router.push(newPathname)
-  }
+    if (cookieLocale && languages[cookieLocale]) {
+      setLocale(cookieLocale);
+    } else {
+      // 3. Derive from browser, but ensure it's one of our supported locales
+      const browserLang = navigator.language.slice(0, 2);
+      const defaultLocale = languages[browserLang] ? browserLang : "en";
+      setLocale(defaultLocale);
+      document.cookie = `BERICHHUBVERSIONLATEST_LOCALE=${defaultLocale}; path=/;`;
+    }
+  }, []);
+
+  const changeLocale = (newLocale: string) => {
+    if (!languages[newLocale]) return;
+    setLocale(newLocale);
+    document.cookie = `BERICHHUBVERSIONLATEST_LOCALE=${newLocale}; path=/;`;
+    // 4. Refresh current route to re-render server components with new locale
+    router.refresh();  // useRouter only works in Client Components :contentReference[oaicite:0]{index=0}
+  };
 
   return (
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="flex items-center w-12 h-10">
-          <Languages/>
-          <span>{languages[currentLang].flag}</span>
+          <Languages />
+          <span className="ml-1">{languages[locale].flag}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        {Object.entries(languages).map(([lang, { name, flag }]) => (
-          <DropdownMenuItem
-            key={lang}
-            onClick={() => switchLanguage(lang as "en" | "de")}
-            className={`flex items-center space-x-2 ${lang === currentLang ? "bg-accent" : ""}`}
-          >
-            <span>{flag}</span>
-            <span>{name}</span>
+        {Object.entries(languages).map(([key, { name, flag }]) => (
+          <DropdownMenuItem key={key} onClick={() => changeLocale(key)}>
+            <span className="mr-2">{flag}</span>
+            {name}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
-  )
-}
+  );
+};
+
+export default LanguageSwitcher;
