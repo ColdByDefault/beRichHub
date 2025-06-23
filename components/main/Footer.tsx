@@ -1,8 +1,13 @@
+'use client'
 import Link from "next/link"
 import { FaGithub, FaSquareXTwitter  } from "react-icons/fa6";
 import { FaLinkedin, FaInstagramSquare  } from "react-icons/fa";
+import {useTranslations} from 'next-intl';
+
 
 export default function Footer() {
+    const t = useTranslations('Footer');
+  
   return (
     <footer className="w-full bg-gray-50 dark:bg-prime border-t ">
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,25 +18,25 @@ export default function Footer() {
                   <li>
                     <Link href="/cookies"
                       className="text-gray-600 dark:text-gray-300 hover:text-prime dark:hover:text-white transition-colors duration-200">
-                      Cookie Policy
+                      {t('cookiePolicy')}
                     </Link>
                   </li>
                   <li>
                     <Link href="/privacy-policy"
                       className="text-gray-600 dark:text-gray-300 hover:text-prime dark:hover:text-white transition-colors duration-200">
-                      Privacy Policy
+                      {t('privacyPolicy')}
                     </Link>
                   </li>
                   <li>
                     <Link href="/terms"
                       className="text-gray-600 dark:text-gray-300 hover:text-prime dark:hover:text-white transition-colors duration-200">
-                      Terms of Service
+                      {t('termsofService')}
                     </Link>
                   </li>
                   <li>
                     <Link href="/impressum"
                       className="text-gray-600 dark:text-gray-300 hover:text-prime dark:hover:text-white transition-colors duration-200">
-                      Impressum
+                      {t('impressum')}
                     </Link>
                   </li>
                 </ul>

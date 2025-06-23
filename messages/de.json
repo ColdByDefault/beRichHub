@@ -1,6 +1,68 @@
 {
   "BeRichHome": {
     "title": "Dein digitales Zentrum für Entwicklererfolg",
-    "description": "Verwandle dich vom Programmieranfänger zum selbstbewussten Entwickler mit personalisierten Fahrplänen, umfassender Dokumentation und einem unterstützenden Lernumfeld, das auf deinen Erfolg ausgerichtet ist."
+    "description": "Verwandle dich vom Programmieranfänger zum selbstbewussten Entwickler mit personalisierten Fahrplänen, umfassender Dokumentation und einem unterstützenden Lernökosystem, das auf deinen Erfolg ausgerichtet ist."
+  },
+  "History": {
+    "sections": {
+      "v1": {
+        "version": "v1.0",
+        "title": "Desktop-Grundlage",
+        "subtitle": "Python- & Tkinter-Ära",
+        "description": "Native Desktop-Anwendung, die automatisierte, vorbefüllte tägliche Berichtserstellung bietet.",
+        "year": "2023",
+        "status": "Altsystem",
+        "metrics": { "users": "4+", "features": "2" }
+      },
+      "v2": {
+        "version": "v2.0",
+        "title": "Web-Revolution",
+        "subtitle": "Flask & serverseitiges Rendering",
+        "description": "Vollständige Umstellung auf eine webbasierte Plattform, die Mehrbenutzerzugriff und Echtzeit-Zusammenarbeit ermöglicht, mit integrierten Lernunterlagen.",
+        "year": "2023",
+        "status": "Veraltet",
+        "metrics": { "users": "20+", "features": "8" }
+      },
+      "v3": {
+        "version": "v3.0",
+        "title": "Moderner Stack",
+        "subtitle": "React & Komponentenarchitektur",
+        "description": "Umfassender Neuaufbau mit dem React-Ökosystem und Einführung einer komponentenbasierten Architektur sowie moderner Entwicklungs-Workflows.",
+        "year": "2024",
+        "status": "Stabil",
+        "metrics": { "users": "30+", "features": "20" }
+      },
+      "v4": {
+        "version": "v4.0",
+        "title": "Leistungssteigerung",
+        "subtitle": "App Router & Server-Komponenten",
+        "description": "Fortgeschrittene Leistungsoptimierungen mit Next.js App Router, React Server Components und strategischem Caching.",
+        "year": "2024",
+        "status": "Produktion",
+        "metrics": { "users": "48+", "features": "28" }
+      },
+      "v5": {
+        "version": "v5.0",
+        "title": "Enterprise Ready",
+        "subtitle": "KI-gestützt, skalierbar & mehrsprachig",
+        "description": "Flaggschiff-Version, die KI-gesteuerte Einblicke, unternehmensgerechte Sicherheit, unbegrenzte Skalierbarkeit, mehrsprachige Unterstützung sowie einen LLM-Chatbot mit RAG-Integration und Offline-Repositorys bietet.",
+        "year": "2025",
+        "status": "Aktuell",
+        "metrics": { "users": "130+", "features": "63" }
+      }
+    },
+    "badge": "Projektevolution",
+    "intro1": "Vom Desktop-Prototyp zur Unternehmensplattform.",
+    "intro2": "5 Versionen. 2 Jahre. Unzählige Innovationen.",
+    "Users": "Benutzer",
+    "Features": "Funktionen",
+    "techStack": "Technologie-Stack",
+    "endSentence": "Kontinuierliche Weiterentwicklung seit 2023"
+  },
+  "Footer": {
+    "cookiePolicy": "Cookie-Richtlinie",
+    "privacyPolicy": "Datenschutzerklärung",
+    "termsofService": "Nutzungsbedingungen",
+    "impressum": "Impressum"
   }
 }

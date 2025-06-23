@@ -3,5 +3,67 @@
         "title": "Your Digital Hub for Developer Success",
         "description": 
         "Transform from coding beginner to confident developer with personalized roadmaps, comprehensive documentation, and a supportive learning ecosystem designed for your success."
+    },
+    "History": {
+        "sections": {
+        "v1": {
+            "version": "v1.0",
+            "title": "Desktop Foundation",
+            "subtitle": "Python & Tkinter Era",
+            "description": "Native desktop application offering automated, pre-populated daily report generation.",
+            "year": "2023",
+            "status": "Legacy",
+            "metrics": { "users": "4+", "features": "2" }
+        },
+        "v2": {
+            "version": "v2.0",
+            "title": "Web Revolution",
+            "subtitle": "Flask & Server-Side Rendering",
+            "description": "Complete shift to a web-based platform, enabling multi-user access and real-time collaboration, with integrated learning documents.",
+            "year": "2023",
+            "status": "Deprecated",
+            "metrics": { "users": "20+", "features": "8" }
+        },
+        "v3": {
+            "version": "v3.0",
+            "title": "Modern Stack",
+            "subtitle": "React & Component Architecture",
+            "description": "Comprehensive rebuild with the React ecosystem, introducing component-based architecture and modern development workflows.",
+            "year": "2024",
+            "status": "Stable",
+            "metrics": { "users": "30+", "features": "20" }
+        },
+        "v4": {
+            "version": "v4.0",
+            "title": "Performance Leap",
+            "subtitle": "App Router & Server Components",
+            "description": "Advanced performance optimizations using Next.js App Router, React Server Components, and strategic caching.",
+            "year": "2024",
+            "status": "Production",
+            "metrics": { "users": "48+", "features": "28" }
+        },
+        "v5": {
+            "version": "v5.0",
+            "title": "Enterprise Ready",
+            "subtitle": "AI-Powered, Scalable & Multi-Language",
+            "description": "Flagship release delivering AI-driven insights, enterprise-grade security, unlimited scalability, multi-language support, plus an LLM chatbot with RAG integration and offline repositories.",
+            "year": "2025",
+            "status": "Current",
+            "metrics": { "users": "130+", "features": "63" }
+        }
+        },
+        "badge": "Project Evolution",
+        "intro1": "From desktop prototype to enterprise-grade platform.",
+        "intro2": "5 versions. 2 years. Countless innovations.",
+        "Users": "Users",
+        "Features": "Features",
+        "techStack": "Technology Stack",
+        "endSentence": "Continuously evolving since 2023"
+    },
+    "Footer": {
+        "cookiePolicy": "Cookie Policy",
+        "privacyPolicy": "Privacy Policy",
+        "termsofService": "Terms of Service",
+        "impressum": "Impressum"
     }
 }
