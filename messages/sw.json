@@ -1,6 +1,68 @@
 {
   "BeRichHome": {
     "title": "Din digitala nav för utvecklarsuccé",
-    "description": "Transformera från kodningsnybörjare till självsäker utvecklare med personliga färdplaner, omfattande dokumentation och en stödjande lärandemiljö utformad för din framgång."
+    "description": "Förvandla dig från kodningsnybörjare till självsäker utvecklare med personliga färdplaner, omfattande dokumentation och ett stödjande lärande ekosystem utformat för din framgång."
+  },
+  "History": {
+    "sections": {
+      "v1": {
+        "version": "v1.0",
+        "title": "Skrivbordsgrund",
+        "subtitle": "Python- och Tkinter-era",
+        "description": "Nativ skrivbordsapplikation med automatisk, förifylld daglig rapportgenerering.",
+        "year": "2023",
+        "status": "Äldre",
+        "metrics": { "users": "4+", "features": "2" }
+      },
+      "v2": {
+        "version": "v2.0",
+        "title": "Webbrevolution",
+        "subtitle": "Flask och serverrendering",
+        "description": "Fullständig övergång till en webbaserad plattform med fleranvändarstöd och realtidssamarbete, med integrerade lärdokument.",
+        "year": "2023",
+        "status": "Föråldrad",
+        "metrics": { "users": "20+", "features": "8" }
+      },
+      "v3": {
+        "version": "v3.0",
+        "title": "Modern stack",
+        "subtitle": "React och komponentarkitektur",
+        "description": "Fullständig ombyggnad med React-ekosystemet, införande av komponentbaserad arkitektur och moderna utvecklingsarbetsflöden.",
+        "year": "2024",
+        "status": "Stabil",
+        "metrics": { "users": "30+", "features": "20" }
+      },
+      "v4": {
+        "version": "v4.0",
+        "title": "Prestandalyft",
+        "subtitle": "App Router och serverkomponenter",
+        "description": "Avancerade prestandaoptimeringar med Next.js App Router, React Server Components och strategisk caching.",
+        "year": "2024",
+        "status": "Produktion",
+        "metrics": { "users": "48+", "features": "28" }
+      },
+      "v5": {
+        "version": "v5.0",
+        "title": "Enterprise Ready",
+        "subtitle": "AI-driven, skalbar & flerspråkig",
+        "description": "Flaggskeppsutgåva som levererar AI-drivna insikter, företagsklassad säkerhet, obegränsad skalbarhet, flerspråkigt stöd samt en LLM-chattbot med RAG-integration och offlineförråd.",
+        "year": "2025",
+        "status": "Aktuell",
+        "metrics": { "users": "130+", "features": "63" }
+      }
+    },
+    "badge": "Projektutveckling",
+    "intro1": "Från skrivbordsprototyp till företagsplattform.",
+    "intro2": "5 versioner. 2 år. Otaliga innovationer.",
+    "Users": "Användare",
+    "Features": "Funktioner",
+    "techStack": "Teknikstack",
+    "endSentence": "Ständigt utvecklad sedan 2023"
+  },
+  "Footer": {
+    "cookiePolicy": "Cookiepolicy",
+    "privacyPolicy": "Integritetspolicy",
+    "termsofService": "Användarvillkor",
+    "impressum": "Utgivningsinformation "
   }
 }
