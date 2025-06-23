@@ -78,8 +78,7 @@ const logoGradient3  = isDark
             {t('title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Transform from coding beginner to confident developer with personalized roadmaps, comprehensive documentation,
-            and a supportive learning ecosystem designed for your success.
+            {t('description')}
           </p>
         </div>
       </section>

@@ -64,17 +64,15 @@ export default async function RootLayout({children,}: Readonly<{children: React.
         <title>beRichHub</title>
       </head>
       <body suppressHydrationWarning className="animated-loader">
-            <NextIntlClientProvider messages={messages}>
         <Providers>
-
+            <NextIntlClientProvider messages={messages}>
                 <div className="z-50 fixed flex items-center justify-between top-0 left-0 right-0
                 px-12 py-2 shadow-md bg-white dark:bg-prime">
                   <Navbar />
                 </div>
                 {children}
-        </Providers>
-
             </NextIntlClientProvider>
+        </Providers>
         <Analytics />
       </body>
     </html>
