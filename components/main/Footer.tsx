@@ -86,9 +86,9 @@ export default function Footer() {
                       </Link>
                     </li>
                     <li>
-                      <Link href="https://www.langflow.org/"
+                      <Link href="https://www.langchain.com/"
                         className="text-gray-600 dark:text-gray-300 hover:text-prime dark:hover:text-white transition-colors duration-200">
-                        LangFlow
+                        LangChain
                       </Link>
                     </li>
                     <li>

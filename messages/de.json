@@ -59,6 +59,43 @@
     "techStack": "Technologie-Stack",
     "endSentence": "Kontinuierliche Weiterentwicklung seit 2023"
   },
+  "Navbar": {
+    "brand": "beRich.Hub®",
+    "brainAlt": "KI",
+    "llm": {
+      "trigger": "LLM",
+      "mainTitle": "Online-LLM-Agent mit RAG",
+      "mainDesc": "Online-LLM-Agent mit einem RAG-System, der sowohl sein trainiertes Wissen als auch aktuelle Datenbanken nutzt.",
+      "intro": "Einführung",
+      "introDesc": "Erfahre mehr über die Funktionen und Fähigkeiten des beRichHub-LLM-Agenten und wie er RAG-Systeme nutzt, um präzise und aktuelle Antworten zu liefern.",
+      "offline": "Offline-RAG-Agent",
+      "offlineDesc": "Erfahre, wie du die Offline-Version des beRichHub-LLM-Agenten einrichtest und nutzt, inklusive Installation der Abhängigkeiten und Strukturierung einer lokalen App.",
+      "langflow": "Verwendung mit LangFlow",
+      "langflowDesc": "LangFlow ist ein visuelles Programmierwerkzeug für LLMs. Lerne, wie du den beRichHub-LLM-Agenten in LangFlow integrierst, um maßgeschneiderte Workflows und Anwendungen zu erstellen."
+    },
+    "docs": {
+      "item1": {
+        "title": "Fahrpläne",
+        "href": "/",
+        "description": "Sammlung von Fahrplänen, die dir helfen, deine Lernreise in der Softwareentwicklung zu navigieren."
+      },
+      "item2": {
+        "title": "Grundlegende PC-Kenntnisse",
+        "href": "/",
+        "description": "Wesentliches Wissen über Personal Computer, einschließlich Hardware-Komponenten, Software und Fehlerbehebung."
+      },
+      "item3": {
+        "title": "Programmiersprachen",
+        "href": "/",
+        "description": "Überblick über gängige Programmiersprachen, ihre Syntax und Anwendungsfälle."
+      },
+      "item4": {
+        "title": "Algorithmen",
+        "href": "/",
+        "description": "Einführung in gängige Algorithmen und Datenstrukturen, einschließlich ihrer Implementierung und Anwendungsfälle."
+      }
+    }
+  },
   "Footer": {
     "cookiePolicy": "Cookie-Richtlinie",
     "privacyPolicy": "Datenschutzerklärung",

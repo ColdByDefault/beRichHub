@@ -30,6 +30,7 @@ const sectionKeys = ["v1", "v2", "v3", "v4", "v5"] as const;
 
 export function Timeline() {
   const t = useTranslations("History");
+  
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,

@@ -59,6 +59,43 @@
     "techStack": "Teknikstack",
     "endSentence": "Ständigt utvecklad sedan 2023"
   },
+  "Navbar": {
+    "brand": "beRich.Hub®",
+    "brainAlt": "AI",
+    "llm": {
+      "trigger": "LLM",
+      "mainTitle": "Online-LLM-agent med RAG",
+      "mainDesc": "Online-LLM-agent med ett RAG-system, som använder både sin tränade kunskap och uppdaterad information från databaser.",
+      "intro": "Introduktion",
+      "introDesc": "Lär dig om funktionerna och kapabiliteterna hos beRichHub-LLM-agenten, inklusive hur den använder RAG-system för att ge korrekta och uppdaterade svar.",
+      "offline": "Offline-RAG-agent",
+      "offlineDesc": "Upptäck hur du ställer in och använder offline-versionen av beRichHub-LLM-agenten, inklusive installation av beroenden och strukturering av en lokal app.",
+      "langflow": "Användning med LangFlow",
+      "langflowDesc": "LangFlow är ett visuellt programmeringsverktyg för LLM. Lär dig hur du integrerar beRichHub-LLM-agenten med LangFlow för att skapa anpassade arbetsflöden och applikationer."
+    },
+    "docs": {
+      "item1": {
+        "title": "Färdplaner",
+        "href": "/",
+        "description": "Samlade färdplaner för att hjälpa dig navigera din inlärningsresa inom mjukvaruutveckling."
+      },
+      "item2": {
+        "title": "Grundläggande PC-kunskap",
+        "href": "/",
+        "description": "Väsentlig kunskap om persondatorer, inklusive maskinvarukomponenter, programvara och felsökning."
+      },
+      "item3": {
+        "title": "Programmeringsspråk",
+        "href": "/",
+        "description": "Översikt över populära programmeringsspråk, deras syntax och användningsfall."
+      },
+      "item4": {
+        "title": "Algoritmer",
+        "href": "/",
+        "description": "Introduktion till vanliga algoritmer och datastrukturer, inklusive deras implementering och användningsfall."
+      }
+    }
+  },
   "Footer": {
     "cookiePolicy": "Cookiepolicy",
     "privacyPolicy": "Integritetspolicy",

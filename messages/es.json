@@ -59,6 +59,43 @@
     "techStack": "Pila tecnológica",
     "endSentence": "Evolucionando continuamente desde 2023"
   },
+  "Navbar": {
+    "brand": "beRich.Hub®",
+    "brainAlt": "IA",
+    "llm": {
+      "trigger": "LLM",
+      "mainTitle": "Agente LLM en línea con RAG",
+      "mainDesc": "Agente LLM en línea con un sistema RAG, que utiliza tanto su conocimiento entrenado como información actualizada de bases de datos.",
+      "intro": "Introducción",
+      "introDesc": "Aprende sobre las características y capacidades del Agente LLM de beRichHub, incluyendo cómo aprovecha los sistemas RAG para ofrecer respuestas precisas y actualizadas.",
+      "offline": "Agente RAG sin conexión",
+      "offlineDesc": "Descubre cómo configurar y usar la versión sin conexión del Agente LLM de beRichHub, incluyendo cómo instalar dependencias y estructurar una aplicación local.",
+      "langflow": "Uso con LangFlow",
+      "langflowDesc": "LangFlow es una herramienta de programación visual para LLM. Aprende a integrar el Agente LLM de beRichHub con LangFlow para crear flujos de trabajo y aplicaciones personalizados."
+    },
+    "docs": {
+      "item1": {
+        "title": "Hojas de ruta",
+        "href": "/",
+        "description": "Colección de hojas de ruta para ayudarte a navegar tu trayectoria de aprendizaje en desarrollo de software."
+      },
+      "item2": {
+        "title": "Conocimientos básicos de PC",
+        "href": "/",
+        "description": "Conocimientos esenciales sobre ordenadores personales, incluyendo componentes de hardware, software y resolución de problemas."
+      },
+      "item3": {
+        "title": "Lenguajes de programación",
+        "href": "/",
+        "description": "Visión general de lenguajes de programación populares, su sintaxis y casos de uso."
+      },
+      "item4": {
+        "title": "Algoritmos",
+        "href": "/",
+        "description": "Introducción a algoritmos y estructuras de datos comunes, incluyendo su implementación y casos de uso."
+      }
+    }
+  },
   "Footer": {
     "cookiePolicy": "Política de Cookies",
     "privacyPolicy": "Política de Privacidad",

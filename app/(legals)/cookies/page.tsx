@@ -146,7 +146,7 @@ export default function CookiePolicyPage() {
                   any time through your browser settings.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <Button size="sm" variant="outline">
+                  <Button size="sm" variant="outline" >
                     <Settings className="w-3 h-3 mr-1" />
                     Browser Settings
                   </Button>
