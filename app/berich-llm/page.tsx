@@ -18,7 +18,7 @@ export interface Chat {
 function ChatPage() {
   const [chats, setChats] = useState<Chat[]>([]);
   const [currentChatId, setCurrentChatId] = useState<string | null>(null);
-  const [selectedModel, setSelectedModel] = useState("gpt-4o");
+  const [selectedModel, setSelectedModel] = useState("Gemini 2.5 Pro");
 
   const currentChat = chats.find((chat) => chat.id === currentChatId);
 

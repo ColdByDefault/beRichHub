@@ -20,26 +20,25 @@ interface ChatHeaderProps {
 }
 
 const models = [
-  { id: "gpt-4o", name: "GPT-4o", description: "Most capable model" },
+  { id: "Gemini", name: "Gemini 2.5 Pro", description: "Most capable model" },
   {
     id: "gpt-4o-mini",
     name: "GPT-4o Mini",
-    description: "Faster and more affordable",
+    description: "Not Available",
   },
   {
     id: "gpt-4-turbo",
     name: "GPT-4 Turbo",
-    description: "Previous generation",
+    description: "Not Available",
   },
   {
     id: "gpt-3.5-turbo",
     name: "GPT-3.5 Turbo",
-    description: "Fast and efficient",
+    description: "Not Available",
   },
 ];
 
 export function ChatHeader({ selectedModel, onModelChange }: ChatHeaderProps) {
-  //export function ChatHeader({ selectedModel, onModelChange, currentChat }: ChatHeaderProps) {
   const currentModel = models.find((m) => m.id === selectedModel);
 
   return (
