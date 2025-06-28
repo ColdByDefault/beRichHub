@@ -18,7 +18,7 @@ export interface Chat {
 function ChatPage() {
   const [chats, setChats] = useState<Chat[]>([]);
   const [currentChatId, setCurrentChatId] = useState<string | null>(null);
-  const [selectedModel, setSelectedModel] = useState("Ella");
+
 
   const currentChat = chats.find((chat) => chat.id === currentChatId);
 
@@ -32,7 +32,7 @@ function ChatPage() {
   } = useChat({
     api: "/api/chat",
     body: {
-      model: selectedModel,
+      model: "Ella",
     },
     onFinish: (message) => {
       if (currentChatId) {
@@ -92,11 +92,7 @@ function ChatPage() {
           onDeleteChat={deleteChat}
         />
         <SidebarInset className="flex flex-col">
-          <ChatHeader
-            selectedModel={selectedModel}
-            onModelChange={setSelectedModel}
-            currentChat={currentChat}
-          />
+          <ChatHeader/>
           <ChatInterface
             messages={messages}
             input={input}
