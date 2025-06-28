@@ -1,8 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-import { Shield, Info } from "lucide-react"
-
-
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Shield, Info } from "lucide-react";
 
 export default function Impressum() {
   return (
@@ -15,7 +13,9 @@ export default function Impressum() {
             </div>
           </div>
           <h1 className="text-4xl font-bold tracking-tight">Impressum</h1>
-          <p className="text-muted-foreground text-lg">Rechtliche Hinweise und Informationen</p>
+          <p className="text-muted-foreground text-lg">
+            Rechtliche Hinweise und Informationen
+          </p>
         </div>
         <Separator />
         <Card>
@@ -29,16 +29,20 @@ export default function Impressum() {
             <div className="bg-muted/50 p-4 rounded-lg">
               <p className="text-sm font-medium mb-2">Projektinformationen:</p>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Diese Website ist ein rein privates, nicht kommerzielles Projekt und dient ausschließlich
-                experimentellen und persönlichen Lernzwecken. Es erfolgt weder eine geschäftsmäßige Nutzung noch eine
-                Gewinnerzielungsabsicht.
+                Diese Website ist ein rein privates, nicht kommerzielles Projekt
+                und dient ausschließlich experimentellen und persönlichen
+                Lernzwecken. Es erfolgt weder eine geschäftsmäßige Nutzung noch
+                eine Gewinnerzielungsabsicht.
               </p>
             </div>
 
             <div className="bg-blue-50 dark:bg-blue-950/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-              <p className="text-sm font-medium text-blue-900 dark:text-blue-100 mb-2">Rechtliche Grundlage:</p>
+              <p className="text-sm font-medium text-blue-900 dark:text-blue-100 mb-2">
+                Rechtliche Grundlage:
+              </p>
               <p className="text-sm text-blue-800 dark:text-blue-200">
-                Gemäß § 5 TMG besteht daher keine Pflicht zur Angabe eines Impressums.
+                Gemäß § 5 TMG besteht daher keine Pflicht zur Angabe eines
+                Impressums.
               </p>
             </div>
           </CardContent>
@@ -49,7 +53,9 @@ export default function Impressum() {
             <CardTitle>AnotherProject</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-muted-foreground">ColdByDefault © {new Date().getFullYear()} beRich.Hub</p>
+            <p className="text-muted-foreground">
+              ColdByDefault © {new Date().getFullYear()} beRich.Hub
+            </p>
           </CardContent>
         </Card>
 
@@ -60,5 +66,5 @@ export default function Impressum() {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -12,10 +12,10 @@ import {
 import { Languages } from "lucide-react";
 
 const languages: Record<string, { name: string; flag: string }> = {
-  en: { name: "English",    flag: "🇬🇧" },
-  de: { name: "Deutsch",    flag: "🇩🇪" },
-  es: { name: "Español",    flag: "🇪🇸" },
-  sw: { name: "Svenska",    flag: "🇸🇪" },
+  en: { name: "English", flag: "🇬🇧" },
+  de: { name: "Deutsch", flag: "🇩🇪" },
+  es: { name: "Español", flag: "🇪🇸" },
+  sw: { name: "Svenska", flag: "🇸🇪" },
 };
 
 const LanguageSwitcher = () => {
@@ -46,7 +46,7 @@ const LanguageSwitcher = () => {
     setLocale(newLocale);
     document.cookie = `BERICHHUBVERSIONLATEST_LOCALE=${newLocale}; path=/;`;
     // 4. Refresh current route to re-render server components with new locale
-    router.refresh();  // useRouter only works in Client Components :contentReference[oaicite:0]{index=0}
+    router.refresh(); // useRouter only works in Client Components :contentReference[oaicite:0]{index=0}
   };
 
   return (

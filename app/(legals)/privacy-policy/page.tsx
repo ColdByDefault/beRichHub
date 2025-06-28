@@ -1,10 +1,9 @@
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-import { Badge } from "@/components/ui/badge"
-import { Shield } from "lucide-react"
-import Link from "next/link"
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Badge } from "@/components/ui/badge";
+import { Shield } from "lucide-react";
+import Link from "next/link";
 import { FaGithub } from "react-icons/fa6";
-
 
 export default function PrivacyPolicyPage() {
   return (
@@ -18,8 +17,8 @@ export default function PrivacyPolicyPage() {
           </div>
           <h1 className="text-4xl font-bold tracking-tight">Privacy Policy</h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            We respect your privacy and are committed to protecting your personal data in accordance with GDPR
-            regulations.
+            We respect your privacy and are committed to protecting your
+            personal data in accordance with GDPR regulations.
           </p>
           <div className="flex justify-center gap-2">
             <Badge variant="secondary">GDPR Compliant</Badge>
@@ -37,8 +36,9 @@ export default function PrivacyPolicyPage() {
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed">
-              At berichHub, we respect your privacy and process your personal data in accordance with Regulation (EU)
-              2016/679 (GDPR), ensuring transparency and security in all operations.
+              At berichHub, we respect your privacy and process your personal
+              data in accordance with Regulation (EU) 2016/679 (GDPR), ensuring
+              transparency and security in all operations.
             </p>
           </CardContent>
         </Card>
@@ -55,7 +55,9 @@ export default function PrivacyPolicyPage() {
                 <div className="flex items-start gap-3 p-3 bg-muted/50 rounded-lg">
                   <div>
                     <p className="font-medium text-sm">Personal Identifiers</p>
-                    <p className="text-sm text-muted-foreground">Name and email via Kinde Auth and GitHub OAuth</p>
+                    <p className="text-sm text-muted-foreground">
+                      Name and email via Kinde Auth and GitHub OAuth
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3 bg-muted/50 rounded-lg">
@@ -70,7 +72,8 @@ export default function PrivacyPolicyPage() {
                   <div>
                     <p className="font-medium text-sm">Technical Data</p>
                     <p className="text-sm text-muted-foreground">
-                      Public IP and browser type for security and performance monitoring
+                      Public IP and browser type for security and performance
+                      monitoring
                     </p>
                   </div>
                 </div>
@@ -88,8 +91,9 @@ export default function PrivacyPolicyPage() {
           <CardContent>
             <div className="p-4 rounded-lg border border-amber-200 dark:border-amber-800">
               <p className="text-sm leading-relaxed">
-                We rely on your consent (Art. 6(1)(a)) for non-essential cookies and on legitimate interests (Art.
-                6(1)(f)) for security and performance processing under GDPR.
+                We rely on your consent (Art. 6(1)(a)) for non-essential cookies
+                and on legitimate interests (Art. 6(1)(f)) for security and
+                performance processing under GDPR.
               </p>
             </div>
           </CardContent>
@@ -104,7 +108,8 @@ export default function PrivacyPolicyPage() {
           <CardContent>
             <div className="space-y-3">
               <p className="text-muted-foreground leading-relaxed">
-                Under GDPR, you have the following rights regarding your personal data:
+                Under GDPR, you have the following rights regarding your
+                personal data:
               </p>
               <div className="grid sm:grid-cols-2 gap-2">
                 <div className="flex items-center gap-2 text-sm">
@@ -120,7 +125,9 @@ export default function PrivacyPolicyPage() {
                   <span>Right to restrict processing (Art. 18)</span>
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground">You can withdraw consent at any time by contacting us.</p>
+              <p className="text-sm text-muted-foreground">
+                You can withdraw consent at any time by contacting us.
+              </p>
             </div>
           </CardContent>
         </Card>
@@ -134,8 +141,9 @@ export default function PrivacyPolicyPage() {
           <CardContent>
             <div className="p-4 rounded-lg border border-indigo-200 dark:border-indigo-800">
               <p className="text-sm leading-relaxed">
-                Personal data is retained only as long as necessary to fulfill the purposes described here, and in
-                compliance with EU adequacy decisions for transfers to our server hosted on Vercel.
+                Personal data is retained only as long as necessary to fulfill
+                the purposes described here, and in compliance with EU adequacy
+                decisions for transfers to our server hosted on Vercel.
               </p>
             </div>
           </CardContent>
@@ -150,12 +158,16 @@ export default function PrivacyPolicyPage() {
           <CardContent>
             <div className="space-y-3">
               <p className="text-muted-foreground">
-                For privacy inquiries, data requests, or any questions about this policy, please contact us:
+                For privacy inquiries, data requests, or any questions about
+                this policy, please contact us:
               </p>
               <div className="flex items-center gap-2 p-3 bg-muted/50 rounded-lg">
-                <Link href="https://github.com/ColdByDefault" target="_blanck" 
-                  rel='noopener noreferrer'
-                  aria-label="GitHub">
+                <Link
+                  href="https://github.com/ColdByDefault"
+                  target="_blanck"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
                   <span className="sr-only">GitHub</span>
                   <FaGithub />
                 </Link>
@@ -174,10 +186,11 @@ export default function PrivacyPolicyPage() {
             })}
           </p>
           <p className="text-xs text-muted-foreground mt-1">
-            This policy is effective immediately and applies to all users of berichHub.
+            This policy is effective immediately and applies to all users of
+            berichHub.
           </p>
         </div>
       </div>
     </div>
-  )
+  );
 }

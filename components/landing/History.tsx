@@ -8,36 +8,33 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { useTranslations } from "next-intl";
 
-
 const styles = [
   { color: "bg-gray-100", shadowColor: "shadow-blue-500/20" },
   { color: "bg-gray-200", shadowColor: "shadow-blue-500/20" },
   { color: "bg-gray-300", shadowColor: "shadow-blue-500/20" },
   { color: "bg-gray-400", shadowColor: "shadow-blue-500/20" },
-  { color: "bg-blue-500", shadowColor: "shadow-blue-500/20" }
+  { color: "bg-blue-500", shadowColor: "shadow-blue-500/20" },
 ] as const;
-
 
 const techStacks = [
   ["Python 3.8", "Tkinter", "SQLite"],
   ["Python 3.9", "Flask", "PostgreSQL", "Bootstrap", "jQuery"],
   ["Next.js 13", "React 17", "Tailwind CSS", "JavaScript"],
   ["Next.js 15", "React 19", "Tailwind CSS 4", "Vercel"],
-  ["Next.js 15", "React 19", "Tailwind CSS 4", "AI SDK", "Edge Runtime"]
+  ["Next.js 15", "React 19", "Tailwind CSS 4", "AI SDK", "Edge Runtime"],
 ];
 
 const sectionKeys = ["v1", "v2", "v3", "v4", "v5"] as const;
 
 export function Timeline() {
   const t = useTranslations("History");
-  
+
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
   });
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-
 
   const timelineData = sectionKeys.map((key, i) => ({
     ...styles[i],
@@ -50,8 +47,8 @@ export function Timeline() {
     status: t(`sections.${key}.status`),
     metrics: {
       users: t(`sections.${key}.metrics.users`),
-      features: t(`sections.${key}.metrics.features`)
-    }
+      features: t(`sections.${key}.metrics.features`),
+    },
   }));
 
   return (
@@ -63,7 +60,8 @@ export function Timeline() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6"
-        ><TrendingUp className="w-4 h-4" />
+        >
+          <TrendingUp className="w-4 h-4" />
           {t("badge")}
         </motion.div>
         <p className="text-xl text-muted-foreground leading-relaxed">
@@ -97,13 +95,22 @@ export function Timeline() {
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 + 0.3, type: "spring", stiffness: 200 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: i * 0.1 + 0.3,
+                    type: "spring",
+                    stiffness: 200,
+                  }}
                   whileHover={{ scale: 1.2 }}
                   className={`flex-shrink-0 w-4 h-4 ${item.color} rounded-full ${item.shadowColor} shadow-lg z-10 relative ml-2`}
                 >
                   <motion.div
                     animate={{ scale: [1, 1.5, 1], opacity: [0.5, 0, 0.5] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
                     className={`absolute inset-0 ${item.color} rounded-full`}
                   />
                   <div className="absolute inset-2 bg-white/20 rounded-full" />
@@ -111,31 +118,55 @@ export function Timeline() {
                 </motion.div>
 
                 {/* Card */}
-                <motion.div whileHover={{ y: -4 }} transition={{ duration: 0.2 }} className="ml-8 flex-1">
-                  <Card className={`group border-2 shadow-xl bg-card/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 hover:${item.shadowColor}`}>
+                <motion.div
+                  whileHover={{ y: -4 }}
+                  transition={{ duration: 0.2 }}
+                  className="ml-8 flex-1"
+                >
+                  <Card
+                    className={`group border-2 shadow-xl bg-card/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 hover:${item.shadowColor}`}
+                  >
                     <CardContent className="p-6">
                       {/* Header */}
                       <div className="flex items-start justify-between mb-4">
                         <div>
                           <div className="flex items-center gap-3 mb-2">
-                            <Badge variant="outline" className="text-lg font-bold px-3 py-1 bg-primary/10 text-primary border-primary/20">
+                            <Badge
+                              variant="outline"
+                              className="text-lg font-bold px-3 py-1 bg-primary/10 text-primary border-primary/20"
+                            >
                               {item.version}
                             </Badge>
-                            <Badge variant={item.status === "Current" ? "default" : "secondary"} className="text-xs">
+                            <Badge
+                              variant={
+                                item.status === "Current"
+                                  ? "default"
+                                  : "secondary"
+                              }
+                              className="text-xs"
+                            >
                               {item.status}
                             </Badge>
                           </div>
-                          <h3 className="text-xl font-bold text-foreground mb-1">{item.title}</h3>
-                          <p className="text-primary font-medium text-sm">{item.subtitle}</p>
+                          <h3 className="text-xl font-bold text-foreground mb-1">
+                            {item.title}
+                          </h3>
+                          <p className="text-primary font-medium text-sm">
+                            {item.subtitle}
+                          </p>
                         </div>
                         <div className="flex items-center gap-2 text-muted-foreground">
                           <Calendar className="w-4 h-4" />
-                          <span className="text-sm font-medium">{item.year}</span>
+                          <span className="text-sm font-medium">
+                            {item.year}
+                          </span>
                         </div>
                       </div>
 
                       <Separator className="mb-4" />
-                      <p className="text-muted-foreground leading-relaxed mb-4 text-sm">{item.description}</p>
+                      <p className="text-muted-foreground leading-relaxed mb-4 text-sm">
+                        {item.description}
+                      </p>
 
                       {/* Metrics */}
                       <div className="flex items-center gap-4 mb-4">
@@ -146,7 +177,9 @@ export function Timeline() {
                           </span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <div className={`w-3 h-3 ${item.color} rounded-full`} />
+                          <div
+                            className={`w-3 h-3 ${item.color} rounded-full`}
+                          />
                           <span className="text-sm font-medium">
                             {item.metrics.features} {t("Features")}
                           </span>
@@ -155,10 +188,16 @@ export function Timeline() {
 
                       {/* Tech Stack */}
                       <div>
-                        <h4 className="text-sm font-semibold text-foreground mb-2">{t("techStack")}</h4>
+                        <h4 className="text-sm font-semibold text-foreground mb-2">
+                          {t("techStack")}
+                        </h4>
                         <div className="flex flex-wrap gap-2">
                           {item.technologies.map((tech) => (
-                            <Badge key={tech} variant="secondary" className="bg-muted/50 hover:bg-muted transition-colors text-xs">
+                            <Badge
+                              key={tech}
+                              variant="secondary"
+                              className="bg-muted/50 hover:bg-muted transition-colors text-xs"
+                            >
                               {tech}
                             </Badge>
                           ))}

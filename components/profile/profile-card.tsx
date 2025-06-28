@@ -1,14 +1,20 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { useRouter } from "next/navigation"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Alert, AlertDescription } from "@/components/ui/alert"
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 import {
   Dialog,
   DialogContent,
@@ -17,76 +23,99 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
-import { User, Mail, UserCheck, Edit, Save, X, Loader2, CheckCircle, AlertCircle } from "lucide-react"
-import { updateUserProfile } from "@/actions/profile"
-import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs"
+} from "@/components/ui/dialog";
+import {
+  User,
+  Mail,
+  UserCheck,
+  Edit,
+  Save,
+  X,
+  Loader2,
+  CheckCircle,
+  AlertCircle,
+} from "lucide-react";
+import { updateUserProfile } from "@/actions/profile";
+import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 
 interface ProfileCardProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  user: any
+  user: any;
 }
 
 export function ProfileCard({ user }: ProfileCardProps) {
-  const router = useRouter()
-  const [isDialogOpen, setIsDialogOpen] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
-  const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null)
+  const router = useRouter();
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState<{
+    type: "success" | "error";
+    text: string;
+  } | null>(null);
   const [formData, setFormData] = useState({
     given_name: user?.given_name || "",
     family_name: user?.family_name || "",
     email: user?.email || "",
-  })
+  });
 
   const getInitials = (firstName?: string, lastName?: string) => {
-    return `${firstName?.charAt(0) || ""}${lastName?.charAt(0) || ""}`.toUpperCase()
-  }
+    return `${firstName?.charAt(0) || ""}${
+      lastName?.charAt(0) || ""
+    }`.toUpperCase();
+  };
 
-  const { refreshData } = useKindeBrowserClient()
+  const { refreshData } = useKindeBrowserClient();
 
   const handleSave = async () => {
-    if (!user?.id) return
+    if (!user?.id) return;
 
-    setIsLoading(true)
-    setMessage(null)
+    setIsLoading(true);
+    setMessage(null);
 
     try {
-      const result = await updateUserProfile(user.id, formData)
+      const result = await updateUserProfile(user.id, formData);
 
       if (result.success) {
-        setMessage({ type: "success", text: "Your profile has been successfully updated." })
-        setIsDialogOpen(false)
+        setMessage({
+          type: "success",
+          text: "Your profile has been successfully updated.",
+        });
+        setIsDialogOpen(false);
 
-        await refreshData()
-        router.refresh()
-        setTimeout(() => setMessage(null), 3000)
+        await refreshData();
+        router.refresh();
+        setTimeout(() => setMessage(null), 3000);
       } else {
-        setMessage({ type: "error", text: result.error || "Failed to update profile. Please try again." })
+        setMessage({
+          type: "error",
+          text: result.error || "Failed to update profile. Please try again.",
+        });
       }
     } catch (error) {
-      setMessage({ type: "error", text: "An unexpected error occurred. Please try again." + error })
+      setMessage({
+        type: "error",
+        text: "An unexpected error occurred. Please try again." + error,
+      });
     } finally {
-      setIsLoading(false)
+      setIsLoading(false);
     }
-
-  }
+  };
 
   const handleCancel = () => {
     setFormData({
       given_name: user?.given_name || "",
       family_name: user?.family_name || "",
       email: user?.email || "",
-    })
-    setIsDialogOpen(false)
-    setMessage(null)
-  }
+    });
+    setIsDialogOpen(false);
+    setMessage(null);
+  };
 
   const handleDialogOpenChange = (open: boolean) => {
     if (!open) {
-      handleCancel()
+      handleCancel();
     }
-    setIsDialogOpen(open)
-  }
+    setIsDialogOpen(open);
+  };
 
   if (!user) {
     return (
@@ -96,10 +125,13 @@ export function ProfileCard({ user }: ProfileCardProps) {
             <User className="h-5 w-5" />
             No User Information
           </CardTitle>
-          <CardDescription>No user information available. Please sign in to view your dashboard.</CardDescription>
+          <CardDescription>
+            No user information available. Please sign in to view your
+            dashboard.
+          </CardDescription>
         </CardHeader>
       </Card>
-    )
+    );
   }
 
   return (
@@ -109,13 +141,23 @@ export function ProfileCard({ user }: ProfileCardProps) {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <Avatar className="h-16 w-16">
-                <AvatarImage src={user.picture || "/avatars/avatar.png"} alt="you" />
-                <AvatarFallback className="text-lg">{getInitials(formData.given_name, formData.family_name)}</AvatarFallback>
+                <AvatarImage
+                  src={user.picture || "/avatars/avatar.png"}
+                  alt="you"
+                />
+                <AvatarFallback className="text-lg">
+                  {getInitials(formData.given_name, formData.family_name)}
+                </AvatarFallback>
               </Avatar>
               <div className="space-y-2">
-                <CardTitle className="text-2xl">Welcome, {formData.given_name}</CardTitle>
+                <CardTitle className="text-2xl">
+                  Welcome, {formData.given_name}
+                </CardTitle>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary" className="flex items-center gap-1">
+                  <Badge
+                    variant="secondary"
+                    className="flex items-center gap-1"
+                  >
                     <UserCheck className="h-3 w-3" />
                     Verified User
                   </Badge>
@@ -128,7 +170,11 @@ export function ProfileCard({ user }: ProfileCardProps) {
             </div>
             <Dialog open={isDialogOpen} onOpenChange={handleDialogOpenChange}>
               <DialogTrigger asChild>
-                <Button variant="outline" size="sm" className="flex items-center gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex items-center gap-2"
+                >
                   <Edit className="h-4 w-4" />
                   Edit Profile
                 </Button>
@@ -136,17 +182,32 @@ export function ProfileCard({ user }: ProfileCardProps) {
               <DialogContent className="sm:max-w-[425px]">
                 <DialogHeader>
                   <DialogTitle>Edit Profile</DialogTitle>
-                  <DialogDescription>Changes will take effect on your next login. Click &quot;Save&quot; when you&rsquo;re done.</DialogDescription>
+                  <DialogDescription>
+                    Changes will take effect on your next login. Click
+                    &quot;Save&quot; when you&rsquo;re done.
+                  </DialogDescription>
                 </DialogHeader>
 
                 {message && (
-                  <Alert className={message.type === "error" ? "border-destructive" : "border-green-500"}>
+                  <Alert
+                    className={
+                      message.type === "error"
+                        ? "border-destructive"
+                        : "border-green-500"
+                    }
+                  >
                     {message.type === "success" ? (
                       <CheckCircle className="h-4 w-4 text-green-600" />
                     ) : (
                       <AlertCircle className="h-4 w-4 text-destructive" />
                     )}
-                    <AlertDescription className={message.type === "error" ? "text-destructive" : "text-green-600"}>
+                    <AlertDescription
+                      className={
+                        message.type === "error"
+                          ? "text-destructive"
+                          : "text-green-600"
+                      }
+                    >
                       {message.text}
                     </AlertDescription>
                   </Alert>
@@ -159,7 +220,12 @@ export function ProfileCard({ user }: ProfileCardProps) {
                       <Input
                         id="given_name"
                         value={formData.given_name}
-                        onChange={(e) => setFormData((prev) => ({ ...prev, given_name: e.target.value }))}
+                        onChange={(e) =>
+                          setFormData((prev) => ({
+                            ...prev,
+                            given_name: e.target.value,
+                          }))
+                        }
                         placeholder="Enter first name"
                         disabled={isLoading}
                       />
@@ -169,7 +235,12 @@ export function ProfileCard({ user }: ProfileCardProps) {
                       <Input
                         id="family_name"
                         value={formData.family_name}
-                        onChange={(e) => setFormData((prev) => ({ ...prev, family_name: e.target.value }))}
+                        onChange={(e) =>
+                          setFormData((prev) => ({
+                            ...prev,
+                            family_name: e.target.value,
+                          }))
+                        }
                         placeholder="Enter last name"
                         disabled={isLoading}
                       />
@@ -187,8 +258,16 @@ export function ProfileCard({ user }: ProfileCardProps) {
                     <X className="h-4 w-4" />
                     Cancel
                   </Button>
-                  <Button onClick={handleSave} disabled={isLoading} className="flex items-center gap-2">
-                    {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}
+                  <Button
+                    onClick={handleSave}
+                    disabled={isLoading}
+                    className="flex items-center gap-2"
+                  >
+                    {isLoading ? (
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                    ) : (
+                      <Save className="h-4 w-4" />
+                    )}
                     Save Changes
                   </Button>
                 </DialogFooter>
@@ -198,13 +277,25 @@ export function ProfileCard({ user }: ProfileCardProps) {
         </CardHeader>
         <CardContent className="space-y-4">
           {message && !isDialogOpen && (
-            <Alert className={message.type === "error" ? "border-destructive" : "border-green-500"}>
+            <Alert
+              className={
+                message.type === "error"
+                  ? "border-destructive"
+                  : "border-green-500"
+              }
+            >
               {message.type === "success" ? (
                 <CheckCircle className="h-4 w-4 text-green-600" />
               ) : (
                 <AlertCircle className="h-4 w-4 text-destructive" />
               )}
-              <AlertDescription className={message.type === "error" ? "text-destructive" : "text-green-600"}>
+              <AlertDescription
+                className={
+                  message.type === "error"
+                    ? "text-destructive"
+                    : "text-green-600"
+                }
+              >
                 {message.text}
               </AlertDescription>
             </Alert>
@@ -226,5 +317,5 @@ export function ProfileCard({ user }: ProfileCardProps) {
         </CardContent>
       </Card>
     </>
-  )
+  );
 }

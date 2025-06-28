@@ -1,21 +1,25 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
-import { useTranslations } from "next-intl"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import { ExternalLink } from "lucide-react"
-import Link from "next/link"
+import {
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
+import { useTranslations } from "next-intl";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 type ResourceCardProps = {
-  title: string
-  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
+  title: string;
+  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   links: Array<{
-    href: string
-    label: string
-  }>
-}
+    href: string;
+    label: string;
+  }>;
+};
 
 export function ResourceCard({ title, Icon, links }: ResourceCardProps) {
   return (
@@ -43,23 +47,26 @@ export function ResourceCard({ title, Icon, links }: ResourceCardProps) {
         </ul>
       </CardContent>
     </Card>
-  )
+  );
 }
-
 
 type FaqItemProps = {
-  value: string
-  questionKey: string
-  answerKey: string
-}
+  value: string;
+  questionKey: string;
+  answerKey: string;
+};
 
 export function FaqItem({ value, questionKey, answerKey }: FaqItemProps) {
-  const t = useTranslations("RoadmapItems")
+  const t = useTranslations("RoadmapItems");
 
   return (
     <AccordionItem value={value}>
-      <AccordionTrigger className="text-left">{t(questionKey)}</AccordionTrigger>
-      <AccordionContent className="leading-relaxed">{t(answerKey)}</AccordionContent>
+      <AccordionTrigger className="text-left">
+        {t(questionKey)}
+      </AccordionTrigger>
+      <AccordionContent className="leading-relaxed">
+        {t(answerKey)}
+      </AccordionContent>
     </AccordionItem>
-  )
+  );
 }

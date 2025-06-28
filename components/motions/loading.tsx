@@ -1,5 +1,5 @@
-import { Progress } from "@/components/ui/progress"
-import { CheckCircle } from "lucide-react"
+import { Progress } from "@/components/ui/progress";
+import { CheckCircle } from "lucide-react";
 
 export function LoadingScreen({ progress }: { progress: number }) {
   return (
@@ -19,18 +19,46 @@ export function LoadingScreen({ progress }: { progress: number }) {
         {/* Loading Steps */}
         <div className="space-y-3 text-left max-w-xs">
           <div className="flex items-center space-x-3">
-            <CheckCircle className={`w-5 h-5 ${progress > 20 ? "text-blue-500" : "text-gray-300"}`} />
-            <span className={`text-sm ${progress > 20 ? "text-gray-600" : "text-gray-500"}`}>
+            <CheckCircle
+              className={`w-5 h-5 ${
+                progress > 20 ? "text-blue-500" : "text-gray-300"
+              }`}
+            />
+            <span
+              className={`text-sm ${
+                progress > 20 ? "text-gray-600" : "text-gray-500"
+              }`}
+            >
               Initializing application
             </span>
           </div>
           <div className="flex items-center space-x-3">
-            <CheckCircle className={`w-5 h-5 ${progress > 50 ? "text-blue-500" : "text-gray-300"}`} />
-            <span className={`text-sm ${progress > 50 ? "text-gray-600" : "text-gray-500"}`}>Loading user data</span>
+            <CheckCircle
+              className={`w-5 h-5 ${
+                progress > 50 ? "text-blue-500" : "text-gray-300"
+              }`}
+            />
+            <span
+              className={`text-sm ${
+                progress > 50 ? "text-gray-600" : "text-gray-500"
+              }`}
+            >
+              Loading user data
+            </span>
           </div>
           <div className="flex items-center space-x-3">
-            <CheckCircle className={`w-5 h-5 ${progress > 80 ? "text-blue-500" : "text-gray-300"}`} />
-            <span className={`text-sm ${progress > 80 ? "text-gray-600" : "text-gray-500"}`}>Setting up LLM Models</span>
+            <CheckCircle
+              className={`w-5 h-5 ${
+                progress > 80 ? "text-blue-500" : "text-gray-300"
+              }`}
+            />
+            <span
+              className={`text-sm ${
+                progress > 80 ? "text-gray-600" : "text-gray-500"
+              }`}
+            >
+              Setting up LLM Models
+            </span>
           </div>
         </div>
 
@@ -43,5 +71,5 @@ export function LoadingScreen({ progress }: { progress: number }) {
         </div>
       </div>
     </div>
-  )
+  );
 }

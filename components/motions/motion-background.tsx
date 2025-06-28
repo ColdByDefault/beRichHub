@@ -13,15 +13,12 @@ function useHasMounted() {
 }
 
 export function Background() {
-
   const { theme, resolvedTheme } = useTheme();
 
-  
   const hasMounted = useHasMounted();
 
   const isDarkTheme =
     hasMounted && (theme === "dark" || resolvedTheme === "dark");
-
 
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);

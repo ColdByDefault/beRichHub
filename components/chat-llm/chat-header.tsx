@@ -1,29 +1,46 @@
-"use client"
+"use client";
 
-import { Brain, ChevronDown } from "lucide-react"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { Button } from "@/components/ui/button"
-import { SidebarTrigger } from "@/components/ui/sidebar"
+import { Brain, ChevronDown } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 
-import type { Chat } from "@/app/berich-llm/page"
+import type { Chat } from "@/app/berich-llm/page";
 //%28berich-llm%29
 
 interface ChatHeaderProps {
-  selectedModel: string
-  onModelChange: (model: string) => void
-  currentChat?: Chat
+  selectedModel: string;
+  onModelChange: (model: string) => void;
+  currentChat?: Chat;
 }
 
 const models = [
   { id: "gpt-4o", name: "GPT-4o", description: "Most capable model" },
-  { id: "gpt-4o-mini", name: "GPT-4o Mini", description: "Faster and more affordable" },
-  { id: "gpt-4-turbo", name: "GPT-4 Turbo", description: "Previous generation" },
-  { id: "gpt-3.5-turbo", name: "GPT-3.5 Turbo", description: "Fast and efficient" },
-]
+  {
+    id: "gpt-4o-mini",
+    name: "GPT-4o Mini",
+    description: "Faster and more affordable",
+  },
+  {
+    id: "gpt-4-turbo",
+    name: "GPT-4 Turbo",
+    description: "Previous generation",
+  },
+  {
+    id: "gpt-3.5-turbo",
+    name: "GPT-3.5 Turbo",
+    description: "Fast and efficient",
+  },
+];
 
 export function ChatHeader({ selectedModel, onModelChange }: ChatHeaderProps) {
-//export function ChatHeader({ selectedModel, onModelChange, currentChat }: ChatHeaderProps) {
-  const currentModel = models.find((m) => m.id === selectedModel)
+  //export function ChatHeader({ selectedModel, onModelChange, currentChat }: ChatHeaderProps) {
+  const currentModel = models.find((m) => m.id === selectedModel);
 
   return (
     <header className="flex items-center justify-between p-4 border-b bg-background">
@@ -52,14 +69,18 @@ export function ChatHeader({ selectedModel, onModelChange }: ChatHeaderProps) {
               >
                 <div className="flex items-center gap-2">
                   <span className="font-medium">{model.name}</span>
-                  {selectedModel === model.id && <div className="h-2 w-2 rounded-full bg-green-500" />}
+                  {selectedModel === model.id && (
+                    <div className="h-2 w-2 rounded-full bg-green-500" />
+                  )}
                 </div>
-                <span className="text-xs text-muted-foreground">{model.description}</span>
+                <span className="text-xs text-muted-foreground">
+                  {model.description}
+                </span>
               </DropdownMenuItem>
             ))}
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
     </header>
-  )
+  );
 }

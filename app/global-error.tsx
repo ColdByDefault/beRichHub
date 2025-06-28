@@ -1,22 +1,28 @@
-"use client"
+"use client";
 
-import { useEffect } from "react"
-import { AlertCircle, RefreshCw, Home, Bug } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { useEffect } from "react";
+import { AlertCircle, RefreshCw, Home, Bug } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export default function GlobalError({
   error,
   reset,
 }: {
-  error: Error & { digest?: string }
-  reset: () => void
+  error: Error & { digest?: string };
+  reset: () => void;
 }) {
   useEffect(() => {
-    console.error("Global error occurred:", error)
-  }, [error])
+    console.error("Global error occurred:", error);
+  }, [error]);
 
-  const isDevelopment = process.env.NODE_ENV === "development"
+  const isDevelopment = process.env.NODE_ENV === "development";
 
   return (
     <html>
@@ -30,7 +36,9 @@ export default function GlobalError({
                 </div>
               </div>
               <div className="space-y-2">
-                <CardTitle className="text-2xl">Something went wrong!</CardTitle>
+                <CardTitle className="text-2xl">
+                  Something went wrong!
+                </CardTitle>
                 <CardDescription>
                   We encountered an unexpected error.
                 </CardDescription>
@@ -43,8 +51,14 @@ export default function GlobalError({
                     <Bug className="w-4 h-4 text-muted-foreground mt-0.5 flex-shrink-0" />
                     <div className="space-y-1">
                       <p className="text-sm font-medium">Error Details:</p>
-                      <p className="text-xs text-muted-foreground font-mono break-all">{error.message}</p>
-                      {error.digest && <p className="text-xs text-muted-foreground">Error ID: {error.digest}</p>}
+                      <p className="text-xs text-muted-foreground font-mono break-all">
+                        {error.message}
+                      </p>
+                      {error.digest && (
+                        <p className="text-xs text-muted-foreground">
+                          Error ID: {error.digest}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -52,14 +66,22 @@ export default function GlobalError({
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button
                   onClick={() => {
-                    console.log("Attempting to reset from global error:", error)
-                    reset()
+                    console.log(
+                      "Attempting to reset from global error:",
+                      error
+                    );
+                    reset();
                   }}
-                  className="flex-1">
+                  className="flex-1"
+                >
                   <RefreshCw className="w-4 h-4 mr-2" />
                   Try Again
                 </Button>
-                <Button variant="outline" onClick={() => (window.location.href = "/")} className="flex-1">
+                <Button
+                  variant="outline"
+                  onClick={() => (window.location.href = "/")}
+                  className="flex-1"
+                >
                   <Home className="w-4 h-4 mr-2" />
                   Go Home
                 </Button>
@@ -74,5 +96,5 @@ export default function GlobalError({
         </div>
       </body>
     </html>
-  )
+  );
 }

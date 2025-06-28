@@ -32,14 +32,25 @@ export function NavbarHeader() {
         <NavigationMenuItem>
           <ul className="flex gap-2 items-center">
             <li>
-              <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+              <NavigationMenuLink
+                asChild
+                className={navigationMenuTriggerStyle()}
+              >
                 <Link href="/">{t("brand")}</Link>
               </NavigationMenuLink>
             </li>
             <li>
-              <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+              <NavigationMenuLink
+                asChild
+                className={navigationMenuTriggerStyle()}
+              >
                 <Link href="/berich-llm" aria-label="berich-llm">
-                  <Image src="/icons/brain.png" width={24} height={24} alt={t("brainAlt")} />
+                  <Image
+                    src="/icons/brain.png"
+                    width={24}
+                    height={24}
+                    alt={t("brainAlt")}
+                  />
                 </Link>
               </NavigationMenuLink>
             </li>
@@ -57,7 +68,9 @@ export function NavbarHeader() {
                     className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline"
                     href="/berich-llm"
                   >
-                    <span className="mt-4 mb-2 text-lg">{t("llm.mainTitle")}</span>
+                    <span className="mt-4 mb-2 text-lg">
+                      {t("llm.mainTitle")}
+                    </span>
                     <p className="text-muted-foreground text-sm leading-tight">
                       {t("llm.mainDesc")}
                     </p>
@@ -80,7 +93,9 @@ export function NavbarHeader() {
 
         {/* Docs Menu */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>{t("docs.item1.title") /* or a separate label */}</NavigationMenuTrigger>
+          <NavigationMenuTrigger>
+            {t("docs.item1.title") /* or a separate label */}
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               {docsData.map((item) => (

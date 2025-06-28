@@ -1,22 +1,22 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useRef, useEffect } from "react"
-import { Send, User, Brain, Loader2 } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Textarea } from "@/components/ui/textarea"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+import { useRef, useEffect } from "react";
+import { Send, User, Brain, Loader2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 interface ChatInterfaceProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  messages: any[]
-  input: string
-  handleInputChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
-  handleSubmit: (e: React.FormEvent) => void
-  isLoading: boolean
-  disabled?: boolean
+  messages: any[];
+  input: string;
+  handleInputChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  handleSubmit: (e: React.FormEvent) => void;
+  isLoading: boolean;
+  disabled?: boolean;
 }
 
 export function ChatInterface({
@@ -27,28 +27,28 @@ export function ChatInterface({
   isLoading,
   disabled = false,
 }: ChatInterfaceProps) {
-  const scrollAreaRef = useRef<HTMLDivElement>(null)
-  const textareaRef = useRef<HTMLTextAreaElement>(null)
+  const scrollAreaRef = useRef<HTMLDivElement>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
     if (scrollAreaRef.current) {
-      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
+      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
     }
-  }, [messages])
+  }, [messages]);
 
   const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     if (input.trim() && !isLoading && !disabled) {
-      handleSubmit(e)
+      handleSubmit(e);
     }
-  }
+  };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter" && !e.shiftKey) {
-      e.preventDefault()
-      onSubmit(e)
+      e.preventDefault();
+      onSubmit(e);
     }
-  }
+  };
 
   return (
     <div className="flex flex-col h-full pb-12">
@@ -58,7 +58,8 @@ export function ChatInterface({
             <Brain className="h-12 w-12 text-muted-foreground mb-4" />
             <h3 className="text-lg font-semibold mb-2">Start a conversation</h3>
             <p className="text-muted-foreground max-w-md">
-              Ask me anything! I&apos;m here to help with questions, creative tasks, analysis, and more.
+              Ask me anything! I&apos;m here to help with questions, creative
+              tasks, analysis, and more.
             </p>
           </div>
         ) : (
@@ -66,7 +67,9 @@ export function ChatInterface({
             {messages.map((message) => (
               <div
                 key={message.id}
-                className={`flex gap-3 ${message.role === "user" ? "justify-end" : "justify-start"}`}
+                className={`flex gap-3 ${
+                  message.role === "user" ? "justify-end" : "justify-start"
+                }`}
               >
                 {message.role === "assistant" && (
                   <Avatar className="h-8 w-8">
@@ -78,18 +81,24 @@ export function ChatInterface({
 
                 <div
                   className={`max-w-[80%] rounded-lg px-4 py-2 ${
-                    message.role === "user" ? "bg-primary text-primary-foreground" : "bg-muted"
+                    message.role === "user"
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-muted"
                   }`}
                 >
                   <div className="whitespace-pre-wrap break-words">
-                    {message.parts?.map((
-                      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                      part: any, i: number) => {
-                      if (part.type === "text") {
-                        return <span key={i}>{part.text}</span>
+                    {message.parts?.map(
+                      (
+                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                        part: any,
+                        i: number
+                      ) => {
+                        if (part.type === "text") {
+                          return <span key={i}>{part.text}</span>;
+                        }
+                        return null;
                       }
-                      return null
-                    }) || message.content}
+                    ) || message.content}
                   </div>
                 </div>
 
@@ -126,16 +135,31 @@ export function ChatInterface({
             value={input}
             onChange={handleInputChange}
             onKeyDown={handleKeyDown}
-            placeholder={disabled ? "Create a new chat to start messaging..." : "Type your message..."}
+            placeholder={
+              disabled
+                ? "Create a new chat to start messaging..."
+                : "Type your message..."
+            }
             className="min-h-[60px] max-h-[200px] resize-none"
             disabled={disabled || isLoading}
           />
-          <Button type="submit" size="icon" disabled={!input.trim() || isLoading || disabled} className="self-end">
-            {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
+          <Button
+            type="submit"
+            size="icon"
+            disabled={!input.trim() || isLoading || disabled}
+            className="self-end"
+          >
+            {isLoading ? (
+              <Loader2 className="h-4 w-4 animate-spin" />
+            ) : (
+              <Send className="h-4 w-4" />
+            )}
           </Button>
         </form>
-        <p className="text-xs text-muted-foreground mt-2 text-center">Press Enter to send, Shift+Enter for new line</p>
+        <p className="text-xs text-muted-foreground mt-2 text-center">
+          Press Enter to send, Shift+Enter for new line
+        </p>
       </div>
     </div>
-  )
+  );
 }

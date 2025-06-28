@@ -106,72 +106,72 @@
     "allRights": "Alla rättigheter förbehållna"
   },
   "RoadmapItems": {
-     "sections": {
-        "1": {
-          "id": 1,
-          "title": "Grunderna",
-          "description": "Bemästra grunderna i programmering",
-          "steps": {
-            "0": "Lär dig ett nybörjarvänligt språk (Python eller JavaScript)",
-            "1": "Förstå variabler, datatyper och operatorer",
-            "2": "Bemästra styrstrukturer (if/else, loopar)",
-            "3": "Lär dig funktioner och grundläggande datastrukturer",
-            "4": "Öva problemlösning med enkla övningar"
-          }
-        },
-        "2": {
-          "id": 2,
-          "title": "Grundläggande webbutveckling",
-          "description": "Bygg dina första webbplatser",
-          "steps": {
-            "0": "Lär dig HTML för struktur",
-            "1": "Lär dig CSS för styling",
-            "2": "Förstå principer för responsiv design",
-            "3": "Introduktion till JavaScript för interaktivitet",
-            "4": "Bygg enkla statiska webbplatser"
-          }
-        },
-        "3": {
-          "id": 3,
-          "title": "Versionskontroll",
-          "description": "Spåra och hantera din kod",
-          "steps": {
-            "0": "Lär dig Git-grunder (commit, push, pull)",
-            "1": "Skapa ett GitHub-konto",
-            "2": "Förstå branching och merging",
-            "3": "Samarbeta i projekt med andra",
-            "4": "Skapa ditt första repository"
-          }
-        },
-        "4": {
-          "id": 4,
-          "title": "Frontend-utveckling",
-          "description": "Skapa interaktiva användargränssnitt",
-          "steps": {
-            "0": "Lär dig ett frontend-ramverk (React, Vue eller Angular)",
-            "1": "Förstå komponentbaserad arkitektur",
-            "2": "Bemästra tillståndshantering",
-            "3": "Lär dig om API-integration",
-            "4": "Bygg interaktiva webbapplikationer"
-          }
-        },
-        "5": {
-          "id": 5,
-          "title": "Backend-utveckling",
-          "description": "Bygg serverbaserade applikationer",
-          "steps": {
-            "0": "Lär dig ett backend-språk/framework (Node.js, Python/Django etc.)",
-            "1": "Förstå databaser (SQL och NoSQL)",
-            "2": "Skapa RESTful-APIs",
-            "3": "Implementera autentisering och auktorisation"
-          }
-        },
-        "6": {
-          "id": 6,
-          "title": "Avancerade ämnen",
-          "description": "Specialisera dig och utveckla dina färdigheter",
-          "steps": {}
+    "sections": {
+      "1": {
+        "id": 1,
+        "title": "Grunderna",
+        "description": "Bemästra grunderna i programmering",
+        "steps": {
+          "0": "Lär dig ett nybörjarvänligt språk (Python eller JavaScript)",
+          "1": "Förstå variabler, datatyper och operatorer",
+          "2": "Bemästra styrstrukturer (if/else, loopar)",
+          "3": "Lär dig funktioner och grundläggande datastrukturer",
+          "4": "Öva problemlösning med enkla övningar"
         }
+      },
+      "2": {
+        "id": 2,
+        "title": "Grundläggande webbutveckling",
+        "description": "Bygg dina första webbplatser",
+        "steps": {
+          "0": "Lär dig HTML för struktur",
+          "1": "Lär dig CSS för styling",
+          "2": "Förstå principer för responsiv design",
+          "3": "Introduktion till JavaScript för interaktivitet",
+          "4": "Bygg enkla statiska webbplatser"
+        }
+      },
+      "3": {
+        "id": 3,
+        "title": "Versionskontroll",
+        "description": "Spåra och hantera din kod",
+        "steps": {
+          "0": "Lär dig Git-grunder (commit, push, pull)",
+          "1": "Skapa ett GitHub-konto",
+          "2": "Förstå branching och merging",
+          "3": "Samarbeta i projekt med andra",
+          "4": "Skapa ditt första repository"
+        }
+      },
+      "4": {
+        "id": 4,
+        "title": "Frontend-utveckling",
+        "description": "Skapa interaktiva användargränssnitt",
+        "steps": {
+          "0": "Lär dig ett frontend-ramverk (React, Vue eller Angular)",
+          "1": "Förstå komponentbaserad arkitektur",
+          "2": "Bemästra tillståndshantering",
+          "3": "Lär dig om API-integration",
+          "4": "Bygg interaktiva webbapplikationer"
+        }
+      },
+      "5": {
+        "id": 5,
+        "title": "Backend-utveckling",
+        "description": "Bygg serverbaserade applikationer",
+        "steps": {
+          "0": "Lär dig ett backend-språk/framework (Node.js, Python/Django etc.)",
+          "1": "Förstå databaser (SQL och NoSQL)",
+          "2": "Skapa RESTful-APIs",
+          "3": "Implementera autentisering och auktorisation"
+        }
+      },
+      "6": {
+        "id": 6,
+        "title": "Avancerade ämnen",
+        "description": "Specialisera dig och utveckla dina färdigheter",
+        "steps": {}
+      }
     },
     "paths": {
       "web": {
