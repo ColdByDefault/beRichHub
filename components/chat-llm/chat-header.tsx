@@ -1,17 +1,10 @@
 "use client";
 
-import { Brain, ChevronDown } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
+import { Brain } from "lucide-react";
+import { Badge } from "@/components/ui/badge" 
 import { SidebarTrigger } from "@/components/ui/sidebar";
-
 import type { Chat } from "@/app/berich-llm/page";
-//%28berich-llm%29
+
 
 interface ChatHeaderProps {
   selectedModel: string;
@@ -52,33 +45,7 @@ export function ChatHeader({ selectedModel, onModelChange }: ChatHeaderProps) {
       </div>
 
       <div className="flex items-center gap-3">
-        <DropdownMenu modal={false}>
-          <DropdownMenuTrigger asChild>
-            <Button variant="outline" className="gap-2">
-              {currentModel?.name || selectedModel}
-              <ChevronDown className="h-4 w-4" />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="w-64">
-            {models.map((model) => (
-              <DropdownMenuItem
-                key={model.id}
-                onClick={() => onModelChange(model.id)}
-                className="flex flex-col items-start gap-1 p-3"
-              >
-                <div className="flex items-center gap-2">
-                  <span className="font-medium">{model.name}</span>
-                  {selectedModel === model.id && (
-                    <div className="h-2 w-2 rounded-full bg-green-500" />
-                  )}
-                </div>
-                <span className="text-xs text-muted-foreground">
-                  {model.description}
-                </span>
-              </DropdownMenuItem>
-            ))}
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <Badge variant="outline">Gemini 2.5 Pro with RAGs</Badge>
       </div>
     </header>
   );
