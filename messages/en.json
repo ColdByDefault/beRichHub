@@ -77,7 +77,7 @@
         "docs": {
             "item1": {
                 "title": "Roadmaps",
-                "href": "/",
+                "href": "/roadmaps",
                 "description": "Collection of roadmaps to help you navigate your learning journey in software development."
             },
             "item2": {
@@ -105,5 +105,114 @@
         "moreAbout": "Mehr über mich",
         "resources": "Resources",
         "allRights": "All rights reserved"
+    },
+    "RoadmapItems": {
+        "sections": {
+            "1": {
+            "id": 1,
+            "title": "Fundamentals",
+            "description": "Master the basics of programming",
+            "steps": {
+                "0": "Learn a beginner-friendly language (Python or JavaScript)",
+                "1": "Understand variables, data types, and operators",
+                "2": "Master control structures (if/else, loops)",
+                "3": "Learn functions and basic data structures",
+                "4": "Practice problem-solving with simple exercises"
+            }
+            },
+            "2": {
+            "id": 2,
+            "title": "Web Development Basics",
+            "description": "Build your first websites",
+            "steps": {
+                "0": "Learn HTML for structure",
+                "1": "Learn CSS for styling",
+                "2": "Understand responsive design principles",
+                "3": "Introduction to JavaScript for interactivity",
+                "4": "Build simple static websites"
+            }
+            },
+            "3": {
+            "id": 3,
+            "title": "Version Control",
+            "description": "Track and manage your code",
+            "steps": {
+                "0": "Learn Git basics (commit, push, pull)",
+                "1": "Create a GitHub account",
+                "2": "Understand branching and merging",
+                "3": "Collaborate on projects with others",
+                "4": "Create your first repository"
+            }
+            },
+            "4": {
+            "id": 4,
+            "title": "Frontend Development",
+            "description": "Create interactive user interfaces",
+            "steps": {
+                "0": "Learn a frontend framework (React, Vue, or Angular)",
+                "1": "Understand component-based architecture",
+                "2": "Master state management",
+                "3": "Learn about API integration",
+                "4": "Build interactive web applications"
+            }
+            },
+            "5": {
+            "id": 5,
+            "title": "Backend Development",
+            "description": "Build server-side applications",
+            "steps": {
+                "0": "Learn a backend language/framework (Node.js, Python/Django, etc.)",
+                "1": "Understand databases (SQL and NoSQL)",
+                "2": "Create RESTful APIs",
+                "3": "Implement authentication and authorization"
+            }
+            },
+            "6": {
+            "id": 6,
+            "title": "Advanced Topics",
+            "description": "Specialize and grow your skills",
+            "steps": {}
+            }
+        },
+        "paths": {
+            "web": {
+                "title": "Web Development",
+                "description":"Build websites and web applications that run in browsers"
+            },
+            "mobile": {
+                "title": "Web Development",
+                "description":"Create apps for iOS and Android devices"
+            },
+            "backend": {
+                "title": "Web Development",
+                "description":"Build server-side applications and APIs"
+            }
+        },
+        "faqs": {
+            "faq1":   {
+                "question": "Do I need a computer science degree to become a programmer?",
+                "answer": "No, you don't need a computer science degree to become a programmer. While a degree can provide a structured education and may help with certain job opportunities, many successful developers are self-taught. What matters most is your skills, portfolio, and ability to solve problems."
+            },
+            "faq2":   {
+                "question": "Which programming language should I learn first?",
+                "answer": "Python and JavaScript are excellent choices for beginners. Python is known for its readability and simplicity, making it great for learning programming concepts. JavaScript is the language of the web and allows you to build interactive websites right away. Choose based on your interests: Python for general programming, data science, or backend; JavaScript for web development."
+            },
+            "faq3":   {
+                "question": "How long does it take to learn programming?",
+                "answer": "Learning programming is a continuous journey. You can learn the basics in a few weeks to a couple of months. Becoming job-ready typically takes 6-12 months of consistent practice. Mastery is an ongoing process that takes years. The key is consistent practice and building projects."
+            },
+            "faq4":   {
+                "question": "What kind of computer do I need for programming?",
+                "answer": "For beginners, any modern computer (less than 5 years old) with at least 8GB of RAM should be sufficient. You don't need an expensive setup to start learning. As you progress to more complex projects or specific fields like game development or machine learning, you might need more powerful hardware."
+            },
+            "faq5":   {
+                "question": "How do I build a portfolio as a beginner?",
+                "answer": "Start by completing tutorials and then modify those projects to make them your own. Then, build projects that solve real problems you or others face. Create a personal website to showcase your work. Contribute to open-source projects. Document your learning journey through a blog or GitHub. Quality matters more than quantity—a few well-crafted projects are better than many incomplete ones."
+            },
+            "faq6":   {
+                "question": "Is programming hard to learn?",
+                "answer": "Programming has a learning curve, but it's accessible with the right approach. It requires logical thinking and problem-solving skills rather than advanced math. The key is to be patient, persistent, and practice regularly. Break down complex problems into smaller parts, and don't be afraid to make mistakes—they're part of the learning process."
+            }
+        }
     }
 }

@@ -76,7 +76,7 @@
     "docs": {
       "item1": {
         "title": "Färdplaner",
-        "href": "/",
+        "href": "/roadmaps",
         "description": "Samlade färdplaner för att hjälpa dig navigera din inlärningsresa inom mjukvaruutveckling."
       },
       "item2": {
@@ -104,5 +104,114 @@
     "moreAbout": "Mer om mig",
     "resources": "Resurser",
     "allRights": "Alla rättigheter förbehållna"
+  },
+  "RoadmapItems": {
+     "sections": {
+        "1": {
+          "id": 1,
+          "title": "Grunderna",
+          "description": "Bemästra grunderna i programmering",
+          "steps": {
+            "0": "Lär dig ett nybörjarvänligt språk (Python eller JavaScript)",
+            "1": "Förstå variabler, datatyper och operatorer",
+            "2": "Bemästra styrstrukturer (if/else, loopar)",
+            "3": "Lär dig funktioner och grundläggande datastrukturer",
+            "4": "Öva problemlösning med enkla övningar"
+          }
+        },
+        "2": {
+          "id": 2,
+          "title": "Grundläggande webbutveckling",
+          "description": "Bygg dina första webbplatser",
+          "steps": {
+            "0": "Lär dig HTML för struktur",
+            "1": "Lär dig CSS för styling",
+            "2": "Förstå principer för responsiv design",
+            "3": "Introduktion till JavaScript för interaktivitet",
+            "4": "Bygg enkla statiska webbplatser"
+          }
+        },
+        "3": {
+          "id": 3,
+          "title": "Versionskontroll",
+          "description": "Spåra och hantera din kod",
+          "steps": {
+            "0": "Lär dig Git-grunder (commit, push, pull)",
+            "1": "Skapa ett GitHub-konto",
+            "2": "Förstå branching och merging",
+            "3": "Samarbeta i projekt med andra",
+            "4": "Skapa ditt första repository"
+          }
+        },
+        "4": {
+          "id": 4,
+          "title": "Frontend-utveckling",
+          "description": "Skapa interaktiva användargränssnitt",
+          "steps": {
+            "0": "Lär dig ett frontend-ramverk (React, Vue eller Angular)",
+            "1": "Förstå komponentbaserad arkitektur",
+            "2": "Bemästra tillståndshantering",
+            "3": "Lär dig om API-integration",
+            "4": "Bygg interaktiva webbapplikationer"
+          }
+        },
+        "5": {
+          "id": 5,
+          "title": "Backend-utveckling",
+          "description": "Bygg serverbaserade applikationer",
+          "steps": {
+            "0": "Lär dig ett backend-språk/framework (Node.js, Python/Django etc.)",
+            "1": "Förstå databaser (SQL och NoSQL)",
+            "2": "Skapa RESTful-APIs",
+            "3": "Implementera autentisering och auktorisation"
+          }
+        },
+        "6": {
+          "id": 6,
+          "title": "Avancerade ämnen",
+          "description": "Specialisera dig och utveckla dina färdigheter",
+          "steps": {}
+        }
+    },
+    "paths": {
+      "web": {
+        "title": "Webbutveckling",
+        "description": "Bygg webbplatser och webbapplikationer som körs i webbläsare"
+      },
+      "mobile": {
+        "title": "Mobilutveckling",
+        "description": "Skapa appar för iOS- och Android-enheter"
+      },
+      "backend": {
+        "title": "Backendutveckling",
+        "description": "Bygg serverbaserade applikationer och API:er"
+      }
+    },
+    "faqs": {
+      "faq1": {
+        "question": "Behöver jag en examen i datavetenskap för att bli programmerare?",
+        "answer": "Nej, du behöver ingen examen i datavetenskap för att bli programmerare. En examen kan ge en strukturerad utbildning och underlätta vissa jobbmöjligheter, men många framgångsrika utvecklare är självlärda. Det viktigaste är dina färdigheter, din portfölj och din förmåga att lösa problem."
+      },
+      "faq2": {
+        "question": "Vilket programspråk bör jag lära mig först?",
+        "answer": "Python och JavaScript är utmärkta val för nybörjare. Python är känt för sin läsbarhet och enkelhet, vilket gör det perfekt för att lära sig programmeringskoncept. JavaScript är webbspråket och låter dig bygga interaktiva webbplatser direkt. Välj efter dina intressen: Python för allmän programmering, data science eller backend; JavaScript för webbutveckling."
+      },
+      "faq3": {
+        "question": "Hur lång tid tar det att lära sig programmera?",
+        "answer": "Att lära sig programmera är en kontinuerlig resa. Du kan lära dig grunderna på några veckor till ett par månader. Att bli arbetsklar tar vanligtvis 6–12 månader med konsekvent övning. Mästerskap är en pågående process som tar år. Nyckeln är konsekvent övning och projektbyggande."
+      },
+      "faq4": {
+        "question": "Vilken typ av dator behöver jag för att programmera?",
+        "answer": "För nybörjare räcker vilken modern dator som helst (mindre än 5 år gammal) med minst 8 GB RAM. Du behöver ingen dyr utrustning för att börja. När du går vidare till mer komplexa projekt eller specifika områden som spelutveckling eller maskininlärning kan du behöva kraftfullare hårdvara."
+      },
+      "faq5": {
+        "question": "Hur bygger jag en portfölj som nybörjare?",
+        "answer": "Börja med att genomföra handledningar och modifiera projekten för att göra dem till dina egna. Bygg sedan projekt som löser verkliga problem. Skapa en personlig webbplats för att visa upp ditt arbete. Bidra till open source-projekt. Dokumentera din inlärningsresa via en blogg eller GitHub. Kvalitet är viktigare än kvantitet: några välgenomtänkta projekt är bättre än många ofullständiga."
+      },
+      "faq6": {
+        "question": "Är det svårt att lära sig programmera?",
+        "answer": "Programmering har en inlärningskurva men är tillgänglig med rätt tillvägagångssätt. Det kräver logiskt tänkande och problemlösningsförmåga mer än avancerad matematik. Nyckeln är tålamod, uthållighet och regelbunden övning. Dela upp komplexa problem i mindre delar och var inte rädd för misstag – de är en del av lärandet."
+      }
+    }
   }
 }

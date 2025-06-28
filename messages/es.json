@@ -76,7 +76,7 @@
     "docs": {
       "item1": {
         "title": "Hojas de ruta",
-        "href": "/",
+        "href": "/roadmaps",
         "description": "Colección de hojas de ruta para ayudarte a navegar tu trayectoria de aprendizaje en desarrollo de software."
       },
       "item2": {
@@ -104,5 +104,114 @@
     "moreAbout": "Más sobre mí",
     "resources": "Recursos",
     "allRights": "Todos los derechos reservados"
+  },
+  "RoadmapItems": {
+      "sections": {
+        "1": {
+          "id": 1,
+          "title": "Fundamentos",
+          "description": "Domina los fundamentos de la programación",
+          "steps": {
+            "0": "Aprende un lenguaje amigable para principiantes (Python o JavaScript)",
+            "1": "Comprende variables, tipos de datos y operadores",
+            "2": "Domina estructuras de control (if/else, bucles)",
+            "3": "Aprende funciones y estructuras de datos básicas",
+            "4": "Practica la resolución de problemas con ejercicios sencillos"
+          }
+        },
+        "2": {
+          "id": 2,
+          "title": "Conceptos básicos de desarrollo web",
+          "description": "Construye tus primeros sitios web",
+          "steps": {
+            "0": "Aprende HTML para la estructura",
+            "1": "Aprende CSS para el estilo",
+            "2": "Comprende los principios del diseño responsivo",
+            "3": "Introducción a JavaScript para interactividad",
+            "4": "Construye sitios web estáticos sencillos"
+          }
+        },
+        "3": {
+          "id": 3,
+          "title": "Control de versiones",
+          "description": "Rastrea y gestiona tu código",
+          "steps": {
+            "0": "Aprende los conceptos básicos de Git (commit, push, pull)",
+            "1": "Crea una cuenta en GitHub",
+            "2": "Comprende ramas y fusiones",
+            "3": "Colabora en proyectos con otros",
+            "4": "Crea tu primer repositorio"
+          }
+        },
+        "4": {
+          "id": 4,
+          "title": "Desarrollo Frontend",
+          "description": "Crea interfaces de usuario interactivas",
+          "steps": {
+            "0": "Aprende un framework frontend (React, Vue o Angular)",
+            "1": "Comprende la arquitectura basada en componentes",
+            "2": "Domina la gestión del estado",
+            "3": "Aprende sobre integración de API",
+            "4": "Construye aplicaciones web interactivas"
+          }
+        },
+        "5": {
+          "id": 5,
+          "title": "Desarrollo Backend",
+          "description": "Construye aplicaciones del lado del servidor",
+          "steps": {
+            "0": "Aprende un lenguaje o framework backend (Node.js, Python/Django, etc.)",
+            "1": "Comprende bases de datos (SQL y NoSQL)",
+            "2": "Crea APIs RESTful",
+            "3": "Implementa autenticación y autorización"
+          }
+        },
+        "6": {
+          "id": 6,
+          "title": "Temas avanzados",
+          "description": "Especialízate y desarrolla tus habilidades",
+          "steps": {}
+        }
+      },
+      "paths": {
+        "web": {
+          "title": "Desarrollo webDesarrollo web",
+          "description": "Construye sitios web y aplicaciones web que se ejecutan en navegadores"
+        },
+        "mobile": {
+          "title": "Desarrollo móvil",
+          "description": "Crea aplicaciones para dispositivos iOS y Android"
+        },
+        "backend": {
+          "title": "Desarrollo backend",
+          "description": "Construye aplicaciones y API del lado del servidor"
+        }
+      },
+      "faqs": {
+        "faq1": {
+          "question": "¿Necesito un título en informática para ser programador?",
+          "answer": "No necesitas un título en informática para ser programador. Aunque un título puede proporcionar una educación estructurada y facilitar algunas oportunidades laborales, muchos desarrolladores exitosos son autodidactas. Lo que importa es tus habilidades, tu portafolio y tu capacidad para resolver problemas."
+        },
+        "faq2": {
+          "question": "¿Qué lenguaje de programación debería aprender primero?",
+          "answer": "Python y JavaScript son excelentes opciones para principiantes. Python es conocido por su legibilidad y simplicidad, ideal para aprender conceptos de programación. JavaScript es el lenguaje de la web y te permite crear sitios interactivos de inmediato. Elige según tus intereses: Python para programación general, ciencia de datos o backend; JavaScript para desarrollo web."
+        },
+        "faq3": {
+          "question": "¿Cuánto tiempo se tarda en aprender a programar?",
+          "answer": "Aprender a programar es un viaje continuo. Puedes aprender lo básico en unas semanas o un par de meses. Estar listo para el trabajo suele llevar de 6 a 12 meses de práctica constante. La maestría es un proceso de años. La clave es la práctica constante y la realización de proyectos."
+        },
+        "faq4": {
+          "question": "¿Qué tipo de computadora necesito para programar?",
+          "answer": "Para principiantes, cualquier computadora moderna (menos de 5 años) con al menos 8 GB de RAM es suficiente. No necesitas un equipo caro para empezar. A medida que avances a proyectos más complejos o campos específicos como desarrollo de juegos o aprendizaje automático, podrías necesitar hardware más potente."
+        },
+        "faq5": {
+          "question": "¿Cómo construyo un portafolio siendo principiante?",
+          "answer": "Comienza completando tutoriales y luego modifica esos proyectos para hacerlos tuyos. Después, crea proyectos que resuelvan problemas reales que enfrentes tú o los demás. Crea un sitio web personal para mostrar tu trabajo. Contribuye a proyectos de código abierto. Documenta tu trayectoria en un blog o GitHub. La calidad importa más que la cantidad: pocos proyectos bien realizados son mejores que muchos incompletos."
+        },
+        "faq6": {
+          "question": "¿Es difícil aprender a programar?",
+          "answer": "Programar tiene una curva de aprendizaje, pero es accesible con el enfoque adecuado. Requiere pensamiento lógico y habilidades de resolución de problemas más que matemáticas avanzadas. La clave es ser paciente, persistente y practicar regularmente. Divide problemas complejos en partes más pequeñas y no temas cometer errores: son parte del proceso de aprendizaje."
+        }
+      }
   }
 }

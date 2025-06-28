@@ -76,7 +76,7 @@
     "docs": {
       "item1": {
         "title": "Fahrpläne",
-        "href": "/",
+        "href": "/roadmaps",
         "description": "Sammlung von Fahrplänen, die dir helfen, deine Lernreise in der Softwareentwicklung zu navigieren."
       },
       "item2": {
@@ -104,5 +104,114 @@
     "moreAbout": "Mehr über mich",
     "resources": "Ressourcen",
     "allRights": "Alle Rechte vorbehalten"
+  },
+  "RoadmapItems": {
+    "sections": {
+      "1": {
+        "id": 1,
+        "title": "Grundlagen",
+        "description": "Beherrsche die Grundlagen der Programmierung",
+        "steps": {
+          "0": "Lerne eine anfängerfreundliche Sprache (Python oder JavaScript)",
+          "1": "Verstehe Variablen, Datentypen und Operatoren",
+          "2": "Beherrsche Kontrollstrukturen (if/else, Schleifen)",
+          "3": "Lerne Funktionen und grundlegende Datenstrukturen",
+          "4": "Übe Problemlösung mit einfachen Übungen"
+        }
+      },
+      "2": {
+        "id": 2,
+        "title": "Grundlagen der Webentwicklung",
+        "description": "Erstelle deine ersten Websites",
+        "steps": {
+          "0": "Lerne HTML für die Struktur",
+          "1": "Lerne CSS für das Styling",
+          "2": "Verstehe Prinzipien des responsiven Designs",
+          "3": "Einführung in JavaScript für Interaktivität",
+          "4": "Erstelle einfache statische Websites"
+        }
+      },
+      "3": {
+        "id": 3,
+        "title": "Versionskontrolle",
+        "description": "Verfolge und verwalte deinen Code",
+        "steps": {
+          "0": "Lerne Git-Grundlagen (commit, push, pull)",
+          "1": "Erstelle ein GitHub-Konto",
+          "2": "Verstehe Branching und Merging",
+          "3": "Arbeite mit anderen an Projekten zusammen",
+          "4": "Erstelle dein erstes Repository"
+        }
+      },
+      "4": {
+        "id": 4,
+        "title": "Frontend-Entwicklung",
+        "description": "Erstelle interaktive Benutzeroberflächen",
+        "steps": {
+          "0": "Lerne ein Frontend-Framework (React, Vue oder Angular)",
+          "1": "Verstehe komponentenbasierte Architektur",
+          "2": "Beherrsche das Zustandsmanagement",
+          "3": "Lerne über API-Integration",
+          "4": "Erstelle interaktive Webanwendungen"
+        }
+      },
+      "5": {
+        "id": 5,
+        "title": "Backend-Entwicklung",
+        "description": "Erstelle serverseitige Anwendungen",
+        "steps": {
+          "0": "Lerne eine Backend-Sprache/-Framework (Node.js, Python/Django etc.)",
+          "1": "Verstehe Datenbanken (SQL und NoSQL)",
+          "2": "Erstelle RESTful-APIs",
+          "3": "Implementiere Authentifizierung und Autorisierung"
+        }
+      },
+      "6": {
+        "id": 6,
+        "title": "Fortgeschrittene Themen",
+        "description": "Spezialisiere dich und erweitere deine Fähigkeiten",
+        "steps": {}
+      }
+    },
+    "paths": {
+      "web": {
+        "title": "Webentwicklung",
+        "description": "Erstelle Websites und Webanwendungen, die in Browsern laufen"
+      },
+      "mobile": {
+        "title": "Mobile-App-Entwicklung",
+        "description": "Erstelle Apps für iOS- und Android-Geräte"
+      },
+      "backend": {
+        "title": "Backend-Entwicklung",
+        "description": "Erstelle serverseitige Anwendungen und APIs"
+      }
+    },
+    "faqs": {
+      "faq1": {
+        "question": "Brauche ich einen Informatik-Abschluss, um Programmierer zu werden?",
+        "answer": "Nein, du brauchst keinen Informatik-Abschluss, um Programmierer zu werden. Ein Abschluss kann eine strukturierte Ausbildung bieten und bei bestimmten Jobmöglichkeiten helfen, aber viele erfolgreiche Entwickler sind Autodidakten. Wichtiger sind deine Fähigkeiten, dein Portfolio und deine Problemlösungskompetenz."
+      },
+      "faq2": {
+        "question": "Welche Programmiersprache sollte ich zuerst lernen?",
+        "answer": "Python und JavaScript sind ausgezeichnete Optionen für Anfänger. Python ist bekannt für Lesbarkeit und Einfachheit und eignet sich gut zum Erlernen von Programmierkonzepten. JavaScript ist die Sprache des Webs und ermöglicht dir, interaktive Webseiten sofort zu erstellen. Wähle je nach Interesse: Python für allgemeine Programmierung, Data Science oder Backend; JavaScript für Webentwicklung."
+      },
+      "faq3": {
+        "question": "Wie lange dauert es, Programmieren zu lernen?",
+        "answer": "Programmieren zu lernen ist eine kontinuierliche Reise. Die Grundlagen kannst du in wenigen Wochen bis Monaten erlernen. Um jobbereit zu sein, braucht man typischerweise 6–12 Monate konsequenter Praxis. Meisterschaft ist ein langjähriger Prozess. Der Schlüssel ist kontinuierliche Übung und Projektarbeit."
+      },
+      "faq4": {
+        "question": "Welche Art von Computer brauche ich zum Programmieren?",
+        "answer": "Für Anfänger reicht jeder moderne Computer (weniger als 5 Jahre alt) mit mindestens 8 GB RAM. Du brauchst keine teure Ausstattung, um anzufangen. Bei komplexeren Projekten oder spezifischen Bereichen wie Spieleentwicklung oder maschinellem Lernen kann leistungsfähigere Hardware nötig sein."
+      },
+      "faq5": {
+        "question": "Wie baue ich als Anfänger ein Portfolio auf?",
+        "answer": "Beginne mit Tutorials und passe die Projekte anschließend an, um sie zu deinem eigenen zu machen. Erstelle dann Projekte, die reale Probleme lösen. Lege eine persönliche Website an, um deine Arbeit zu präsentieren. Trage zu Open-Source-Projekten bei. Dokumentiere deinen Lernweg in einem Blog oder auf GitHub. Qualität geht vor Quantität: Wenige gut durchdachte Projekte sind besser als viele unvollständige."
+      },
+      "faq6": {
+        "question": "Ist es schwer, Programmieren zu lernen?",
+        "answer": "Programmieren hat eine Lernkurve, ist aber mit der richtigen Herangehensweise zugänglich. Es erfordert logisches Denken und Problemlösungsfähigkeiten eher als fortgeschrittene Mathematik. Der Schlüssel ist Geduld, Beharrlichkeit und regelmäßiges Üben. Zerlege komplexe Probleme in kleinere Teile und hab keine Angst vor Fehlern – sie sind Teil des Lernprozesses."
+      }
+    }
   }
 }

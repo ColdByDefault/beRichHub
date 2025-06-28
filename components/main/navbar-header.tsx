@@ -14,12 +14,11 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-const docKeys = ["item1", "item2"] as const;
+const docKeys = ["item1"] as const;
 
 export function NavbarHeader() {
   const t = useTranslations("Navbar");
 
-  // Build docs data via dotted paths—no objects in JSON leaves
   const docsData = docKeys.map((key) => ({
     title: t(`docs.${key}.title`),
     href: t(`docs.${key}.href`),
