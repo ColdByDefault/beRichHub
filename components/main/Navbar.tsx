@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: LicenseRef-BRH-1.0
 import Link from "next/link";
 import { ModeToggle } from "@/components/toggles/toggle-mode";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";

@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: LicenseRef-BRH-1.0
 import type React from "react";
 import type { Metadata } from "next";
 

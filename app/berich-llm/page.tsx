@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: LicenseRef-BRH-1.0
 "use client";
 import { useState, useEffect } from "react";
 import { useChat } from "@ai-sdk/react";
@@ -18,7 +19,6 @@ export interface Chat {
 function ChatPage() {
   const [chats, setChats] = useState<Chat[]>([]);
   const [currentChatId, setCurrentChatId] = useState<string | null>(null);
-
 
   const currentChat = chats.find((chat) => chat.id === currentChatId);
 
@@ -92,7 +92,7 @@ function ChatPage() {
           onDeleteChat={deleteChat}
         />
         <SidebarInset className="flex flex-col">
-          <ChatHeader/>
+          <ChatHeader />
           <ChatInterface
             messages={messages}
             input={input}

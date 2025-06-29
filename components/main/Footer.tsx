@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: LicenseRef-BRH-1.0
 "use client";
 import Link from "next/link";
 import { FaGithub, FaSquareXTwitter } from "react-icons/fa6";

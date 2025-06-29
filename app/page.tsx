@@ -1,3 +1,12 @@
+// SPDX-License-Identifier: LicenseRef-BRH-1.0
+/**
+ * The main home page component for the application.
+ *
+ * Renders the animated background, the landing hero section, and the timeline/history section.
+ *
+ * @returns {JSX.Element} The rendered home page.
+ */
+//
 import { Background } from "@/components/motions/motion-background";
 import BeRichHome from "@/components/landing/Hero";
 import { Timeline } from "@/components/landing/History";

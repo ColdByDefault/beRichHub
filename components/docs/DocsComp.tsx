@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: LicenseRef-BRH-1.0
 "use client";
 
 import type React from "react";

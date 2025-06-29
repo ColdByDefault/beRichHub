@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: LicenseRef-BRH-1.0
 /* OPEN AI */
 /* import { openai } from "@ai-sdk/openai";
 import { streamText } from "ai";
@@ -16,7 +17,6 @@ export async function POST(req: Request) {
   return result.toDataStreamResponse();
 } */
 
-
 import { google } from "@ai-sdk/google";
 import { streamText } from "ai";
 
@@ -29,8 +29,7 @@ export async function POST(req: Request) {
   const result = streamText({
     model: google("gemini-2.0-flash-exp"),
     messages,
-    system: 
-`You are an AI assistant specialized exclusively in software engineering and development. 
+    system: `You are an AI assistant specialized exclusively in software engineering and development. 
 You should: Answer only questions directly related to software development: programming languages, frameworks, architecture, DevOps, testing, security, databases, algorithms, performance, tooling, best practices, code review, debugging, and related topics.  
 • If asked about anything else—sports, news, weather, politics, entertainment, personal advice, etc.—respond with:
 “I amm sorry, but I can only answer questions about software development.”
@@ -45,4 +44,3 @@ Always keep your focus on development—no digressions.
 
   return result.toDataStreamResponse();
 }
-  

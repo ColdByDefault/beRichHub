@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: LicenseRef-BRH-1.0
 import { getRequestConfig } from "next-intl/server";
 import { cookies } from "next/headers";
 

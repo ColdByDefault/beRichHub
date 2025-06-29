@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: LicenseRef-BRH-1.0
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { ProfileCard } from "@/components/profile/profile-card";
 import { BlogForm } from "@/components/profile/BlogForm";
@@ -6,9 +7,8 @@ import { BlogList } from "@/components/profile/BlogList";
 export default async function Dashboard() {
   const { getUser, getClaim } = getKindeServerSession();
   const user = await getUser();
-  const rolesClaim = await getClaim("roles"); 
+  const rolesClaim = await getClaim("roles");
 
-  
   const rolesArray = Array.isArray(rolesClaim?.value)
     ? // map each element to its name (or whatever field holds the string)
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -49,5 +49,3 @@ export default async function Dashboard() {
     </div>
   );
 }
-
-

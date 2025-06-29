@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: LicenseRef-BRH-1.0
 export const items = [
   [
     "Learn a beginner-friendly language (Python or JavaScript)",

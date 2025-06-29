@@ -1,3 +1,27 @@
+// SPDX-License-Identifier: LicenseRef-BRH-1.0
+/**
+ * ColdByDefault www.coldbydefault.com
+ * <!-- Leve Palestina -->
+ * Root layout component for the beRich-Hub Next.js application.
+ *
+ * This component sets up the global HTML structure, metadata, font, and providers for the app.
+ * It includes:
+ * - Global metadata for SEO and social sharing.
+ * - Urbanist Google font integration.
+ * - Internationalization support using NextIntlClientProvider.
+ * - Theme and context providers.
+ * - Persistent Navbar and Footer components.
+ * - Vercel Analytics integration.
+ *
+ * @param children - The React node(s) to be rendered within the layout.
+ * @returns The root HTML structure with global providers and layout components.
+ *
+ * @remarks
+ * - The layout dynamically sets the language and locale based on server-side detection.
+ * - Includes structured data (JSON-LD) for organization schema.
+ * - Applies global CSS and animated loader class to the body.
+ */
+//
 import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "@/components/themes/providers";
@@ -21,9 +45,6 @@ const urbanist = Urbanist({
 export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  //const defaultLang = 'en';
-  //const alternateLang = 'de';
-
   const messages = await getMessages();
   const locale = await getLocale();
 

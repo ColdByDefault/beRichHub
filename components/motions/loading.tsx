@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: LicenseRef-BRH-1.0
 import { Progress } from "@/components/ui/progress";
 import { CheckCircle } from "lucide-react";
 

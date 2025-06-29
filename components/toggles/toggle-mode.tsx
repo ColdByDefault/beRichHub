@@ -1,4 +1,5 @@
-// components/ModeToggle.tsx
+// SPDX-License-Identifier: LicenseRef-BRH-1.0
+
 "use client";
 
 import * as React from "react";

@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: LicenseRef-BRH-1.0
 "use client";
 
 import type React from "react";
@@ -13,7 +14,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-  CardFooter
+  CardFooter,
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 
@@ -99,7 +100,9 @@ export function BlogForm() {
             </div>
           </div>
           <CardFooter className="pt-4">
-            <Button type="submit" variant="outline">Post</Button>
+            <Button type="submit" variant="outline">
+              Post
+            </Button>
           </CardFooter>
         </form>
       </CardContent>

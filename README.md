@@ -3,26 +3,33 @@
 v.5.2.1 
 [![wakatime](https://wakatime.com/badge/user/c4621892-41e0-4c29-a8bc-05597d124f63/project/54a8cd7c-b451-4676-8695-4e701a4bda69.svg)](https://wakatime.com/badge/user/c4621892-41e0-4c29-a8bc-05597d124f63/project/54a8cd7c-b451-4676-8695-4e701a4bda69)
 
-beRichHub is a web platform that provides personalized learning roadmaps and curated resources to help developers reach their goals faster. It is built with Next.js and TypeScript, uses Tailwind CSS for styling, Drizzle ORM for database access, and Kinde for authentication.
+BeRichHub is an open-source web platform that helps developers track their learning journey. The application provides personalized roadmaps, curated documentation, and progress tracking so you can reach your goals faster. It is built with **Next.js** and **TypeScript**, styled with **Tailwind CSS**, and uses **Prisma** with PostgreSQL for data persistence. Authentication is handled via **Kinde**.
 
 ## Features
 
-- **Personalized roadmaps** tailored to each user's experience and interests
-- **Curated documentation** and tutorials collected in a searchable library
-- **Progress tracking** so learners can monitor their achievements
+- **Personalized roadmaps** based on your experience and interests
+- **Curated tutorials** and documentation in a searchable library
+- **Progress tracking** to keep an eye on your achievements
 - **Authentication** powered by [Kinde](https://kinde.com)
-- **Responsive UI** built with the Radix UI component library and Tailwind CSS
+- **Responsive UI** built on Radix UI and Tailwind CSS
+
+## Repository Contents
+
+- `app` – Next.js application routes and pages
+- `components` – Reusable React components
+- `data` – Static data such as the roadmaps
+- `hooks` – Custom React hooks used throughout the app
+- `lib` – Utility functions and configuration helpers
+- `prisma` – Prisma schema for the PostgreSQL database
+- `public` – Static assets served by Next.js
 
 ## Tech Stack
 
 - [Next.js](https://nextjs.org/) 15 with the App Router
 - [React](https://react.dev/) and TypeScript
-- [Tailwind CSS](https://tailwindcss.com/) for styling
-- [Prisma ORM](https://www.prisma.io/) and PostgreSQL
-- [Kinde](https://kinde.com) for auth
-
-
-See [`db/README.md`](db/README.md) for details on setting up the database and running migrations.
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Prisma ORM](https://www.prisma.io/) with PostgreSQL
+- [Kinde](https://kinde.com) for authentication
 
 ## Getting Started
 
@@ -32,9 +39,7 @@ See [`db/README.md`](db/README.md) for details on setting up the database and ru
 npm install
 ```
 
-2. **Create `.env.local`**
-
-Define the following environment variables:
+2. **Create a `.env.local` file** with the following environment variables:
 
 ```
 DATABASE_URL=postgres://user:password@host:port/db
@@ -42,6 +47,18 @@ KINDE_ISSUER_URL=<your-kinde-issuer>
 KINDE_MANAGEMENT_CLIENT_ID=<kinde-management-client-id>
 KINDE_MANAGEMENT_CLIENT_SECRET=<kinde-management-client-secret>
 ```
+
+3. **Run the development server**
+
+```bash
+npm run dev
+```
+
+For database setup and migrations see the files under `prisma/`.
+
+## License
+
+BeRichHub is open source and distributed under the terms of the modified [LicenseRef-BRH-1.0](LICENSE).
 
 
 
