@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
@@ -105,6 +104,7 @@ export function ProfileCard({ user }: ProfileCardProps) {
       await refreshData();
       router.refresh();
       setTimeout(() => setMessage(null), 3000);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       setMessage({
         type: "error",
@@ -327,8 +327,8 @@ export function ProfileCard({ user }: ProfileCardProps) {
             </div>
             <div className="space-y-1">
               <p className="text-sm font-medium">Your Bio</p>
-              <Badge variant="default" className="font-mono">
-                {formData.bio || "—"}
+              <Badge variant="outline" className="font-mono">
+                {formData.bio || "add Bio"}
               </Badge>
             </div>
           </div>

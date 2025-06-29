@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "all": "npm run lint && npm run build && npm run start"
+    "all": "npm run lint && npm run build && npm run start",
+    "postinstall": "prisma generate && prisma migrate deploy"
   },
   "dependencies": {
     "@ai-sdk/google": "^1.2.19",

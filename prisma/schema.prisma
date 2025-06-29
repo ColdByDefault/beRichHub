@@ -10,12 +10,24 @@ datasource db {
 
 
 model User {
-  id         String  @id @default(cuid())
-
-  kindeId    String  @unique
+  id         String   @id @default(cuid())
+  kindeId    String   @unique
   givenName  String
   familyName String
-  email      String  @unique
+  email      String   @unique
+  bio        String?  @db.VarChar(150)
 
-  bio        String? @db.VarChar(150)
+  posts      Post[]   @relation("UserPosts")
+}
+
+model Post {
+  id         String   @id @default(cuid())
+  user       User     @relation("UserPosts", fields: [userId], references: [id])
+  userId     String
+  title      String
+  content    String   @db.VarChar(500)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([userId])
 }
