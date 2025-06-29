@@ -172,12 +172,8 @@ export function ProfileCard({ user }: ProfileCardProps) {
                   <UserCheck className="h-3 w-3 text-green-400" /> Verified User
                 </Badge>
                 <Badge variant="secondary" className="flex items-center gap-1">
-                  <UserCheck className="h-3 w-3 text-green-400" />
+                  <UserCheck className="h-3 w-3 text-blue-400" />
                   {formData.roles || "no role"}
-                </Badge>
-                <Badge variant="outline" className="flex items-center gap-1">
-                  <User className="h-3 w-3" /> {formData.given_name}{" "}
-                  {formData.family_name}
                 </Badge>
               </div>
             </div>

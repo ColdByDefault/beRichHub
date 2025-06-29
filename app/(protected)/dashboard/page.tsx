@@ -7,8 +7,17 @@ export default async function Dashboard() {
   const { getUser, getClaim } = getKindeServerSession();
   const user = await getUser();
   const rolesClaim = await getClaim("roles"); 
+
+  
   const rolesArray = Array.isArray(rolesClaim?.value)
-    ? rolesClaim.value
+    ? // map each element to its name (or whatever field holds the string)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      rolesClaim.value.map((r: any) =>
+        typeof r === "string"
+          ? r
+          : // adjust `r.name` to the property your backend actually uses
+            r.name ?? r.role ?? JSON.stringify(r)
+      )
     : typeof rolesClaim?.value === "string"
     ? [rolesClaim.value]
     : [];
