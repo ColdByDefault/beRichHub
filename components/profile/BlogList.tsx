@@ -39,6 +39,17 @@ export function BlogList() {
     load();
   }, []);
 
+  useEffect(() => {
+      load();
+  
+      // whenever a new post is created elsewhere, re-fetch
+      const onAdded = () => load();
+      window.addEventListener("postAdded", onAdded);
+      return () => {
+        window.removeEventListener("postAdded", onAdded);
+      };
+  }, []);
+
   const handleDelete = async (id: string) => {
     if (!confirm("Delete this post?")) return;
     try {
@@ -46,6 +57,7 @@ export function BlogList() {
       if (!res.ok) throw new Error("Delete failed.");
       // Refresh list
       await load();
+      load();
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       setError(err.message);
@@ -57,22 +69,21 @@ export function BlogList() {
   }
 
   return (
-    <div className="space-y-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-12">
       {posts.map((post) => (
-        <Card key={post.id}>
-          <CardHeader className="flex justify-between items-center">
+        <Card key={post.id} className="flex flex-col h-full">
+          <CardHeader>
             <CardTitle>{post.title}</CardTitle>
-            <time className="text-xs text-muted-foreground">
+            <time className="text-xs">
               {new Date(post.createdAt).toLocaleString()}
             </time>
           </CardHeader>
           <CardContent>{post.content}</CardContent>
           <CardFooter>
             <Button
-              variant="destructive"
+              variant="ghost"
               size="sm"
-              onClick={() => handleDelete(post.id)}
-            >
+              onClick={() => handleDelete(post.id)}>
               <Trash2 className="mr-2 h-4 w-4" />
               Delete
             </Button>
@@ -82,3 +93,4 @@ export function BlogList() {
     </div>
   );
 }
+

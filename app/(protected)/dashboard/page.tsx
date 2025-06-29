@@ -27,7 +27,7 @@ export default async function Dashboard() {
         </p>
       </div>
       <ProfileCard user={mappedUser} />
-      <div>
+      <div className="container mx-auto py-10">
         <BlogForm />
         <BlogList />
       </div>
