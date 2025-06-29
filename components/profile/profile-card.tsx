@@ -183,8 +183,8 @@ export function ProfileCard({ user }: ProfileCardProps) {
                 <DialogHeader>
                   <DialogTitle>Edit Profile</DialogTitle>
                   <DialogDescription>
-                    Changes will take effect on your next login. Click
-                    &quot;Save&quot; when you&rsquo;re done.
+                    Sometimes, changes will take effect on your next login.
+                    Click &quot;Save&quot; when you&rsquo;re done.
                   </DialogDescription>
                 </DialogHeader>
 
