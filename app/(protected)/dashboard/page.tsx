@@ -3,10 +3,15 @@ import { ProfileCard } from "@/components/profile/profile-card";
 import { BlogForm } from "@/components/profile/BlogForm";
 import { BlogList } from "@/components/profile/BlogList";
 
-
 export default async function Dashboard() {
-  const { getUser } = getKindeServerSession();
+  const { getUser, getClaim } = getKindeServerSession();
   const user = await getUser();
+  const rolesClaim = await getClaim("roles"); 
+  const rolesArray = Array.isArray(rolesClaim?.value)
+    ? rolesClaim.value
+    : typeof rolesClaim?.value === "string"
+    ? [rolesClaim.value]
+    : [];
 
   // Map user fields to ensure they are strings (not null)
   const mappedUser = user
@@ -16,6 +21,7 @@ export default async function Dashboard() {
         family_name: user.family_name ?? "",
         email: user.email ?? "",
         picture: user.picture ?? undefined,
+        roles: rolesArray.join(", "),
       }
     : null;
 
@@ -34,3 +40,5 @@ export default async function Dashboard() {
     </div>
   );
 }
+
+

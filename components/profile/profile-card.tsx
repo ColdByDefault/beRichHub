@@ -47,6 +47,7 @@ interface ProfileCardProps {
     family_name: string;
     email: string;
     picture?: string;
+    roles?: string;
   } | null;
 }
 
@@ -64,6 +65,7 @@ export function ProfileCard({ user }: ProfileCardProps) {
     family_name: user?.family_name || "",
     email: user?.email || "",
     bio: "",
+    roles: user?.roles || "",
   });
 
   // Fetch bio on mount
@@ -121,6 +123,7 @@ export function ProfileCard({ user }: ProfileCardProps) {
       family_name: user?.family_name || "",
       email: user?.email || "",
       bio: formData.bio, // keep loaded bio until re-open
+      roles: user?.roles ?? "",
     });
     setIsDialogOpen(false);
     setMessage(null);
@@ -166,7 +169,11 @@ export function ProfileCard({ user }: ProfileCardProps) {
               </CardTitle>
               <div className="flex flex-wrap gap-2">
                 <Badge variant="secondary" className="flex items-center gap-1">
-                  <UserCheck className="h-3 w-3" /> Verified User
+                  <UserCheck className="h-3 w-3 text-green-400" /> Verified User
+                </Badge>
+                <Badge variant="secondary" className="flex items-center gap-1">
+                  <UserCheck className="h-3 w-3 text-green-400" />
+                  {formData.roles || "no role"}
                 </Badge>
                 <Badge variant="outline" className="flex items-center gap-1">
                   <User className="h-3 w-3" /> {formData.given_name}{" "}

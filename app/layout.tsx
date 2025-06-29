@@ -3,6 +3,7 @@ import "./globals.css";
 import { Providers } from "@/components/themes/providers";
 import { Analytics } from "@vercel/analytics/next";
 import { Navbar } from "@/components/main/Navbar";
+import Footer from "@/components/main/Footer";
 import { Urbanist as Urbanist } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
@@ -81,6 +82,9 @@ export default async function RootLayout({
               <Navbar />
             </div>
             {children}
+            <div className="shadow-md bg-white dark:bg-prime">
+              <Footer />
+            </div>
           </NextIntlClientProvider>
         </Providers>
         <Analytics />

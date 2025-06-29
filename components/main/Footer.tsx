@@ -3,9 +3,14 @@ import Link from "next/link";
 import { FaGithub, FaSquareXTwitter } from "react-icons/fa6";
 import { FaLinkedin, FaInstagramSquare } from "react-icons/fa";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const t = useTranslations("Footer");
+  const pathname = usePathname();
+  if (pathname.startsWith("/berich-llm") || pathname.startsWith("/reeed")) {
+    return null;
+  }
 
   return (
     <footer className="w-full bg-gray-50 dark:bg-prime border-t ">

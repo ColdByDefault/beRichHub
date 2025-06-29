@@ -1,5 +1,4 @@
 import { Background } from "@/components/motions/motion-background";
-import Footer from "@/components/main/Footer";
 import BeRichHome from "@/components/landing/Hero";
 import { Timeline } from "@/components/landing/History";
 
@@ -11,7 +10,6 @@ export default function Home() {
         <BeRichHome />
         <Timeline />
       </div>
-      <Footer />
     </div>
   );
 }

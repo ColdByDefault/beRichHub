@@ -10,6 +10,14 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Trash2 } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 interface Post {
   id: string;
@@ -22,6 +30,8 @@ export function BlogList() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [error, setError] = useState<string | null>(null);
 
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const [postToDelete, setPostToDelete] = useState<string | null>(null);
 
   // Fetch posts
   const load = async () => {
@@ -40,24 +50,21 @@ export function BlogList() {
   }, []);
 
   useEffect(() => {
-      load();
-  
-      // whenever a new post is created elsewhere, re-fetch
-      const onAdded = () => load();
-      window.addEventListener("postAdded", onAdded);
-      return () => {
-        window.removeEventListener("postAdded", onAdded);
-      };
+    load();
+
+    // whenever a new post is created elsewhere, re-fetch
+    const onAdded = () => load();
+    window.addEventListener("postAdded", onAdded);
+    return () => {
+      window.removeEventListener("postAdded", onAdded);
+    };
   }, []);
 
   const handleDelete = async (id: string) => {
-    if (!confirm("Delete this post?")) return;
     try {
       const res = await fetch(`/api/posts/${id}`, { method: "DELETE" });
       if (!res.ok) throw new Error("Delete failed.");
-      // Refresh list
       await load();
-      load();
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       setError(err.message);
@@ -71,7 +78,7 @@ export function BlogList() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-12">
       {posts.map((post) => (
-        <Card key={post.id} className="flex flex-col h-full">
+        <Card key={post.id} className="flex flex-col h-full justify-between">
           <CardHeader>
             <CardTitle>{post.title}</CardTitle>
             <time className="text-xs">
@@ -83,14 +90,48 @@ export function BlogList() {
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => handleDelete(post.id)}>
+              onClick={() => {
+                setPostToDelete(post.id);
+                setDeleteDialogOpen(true);
+              }}
+            >
               <Trash2 className="mr-2 h-4 w-4" />
               Delete
             </Button>
           </CardFooter>
         </Card>
       ))}
+      <Dialog
+        open={deleteDialogOpen}
+        onOpenChange={(open) => {
+          setDeleteDialogOpen(open);
+          if (!open) setPostToDelete(null);
+        }}
+      >
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Delete Post</DialogTitle>
+            <DialogDescription>
+              Are you sure you want to delete this post? This action cannot be
+              undone.
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => {
+                if (postToDelete) handleDelete(postToDelete);
+                setDeleteDialogOpen(false);
+                setPostToDelete(null);
+              }}
+            >
+              <Trash2 className="mr-2 h-4 w-4" />
+              Delete
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
-

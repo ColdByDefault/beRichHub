@@ -7,9 +7,10 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { revalidatePath } from "next/cache"
 
 interface UpdateProfileData {
-  given_name: string
-  family_name: string
-  email: string
+  given_name: string;
+  family_name: string;
+  email: string;
+  roles?: string;
 }
 
 export async function updateUserProfile(userId: string, data: UpdateProfileData) {
@@ -46,20 +47,24 @@ export async function updateUserProfile(userId: string, data: UpdateProfileData)
     const accessToken = tokenData.access_token
 
     // Update user profile using the correct Kinde Management API endpoint
-    const updateResponse = await fetch(`${process.env.KINDE_ISSUER_URL}/api/v1/user`, {
-      method: "PATCH",
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        id: userId,
-        given_name: data.given_name,
-        family_name: data.family_name,
-        email: data.email,
-      }),
-    })
+    const updateResponse = await fetch(
+      `${process.env.KINDE_ISSUER_URL}/api/v1/user`,
+      {
+        method: "PATCH",
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          id: userId,
+          given_name: data.given_name,
+          family_name: data.family_name,
+          email: data.email,
+          roles: data.roles?.split(",").map((r) => r.trim()),
+        }),
+      }
+    );
 
     if (!updateResponse.ok) {
       const errorText = await updateResponse.text()
