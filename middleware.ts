@@ -16,6 +16,6 @@ export const config = {
     // - _next
     // - static files
     // - public legal routes
-    '/((?!_next|favicon.ico|cookies|privacy-policy|terms|$|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
+    '/((?!_next|favicon.ico|cookies|impressum|privacy-policy|terms|$|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
   ]
 };

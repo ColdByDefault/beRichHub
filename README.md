@@ -1,6 +1,25 @@
 # beRichHub
 
-v.5.2.1 
+**V.0.** **Flask App**
+
+[beRich](https://coldbydefault070.pythonanywhere.com/)
+
+**V.1.**
+
+[![wakatime](https://wakatime.com/badge/user/c4621892-41e0-4c29-a8bc-05597d124f63/project/8021aafa-030b-41b9-9c31-71b1906659cd.svg)](https://wakatime.com/badge/user/c4621892-41e0-4c29-a8bc-05597d124f63/project/8021aafa-030b-41b9-9c31-71b1906659cd)
+
+**V.2.**
+
+[![wakatime](https://wakatime.com/badge/user/c4621892-41e0-4c29-a8bc-05597d124f63/project/79c9876c-acce-48e7-b661-264f4bf514a5.svg)](https://wakatime.com/badge/user/c4621892-41e0-4c29-a8bc-05597d124f63/project/79c9876c-acce-48e7-b661-264f4bf514a5)
+
+**V.3.**
+
+[![wakatime](https://wakatime.com/badge/user/c4621892-41e0-4c29-a8bc-05597d124f63/project/beb9337a-f033-4377-9e03-26f96c36a41a.svg)](https://wakatime.com/badge/user/c4621892-41e0-4c29-a8bc-05597d124f63/project/beb9337a-f033-4377-9e03-26f96c36a41a)
+
+
+**V.4.** Removed
+
+**v.5.2.1** 
 [![wakatime](https://wakatime.com/badge/user/c4621892-41e0-4c29-a8bc-05597d124f63/project/54a8cd7c-b451-4676-8695-4e701a4bda69.svg)](https://wakatime.com/badge/user/c4621892-41e0-4c29-a8bc-05597d124f63/project/54a8cd7c-b451-4676-8695-4e701a4bda69)
 
 BeRichHub is an open-source web platform that helps developers track their learning journey. The application provides personalized roadmaps, curated documentation, and progress tracking so you can reach your goals faster. It is built with **Next.js** and **TypeScript**, styled with **Tailwind CSS**, and uses **Prisma** with PostgreSQL for data persistence. Authentication is handled via **Kinde**.
