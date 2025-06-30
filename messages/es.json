@@ -64,14 +64,12 @@
     "brainAlt": "IA",
     "llm": {
       "trigger": "LLM",
-      "mainTitle": "Agente LLM en línea con RAG",
-      "mainDesc": "Agente LLM en línea con un sistema RAG, que utiliza tanto su conocimiento entrenado como información actualizada de bases de datos.",
+      "mainTitle": "¿Qué es un modelo de lenguaje grande?",
+      "mainDesc": "Un modelo de lenguaje grande (LLM) es un sistema de IA entrenado con enormes conjuntos de texto para comprender y generar lenguaje similar al humano en diversas tareas.",
       "intro": "Introducción",
-      "introDesc": "Aprende sobre las características y capacidades del Agente LLM de beRichHub, incluyendo cómo aprovecha los sistemas RAG para ofrecer respuestas precisas y actualizadas.",
-      "offline": "Agente RAG sin conexión",
-      "offlineDesc": "Descubre cómo configurar y usar la versión sin conexión del Agente LLM de beRichHub, incluyendo cómo instalar dependencias y estructurar una aplicación local.",
-      "langflow": "Uso con LangFlow",
-      "langflowDesc": "LangFlow es una herramienta de programación visual para LLM. Aprende a integrar el Agente LLM de beRichHub con LangFlow para crear flujos de trabajo y aplicaciones personalizados."
+      "introDesc": "Descubre las características del agente LLM de beRichHub e cómo integra la Generación Aumentada por Recuperación (RAG) para ofrecer respuestas precisas y contextuales.",
+      "offline": "Agente LLM sin conexión",
+      "offlineDesc": "Explora la configuración y el uso de la versión sin conexión del agente LLM de beRichHub, incluyendo la instalación de dependencias y la estructura de la aplicación local."
     },
     "docs": {
       "item1": {

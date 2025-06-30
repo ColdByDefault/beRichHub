@@ -4,7 +4,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,6 +13,11 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const docKeys = ["item1"] as const;
 
@@ -45,14 +49,22 @@ export function NavbarHeader() {
                 asChild
                 className={navigationMenuTriggerStyle()}
               >
-                <Link href="/berich-llm" aria-label="berich-llm">
-                  <Image
-                    src="/icons/brain.png"
-                    width={24}
-                    height={24}
-                    alt={t("brainAlt")}
-                  />
-                </Link>
+                <Tooltip>
+                  <TooltipTrigger>
+                    {" "}
+                    <Link href="/berich-llm" aria-label="berich-llm">
+                      <Image
+                        src="/icons/brain.png"
+                        width={24}
+                        height={24}
+                        alt={t("brainAlt")}
+                      />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>AI Assistant</p>
+                  </TooltipContent>
+                </Tooltip>
               </NavigationMenuLink>
             </li>
           </ul>
@@ -85,9 +97,7 @@ export function NavbarHeader() {
               <ListItem href="/berich-llm#offline" title={t("llm.offline")}>
                 {t("llm.offlineDesc")}
               </ListItem>
-              <ListItem href="/berich-llm#langflow" title={t("llm.langflow")}>
-                {t("llm.langflowDesc")}
-              </ListItem>
+
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>

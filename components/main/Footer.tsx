@@ -140,7 +140,9 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="#"
+                  target="_blanck"
+                  rel="noopener noreferrer"
+                  href="hhtps://www.coldbydefault.com"
                   className="text-gray-600 dark:text-gray-300 hover:text-prime dark:hover:text-white transition-colors duration-200"
                 >
                   ColdByDefault

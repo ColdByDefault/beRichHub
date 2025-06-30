@@ -64,14 +64,12 @@
     "brainAlt": "AI",
     "llm": {
       "trigger": "LLM",
-      "mainTitle": "Online-LLM-agent med RAG",
-      "mainDesc": "Online-LLM-agent med ett RAG-system, som använder både sin tränade kunskap och uppdaterad information från databaser.",
+      "mainTitle": "Vad är en stor språkmodell?",
+      "mainDesc": "En stor språkmodell (LLM) är ett AI-system tränat på enorma textmängder för att förstå och generera mänskligt liknande språk i olika uppgifter.",
       "intro": "Introduktion",
-      "introDesc": "Lär dig om funktionerna och kapabiliteterna hos beRichHub-LLM-agenten, inklusive hur den använder RAG-system för att ge korrekta och uppdaterade svar.",
-      "offline": "Offline-RAG-agent",
-      "offlineDesc": "Upptäck hur du ställer in och använder offline-versionen av beRichHub-LLM-agenten, inklusive installation av beroenden och strukturering av en lokal app.",
-      "langflow": "Användning med LangFlow",
-      "langflowDesc": "LangFlow är ett visuellt programmeringsverktyg för LLM. Lär dig hur du integrerar beRichHub-LLM-agenten med LangFlow för att skapa anpassade arbetsflöden och applikationer."
+      "introDesc": "Lär dig om beRichHub LLM Agentens funktioner och hur den integrerar Retrieval-Augmented Generation (RAG) för att leverera precisa, kontextmedvetna svar.",
+      "offline": "Offline-LLM-Agent",
+      "offlineDesc": "Utforska hur du ställer in och använder den offline-version av beRichHub LLM Agent, inklusive installation av beroenden och strukturering av den lokala applikationen."
     },
     "docs": {
       "item1": {

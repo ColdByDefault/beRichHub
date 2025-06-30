@@ -64,14 +64,12 @@
     "brainAlt": "AI",
     "llm": {
       "trigger": "LLM",
-      "mainTitle": "Online LLM-Agent with RAG",
-      "mainDesc": "Online LLM-Agent with a RAG system, using both its trained knowledge and up-to-date information from databases.",
+      "mainTitle": "What is a Large Language Model?",
+      "mainDesc": "A Large Language Model (LLM) is an AI system trained on massive text datasets to understand and generate human-like language across diverse tasks.",
       "intro": "Introduction",
-      "introDesc": "Learn about the features and capabilities of the beRichHub-LLM-Agent, including how it leverages RAG systems to provide accurate and up-to-date answers.",
-      "offline": "Offline RAG-Agent",
-      "offlineDesc": "Discover how to set up and use the offline version of the beRichHub-LLM-Agent, including how to install dependencies and structure a local app.",
-      "langflow": "Usage with LangFlow",
-      "langflowDesc": "LangFlow is a visual programming tool for LLMs. Learn how to integrate the beRichHub-LLM-Agent with LangFlow to create custom workflows and applications."
+      "introDesc": "Learn about the beRichHub LLM Agent's features, including how it integrates Retrieval-Augmented Generation (RAG) to deliver precise, context-aware responses.",
+      "offline": "Offline LLM Agent",
+      "offlineDesc": "Explore setup and usage of the offline version of the beRichHub LLM Agent, covering dependency installation and local application structure."
     },
     "docs": {
       "item1": {
@@ -101,7 +99,7 @@
     "privacyPolicy": "Privacy Policy",
     "termsofService": "Terms of Service",
     "impressum": "Impressum",
-    "moreAbout": "Mehr über mich",
+    "moreAbout": "More about me",
     "resources": "Resources",
     "allRights": "All rights reserved"
   },

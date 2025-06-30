@@ -8,6 +8,8 @@ import { NavbarHeader } from "@/components/main/navbar-header";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { LoginLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import LanguageSwitcher from "@/components/toggles/language-switcher";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+
 
 export async function Navbar() {
   const { getUser } = getKindeServerSession();
@@ -29,6 +31,14 @@ export async function Navbar() {
                 />
                 <AvatarFallback>YOU</AvatarFallback>
               </Avatar>
+              <Tooltip>
+                <TooltipTrigger>
+                  {user.given_name || user.username}
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Profile</p>
+                </TooltipContent>
+              </Tooltip>
             </Link>
           )}
         </li>
@@ -38,11 +48,18 @@ export async function Navbar() {
               <LoginLink postLoginRedirectURL="/dashboard">Sign In</LoginLink>
             </Button>
           ) : (
-            <Button variant="ghost" asChild>
-              <LogoutLink>
-                <LogOut />
-              </LogoutLink>
-            </Button>
+            <Tooltip>
+              <TooltipTrigger>
+                <Button variant="ghost" asChild>
+                  <LogoutLink>
+                    <LogOut />
+                  </LogoutLink>
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Log out</p>
+              </TooltipContent>
+            </Tooltip>
           )}
         </li>
         <li>
