@@ -29,9 +29,10 @@ interface Post {
 
 interface BlogListProps {
   userId?: string; // Optional userId to fetch posts for specific user
+  isOwnProfile?: boolean; // Whether the current user is viewing their own profile
 }
 
-export function BlogList({ userId }: BlogListProps) {
+export function BlogList({ userId, isOwnProfile = false }: BlogListProps) {
   const [posts, setPosts] = useState<Post[]>([]);
   const [error, setError] = useState<string | null>(null);
 
@@ -90,19 +91,21 @@ export function BlogList({ userId }: BlogListProps) {
             </time>
           </CardHeader>
           <CardContent>{post.content}</CardContent>
-          <CardFooter>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => {
-                setPostToDelete(post.id);
-                setDeleteDialogOpen(true);
-              }}
-            >
-              <Trash2 className="mr-2 h-4 w-4" />
-              Delete
-            </Button>
-          </CardFooter>
+          {isOwnProfile && (
+            <CardFooter>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => {
+                  setPostToDelete(post.id);
+                  setDeleteDialogOpen(true);
+                }}
+              >
+                <Trash2 className="mr-2 h-4 w-4" />
+                Delete
+              </Button>
+            </CardFooter>
+          )}
         </Card>
       ))}
       <Dialog

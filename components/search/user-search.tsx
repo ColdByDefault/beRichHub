@@ -25,6 +25,7 @@ export function UserSearch() {
   const [results, setResults] = useState<SearchUser[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [hasSearched, setHasSearched] = useState(false);
   const router = useRouter();
   const { isAuthenticated } = useKindeBrowserClient();
 
@@ -39,6 +40,7 @@ export function UserSearch() {
 
     setIsLoading(true);
     setError(null);
+    setHasSearched(true);
 
     try {
       const response = await fetch(
@@ -65,6 +67,12 @@ export function UserSearch() {
   };
 
   const handleUserClick = (userId: string) => {
+    // Close the search results by resetting the state
+    setResults([]);
+    setHasSearched(false);
+    setQuery("");
+    setError(null);
+
     router.push(`/profile/${userId}`);
   };
 
@@ -85,11 +93,19 @@ export function UserSearch() {
 
   return (
     <div className="relative w-full max-w-md mx-auto">
-      <div className="flex space-x-2">
+      <div className="flex space-x-2 gap-1">
         <Input
           placeholder="Search users..."
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => {
+            setQuery(e.target.value);
+            // Reset search state when query is cleared
+            if (!e.target.value.trim()) {
+              setResults([]);
+              setHasSearched(false);
+              setError(null);
+            }
+          }}
           onKeyDown={(e) => e.key === "Enter" && handleSearch()}
           disabled={isLoading}
         />
@@ -106,7 +122,7 @@ export function UserSearch() {
       {(error ||
         results.length > 0 ||
         isLoading ||
-        (!isLoading && query && results.length === 0 && !error)) && (
+        (!isLoading && hasSearched && results.length === 0 && !error)) && (
         <div className="absolute top-full left-0 right-0 mt-2 z-50">
           {error && (
             <Card className="border-destructive shadow-lg">
@@ -162,7 +178,7 @@ export function UserSearch() {
             </Card>
           )}
 
-          {!isLoading && query && results.length === 0 && !error && (
+          {!isLoading && hasSearched && results.length === 0 && !error && (
             <Card className="shadow-lg">
               <CardContent className="pt-4">
                 <p className="text-sm text-muted-foreground text-center">
