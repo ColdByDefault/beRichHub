@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LicenseRef-BRH-1.0
 
-// add username
+// actions\profile.ts
 "use server";
 
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
@@ -106,4 +106,44 @@ export async function updateUserProfile(
     console.error("Error updating user profile:", error);
     return { success: false, error: "An unexpected error occurred" };
   }
+}
+
+
+export async function searchUsers(query: string) {
+  // 1) verify session
+  const { getUser } = getKindeServerSession();
+  const currentUser = await getUser();
+  if (!currentUser) throw new Error("Unauthorized");
+
+  // 2) fetch management token
+  const tokenRes = await fetch(`${process.env.KINDE_ISSUER_URL}/oauth2/token`, {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({
+      grant_type: "client_credentials",
+      client_id: process.env.KINDE_MANAGEMENT_CLIENT_ID!,
+      client_secret: process.env.KINDE_MANAGEMENT_CLIENT_SECRET!,
+      audience: `${process.env.KINDE_ISSUER_URL}/api`,
+    }),
+  });
+  if (!tokenRes.ok) throw new Error("Failed to auth with Kinde API");
+  const { access_token } = await tokenRes.json();
+
+  // 3) hit the users endpoint
+  const listRes = await fetch(
+    `${
+      process.env.KINDE_ISSUER_URL
+    }/api/v1/search/users?query=${encodeURIComponent(query)}`,
+    {
+      headers: {
+        Authorization: `Bearer ${access_token}`,
+        Accept: "application/json",
+      },
+    }
+  );
+  if (!listRes.ok) {
+    const body = await listRes.text();
+    throw new Error(`Kinde search failed: ${listRes.status} ${body}`);
+  }
+  return listRes.json();
 }

@@ -50,9 +50,10 @@ interface ProfileCardProps {
     picture?: string;
     roles?: string;
   } | null;
+  isOwnProfile?: boolean;
 }
 
-export function ProfileCard({ user }: ProfileCardProps) {
+export function ProfileCard({ user, isOwnProfile = true }: ProfileCardProps) {
   const router = useRouter();
   const { refreshData } = useKindeBrowserClient();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -179,123 +180,125 @@ export function ProfileCard({ user }: ProfileCardProps) {
               </div>
             </div>
           </div>
-          <Dialog open={isDialogOpen} onOpenChange={handleDialogOpenChange}>
-            <DialogTrigger asChild>
-              <Button
-                variant="outline"
-                size="sm"
-                className="flex items-center gap-2"
-              >
-                <Edit className="h-4 w-4" /> Edit Profile
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
-              <DialogHeader>
-                <DialogTitle>Edit Profile</DialogTitle>
-                <DialogDescription>
-                  Some changes require re-login. Click “Save” when ready.
-                </DialogDescription>
-              </DialogHeader>
-
-              {message && (
-                <Alert
-                  className={
-                    message.type === "error"
-                      ? "border-destructive"
-                      : "border-green-500"
-                  }
-                >
-                  {message.type === "success" ? (
-                    <CheckCircle className="h-4 w-4 text-green-600" />
-                  ) : (
-                    <AlertCircle className="h-4 w-4 text-destructive" />
-                  )}
-                  <AlertDescription
-                    className={
-                      message.type === "error"
-                        ? "text-destructive"
-                        : "text-green-600"
-                    }
-                  >
-                    {message.text}
-                  </AlertDescription>
-                </Alert>
-              )}
-
-              <div className="space-y-4 py-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="given_name">First Name</Label>
-                    <Input
-                      id="given_name"
-                      value={formData.given_name}
-                      onChange={(e) =>
-                        setFormData((p) => ({
-                          ...p,
-                          given_name: e.target.value,
-                        }))
-                      }
-                      placeholder="Enter first name"
-                      disabled={isLoading}
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="family_name">Last Name</Label>
-                    <Input
-                      id="family_name"
-                      value={formData.family_name}
-                      onChange={(e) =>
-                        setFormData((p) => ({
-                          ...p,
-                          family_name: e.target.value,
-                        }))
-                      }
-                      placeholder="Enter last name"
-                      disabled={isLoading}
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="bio">Bio</Label>
-                  <Textarea
-                    id="bio"
-                    value={formData.bio}
-                    onChange={(e) =>
-                      setFormData((p) => ({ ...p, bio: e.target.value }))
-                    }
-                    placeholder="Tell us a bit about yourself (max 150 chars)"
-                    maxLength={150}
-                    disabled={isLoading}
-                    className="w-full"
-                  />
-                </div>
-              </div>
-
-              <DialogFooter>
+          {isOwnProfile && (
+            <Dialog open={isDialogOpen} onOpenChange={handleDialogOpenChange}>
+              <DialogTrigger asChild>
                 <Button
                   variant="outline"
-                  onClick={handleCancel}
-                  disabled={isLoading}
+                  size="sm"
                   className="flex items-center gap-2"
                 >
-                  <X className="h-4 w-4" /> Cancel
+                  <Edit className="h-4 w-4" /> Edit Profile
                 </Button>
-                <Button
-                  onClick={handleSave}
-                  disabled={isLoading}
-                  className="flex items-center gap-2"
-                >
-                  {isLoading ? (
-                    <Loader2 className="h-4 w-4 animate-spin" />
-                  ) : (
-                    <Save className="h-4 w-4" />
-                  )}{" "}
-                  Save Changes
-                </Button>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-[425px]">
+                <DialogHeader>
+                  <DialogTitle>Edit Profile</DialogTitle>
+                  <DialogDescription>
+                    Some changes require re-login. Click “Save” when ready.
+                  </DialogDescription>
+                </DialogHeader>
+
+                {message && (
+                  <Alert
+                    className={
+                      message.type === "error"
+                        ? "border-destructive"
+                        : "border-green-500"
+                    }
+                  >
+                    {message.type === "success" ? (
+                      <CheckCircle className="h-4 w-4 text-green-600" />
+                    ) : (
+                      <AlertCircle className="h-4 w-4 text-destructive" />
+                    )}
+                    <AlertDescription
+                      className={
+                        message.type === "error"
+                          ? "text-destructive"
+                          : "text-green-600"
+                      }
+                    >
+                      {message.text}
+                    </AlertDescription>
+                  </Alert>
+                )}
+
+                <div className="space-y-4 py-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="given_name">First Name</Label>
+                      <Input
+                        id="given_name"
+                        value={formData.given_name}
+                        onChange={(e) =>
+                          setFormData((p) => ({
+                            ...p,
+                            given_name: e.target.value,
+                          }))
+                        }
+                        placeholder="Enter first name"
+                        disabled={isLoading}
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="family_name">Last Name</Label>
+                      <Input
+                        id="family_name"
+                        value={formData.family_name}
+                        onChange={(e) =>
+                          setFormData((p) => ({
+                            ...p,
+                            family_name: e.target.value,
+                          }))
+                        }
+                        placeholder="Enter last name"
+                        disabled={isLoading}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="bio">Bio</Label>
+                    <Textarea
+                      id="bio"
+                      value={formData.bio}
+                      onChange={(e) =>
+                        setFormData((p) => ({ ...p, bio: e.target.value }))
+                      }
+                      placeholder="Tell us a bit about yourself (max 150 chars)"
+                      maxLength={150}
+                      disabled={isLoading}
+                      className="w-full"
+                    />
+                  </div>
+                </div>
+
+                <DialogFooter>
+                  <Button
+                    variant="outline"
+                    onClick={handleCancel}
+                    disabled={isLoading}
+                    className="flex items-center gap-2"
+                  >
+                    <X className="h-4 w-4" /> Cancel
+                  </Button>
+                  <Button
+                    onClick={handleSave}
+                    disabled={isLoading}
+                    className="flex items-center gap-2"
+                  >
+                    {isLoading ? (
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                    ) : (
+                      <Save className="h-4 w-4" />
+                    )}{" "}
+                    Save Changes
+                  </Button>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
+          )}
         </div>
       </CardHeader>
 
@@ -330,25 +333,30 @@ export function ProfileCard({ user }: ProfileCardProps) {
               <MessageSquareQuote className="h-5 w-5 text-primary" />
             </div>
             <div className="space-y-1">
-              <p className="text-sm font-medium">Your Bio</p>
+              <p className="text-sm font-medium">
+                {isOwnProfile ? "Your Bio" : "Bio"}
+              </p>
               <Badge variant="outline" className="font-mono">
-                {formData.bio || "add Bio"}
+                {formData.bio ||
+                  (isOwnProfile ? "add Bio" : "No bio available")}
               </Badge>
             </div>
           </div>
 
-          {/* Email display */}
-          <div className="flex items-center space-x-3 p-3 rounded-lg bg-muted/50">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
-              <Mail className="h-5 w-5 text-primary" />
+          {/* Email display - only show for own profile */}
+          {isOwnProfile && (
+            <div className="flex items-center space-x-3 p-3 rounded-lg bg-muted/50">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                <Mail className="h-5 w-5 text-primary" />
+              </div>
+              <div className="space-y-1">
+                <p className="text-sm font-medium">Email Address</p>
+                <Badge variant="default" className="font-mono">
+                  {formData.email}
+                </Badge>
+              </div>
             </div>
-            <div className="space-y-1">
-              <p className="text-sm font-medium">Email Address</p>
-              <Badge variant="default" className="font-mono">
-                {formData.email}
-              </Badge>
-            </div>
-          </div>
+          )}
         </div>
       </CardContent>
     </Card>

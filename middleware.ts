@@ -6,7 +6,7 @@ export default withAuth(
     // optional: logging or analytics here
   },
   {
-    isReturnToCurrentPage: true
+    isReturnToCurrentPage: true,
   }
 );
 
