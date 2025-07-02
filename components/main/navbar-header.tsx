@@ -73,13 +73,13 @@ export function NavbarHeader() {
         {/* LLM Menu */}
         <NavigationMenuItem>
           <NavigationMenuTrigger>{t("llm.trigger")}</NavigationMenuTrigger>
-          <NavigationMenuContent>
+          <NavigationMenuContent >
             <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Link
                     className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline"
-                    href="/berich-llm"
+                    href="/"
                   >
                     <span className="mt-4 mb-2 text-lg">
                       {t("llm.mainTitle")}
@@ -91,10 +91,10 @@ export function NavbarHeader() {
                 </NavigationMenuLink>
               </li>
 
-              <ListItem href="/berich-llm#intro" title={t("llm.intro")}>
+              <ListItem href="/" title={t("llm.intro")}>
                 {t("llm.introDesc")}
               </ListItem>
-              <ListItem href="/berich-llm#offline" title={t("llm.offline")}>
+              <ListItem href="/" title={t("llm.offline")}>
                 {t("llm.offlineDesc")}
               </ListItem>
 
