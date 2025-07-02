@@ -36,7 +36,7 @@ This guide provides comprehensive information for developers working on beRichHu
 #### 1. Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/berichhub.git
+git clone https://github.com/coldbydefault/berichhub.git
 cd berichhub
 ```
 

@@ -21,7 +21,7 @@
 
 [![wakatime](https://wakatime.com/badge/user/c4621892-41e0-4c29-a8bc-05597d124f63/project/54a8cd7c-b451-4676-8695-4e701a4bda69.svg)](https://wakatime.com/badge/user/c4621892-41e0-4c29-a8bc-05597d124f63/project/54a8cd7c-b451-4676-8695-4e701a4bda69)
 
-**Version 5.3.1** | **License:** LicenseRef-BRH-1.0 | **Website:** [berich-hub.org](https://www.berich-hub.org)
+**Version 5.3.1** | **License:** LicenseRef-BRH-1.0 | **Website:** [berich-hub.org](https://berich-hub.vercel.app/)
 
 BeRichHub is a comprehensive web platform designed for developers, offering AI-powered assistance, personalized learning roadmaps, user profiles with blogging capabilities, and curated resources. Built with modern web technologies, it provides a seamless experience across multiple languages and devices.
 
@@ -80,7 +80,7 @@ BeRichHub is a comprehensive web platform designed for developers, offering AI-p
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/berichhub.git
+   git clone https://github.com/coldbydefault/berichhub.git
    cd berichhub
    ```
 
@@ -242,7 +242,7 @@ BeRichHub is open source and distributed under the terms of the [LicenseRef-BRH-
 
 ## 🔗 Links
 
-- **Website:** [berich-hub.org](https://www.berich-hub.org)
+- **Website:** [berich-hub.org](https://berich-hub.vercel.app/)
 - **Documentation:** [Complete Docs](./DOCUMENTATION.md)
 - **API Reference:** [API Docs](./docs/API.md)
 - **Component Library:** [Component Docs](./docs/COMPONENTS.md)

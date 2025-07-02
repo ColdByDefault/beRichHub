@@ -7,7 +7,7 @@ beRichHub provides a comprehensive RESTful API built with Next.js API routes. Al
 ## Base URL
 
 ```
-Production: https://www.berich-hub.org/api
+Production: https://berich-hub.vercel.app/api
 Development: http://localhost:3000/api
 ```
 
