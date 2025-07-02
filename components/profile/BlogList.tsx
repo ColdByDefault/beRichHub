@@ -54,10 +54,6 @@ export function BlogList({ userId }: BlogListProps) {
 
   useEffect(() => {
     load();
-  }, [load]);
-
-  useEffect(() => {
-    load();
 
     // whenever a new post is created elsewhere, re-fetch
     const onAdded = () => load();
