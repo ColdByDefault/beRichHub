@@ -59,7 +59,7 @@ export function MobileNavbar({ user }: MobileNavbarProps) {
             </SheetTitle>
           </SheetHeader>
 
-          <div className="mt-6 space-y-6 pb-6 pl-4">
+          <div className="mt-6 space-y-6 pb-6 px-4">
             {/* User Profile Section */}
             {user && (
               <div className="space-y-3">

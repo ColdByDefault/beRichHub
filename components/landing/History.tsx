@@ -19,7 +19,7 @@ const styles = [
 
 const techStacks = [
   ["Python 3.8", "Tkinter", "SQLite"],
-  ["Python 3.9", "Flask", "PostgreSQL", "Bootstrap", "jQuery"],
+  ["Python 3.9", "Flask", "Bootstrap", "jQuery"],
   ["Next.js 13", "React 17", "Tailwind CSS", "JavaScript"],
   ["Next.js 15", "React 19", "Tailwind CSS 4", "Vercel"],
   ["Next.js 15", "React 19", "Tailwind CSS 4", "AI SDK", "Edge Runtime"],
