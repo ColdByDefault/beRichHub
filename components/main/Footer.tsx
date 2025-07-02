@@ -64,6 +64,8 @@ export default function Footer() {
               <ul className="space-y-3">
                 <li>
                   <Link
+                    target="_blanck"
+                    rel="noopener noreferrer"
                     href="https://nextjs.org"
                     className="text-gray-600 dark:text-gray-300 hover:text-prime dark:hover:text-white 
                         transition-colors duration-200"
@@ -73,6 +75,8 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
+                    target="_blanck"
+                    rel="noopener noreferrer"
                     href="https://react.dev"
                     className="text-gray-600 dark:text-gray-300 hover:text-prime dark:hover:text-white transition-colors duration-200"
                   >
@@ -81,6 +85,8 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
+                    target="_blanck"
+                    rel="noopener noreferrer"
                     href="https://ui.shadcn.com"
                     className="text-gray-600 dark:text-gray-300 hover:text-prime dark:hover:text-white transition-colors duration-200"
                   >
@@ -89,6 +95,8 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
+                    target="_blanck"
+                    rel="noopener noreferrer"
                     href="https://vercel.com/"
                     className="text-gray-600 dark:text-gray-300 hover:text-prime dark:hover:text-white transition-colors duration-200"
                   >
@@ -99,6 +107,8 @@ export default function Footer() {
               <ul className="space-y-3">
                 <li>
                   <Link
+                  target="_blanck"
+                  rel="noopener noreferrer"
                     href="https://ai-sdk.dev/docs/introduction"
                     className="text-gray-600 dark:text-gray-300 hover:text-prime dark:hover:text-white transition-colors duration-200"
                   >
@@ -107,6 +117,8 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
+                  target="_blanck"
+                  rel="noopener noreferrer"
                     href="https://ollama.com/"
                     className="text-gray-600 dark:text-gray-300 hover:text-prime dark:hover:text-white 
                         transition-colors duration-200"
@@ -116,6 +128,8 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
+                  target="_blanck"
+                  rel="noopener noreferrer"
                     href="https://www.langchain.com/"
                     className="text-gray-600 dark:text-gray-300 hover:text-prime dark:hover:text-white transition-colors duration-200"
                   >
@@ -124,6 +138,8 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
+                  target="_blanck"
+                  rel="noopener noreferrer"
                     href="https://openai.com/"
                     className="text-gray-600 dark:text-gray-300 hover:text-prime dark:hover:text-white transition-colors duration-200"
                   >

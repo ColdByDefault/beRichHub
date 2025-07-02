@@ -211,5 +211,222 @@
         "answer": "Programar tiene una curva de aprendizaje, pero es accesible con el enfoque adecuado. Requiere pensamiento lógico y habilidades de resolución de problemas más que matemáticas avanzadas. La clave es ser paciente, persistente y practicar regularmente. Divide problemas complejos en partes más pequeñas y no temas cometer errores: son parte del proceso de aprendizaje."
       }
     }
+  },
+  "TermsOfServicePage": {
+    "page": {
+      "title": "Términos de servicio",
+      "description": "Por favor, lea estos términos detenidamente antes de usar berichHub. Al acceder a nuestro servicio, acepta estar sujeto a estos términos."
+    },
+    "badges": {
+      "legallyBinding": "Legalmente vinculante",
+      "euGermanLaw": "Derecho de la UE y alemán"
+    },
+    "alert": {
+      "importantLabel": "Importante:",
+      "description": "Este es un proyecto privado y no comercial con fines educativos. Estos términos reflejan nuestro compromiso con la transparencia y la protección del usuario."
+    },
+    "sections": {
+      "acceptance": {
+        "title": "1. Aceptación de los términos",
+        "description": "Al acceder a berichHub, acepta estos Términos de servicio y todas las leyes aplicables.",
+        "updateNote": "Su uso continuado de nuestro servicio constituye la aceptación de cualquier actualización de estos términos."
+      },
+      "modification": {
+        "title": "2. Modificación de los términos",
+        "description": "Nos reservamos el derecho de modificar o reemplazar estos términos en cualquier momento, con cambios que entran en vigor al publicarse.",
+        "noticeLabel": "Aviso:",
+        "noticeDescription": "Haremos esfuerzos razonables para notificar a los usuarios sobre cambios significativos a través de nuestra plataforma o por correo electrónico."
+      },
+      "responsibilities": {
+        "title": "3. Responsabilidades del usuario",
+        "description": "Como usuario de berichHub, acepta las siguientes responsabilidades:",
+        "items": {
+          "accurateInfo": {
+            "title": "Información precisa",
+            "description": "Proporcione información veraz y precisa durante el registro y el uso"
+          },
+          "authorizedUse": {
+            "title": "Uso autorizado",
+            "description": "Utilice nuestros servicios solo para fines legales y de acuerdo con estos términos"
+          },
+          "accountSecurity": {
+            "title": "Seguridad de la cuenta",
+            "description": "Mantenga la seguridad de las credenciales de su cuenta y notifíquenos sobre cualquier acceso no autorizado"
+          }
+        }
+      },
+      "intellectualProperty": {
+        "title": "4. Propiedad intelectual",
+        "description": "Todo el contenido, código y propiedad intelectual en berichHub son propiedad del desarrollador, a menos que se indique lo contrario.",
+        "educationalUseLabel": "Uso educativo:",
+        "educationalUseDescription": "Este proyecto es para fines educativos. Cualquier código o contenido puede referenciarse para uso educativo con la atribución adecuada."
+      },
+      "liability": {
+        "title": "5. Limitación de responsabilidad",
+        "disclaimerLabel": "Descargo de responsabilidad importante:",
+        "disclaimerDescription": "El servicio se proporciona \"tal cual\" sin garantías de ningún tipo.",
+        "details": "No somos responsables de ningún daño indirecto, incidental, especial, consecuente o punitivo que surja de su uso de berichHub. Esta limitación se aplica en la máxima medida permitida por la ley."
+      },
+      "governingLaw": {
+        "title": "6. Ley aplicable y jurisdicción",
+        "description": "Estos términos se rigen por las leyes de Alemania y las regulaciones aplicables de la UE.",
+        "jurisdictionLabel": "Jurisdicción:",
+        "jurisdictionDescription": "Cualquier disputa se resolverá bajo la jurisdicción alemana, con las leyes de protección del consumidor de la UE aplicables cuando corresponda."
+      }
+    },
+    "footer": {
+      "lastUpdatedLabel": "Última actualización:",
+      "effective": "Estos términos son efectivos de inmediato y se aplican a todos los usuarios de berichHub.",
+      "versionInfo": "Versión 1.0 • Este documento es parte de nuestro marco legal que garantiza transparencia y protección del usuario."
+    }
+  },
+  "Cookies": {
+    "page": {
+      "title": "Política de cookies",
+      "description": "Aprende cómo usamos cookies para mejorar tu experiencia y garantizar que nuestro sitio funcione correctamente."
+    },
+    "badges": {
+      "gdprCompliant": "Cumple con GDPR",
+      "transparentUsage": "Uso transparente"
+    },
+    "sections": {
+      "whatAreCookies": {
+        "title": "¿Qué son las cookies?",
+        "description": "Las cookies son pequeños archivos de texto almacenados en tu dispositivo por tu navegador cuando visitas un sitio web, utilizados para recordar tus preferencias y mejorar la funcionalidad."
+      },
+      "howWeUseCookies": {
+        "title": "Cómo usamos las cookies",
+        "essential": {
+          "label": "Cookies esenciales",
+          "badge": "Requerido",
+          "items": {
+            "authentication": {
+              "title": "Cookies de autenticación",
+              "description": "Cookies de Kinde Auth para sesiones de autenticación seguras y gestión de identidad de usuario"
+            },
+            "performance": {
+              "title": "Cookies de rendimiento",
+              "description": "Cookies de alojamiento de Vercel para monitorización de rendimiento y estabilidad de enrutamiento"
+            }
+          }
+        },
+        "functional": {
+          "label": "Cookies funcionales",
+          "badge": "Opcional",
+          "items": {
+            "themePreferences": {
+              "title": "Preferencias de tema",
+              "description": "Almacena tu elección de tema de UI (modo claro/oscuro) para una experiencia coherente"
+            },
+            "oauthIntegration": {
+              "title": "Integración OAuth",
+              "description": "Cookies OAuth de GitHub para flujos de inicio de sesión y vinculación de cuentas sin interrupciones"
+            },
+            "sessionManagement": {
+              "title": "Gestión de sesión",
+              "description": "Mantente conectado entre visitas y conserva el estado de tu sesión"
+            }
+          }
+        }
+      },
+      "yourChoices": {
+        "title": "Tus opciones y control",
+        "notImplemented": "¡Aún no implementado!",
+        "description": "Tienes el control total de tus preferencias de cookies. Puedes gestionar o desactivar cookies no esenciales en cualquier momento desde la configuración de tu navegador.",
+        "buttons": {
+          "browserSettings": "Configuración del navegador",
+          "cookiePreferences": "Preferencias de cookies"
+        },
+        "noteLabel": "Nota:",
+        "noteDescription": "Desactivar las cookies esenciales puede afectar la funcionalidad principal, como la autenticación y la persistencia de datos."
+      }
+    },
+    "footer": {
+      "lastUpdated": "Última actualización:",
+      "policyDescription": "Esta política de cookies forma parte de nuestro marco de privacidad integral y el cumplimiento de GDPR."
+    }
+  },
+  "Impressum": {
+    "page": {
+      "title": "Aviso legal",
+      "description": "Aviso y información legal"
+    },
+    "sections": {
+      "legalStatus": {
+        "title": "Estado legal",
+        "projectInfoTitle": "Información del proyecto:",
+        "projectInfoDescription": "Este sitio web es un proyecto puramente privado y no comercial que sirve exclusivamente para fines experimentales y de aprendizaje personal. No hay uso comercial ni intención de lucro.",
+        "legalBasisTitle": "Base legal:",
+        "legalBasisDescription": "Según el § 5 TMG, no existe la obligación de proporcionar un impressum."
+      },
+      "anotherProject": {
+        "title": "AnotherProject",
+        "text": "ColdByDefault © {year} beRich.Hub"
+      }
+    },
+    "footer": {
+      "lastUpdated": "Última actualización: {date}"
+    }
+  },
+  "PrivacyPolicy": {
+    "page": {
+      "title": "Política de privacidad",
+      "description": "Respetamos tu privacidad y nos comprometemos a proteger tus datos personales de acuerdo con las normativas GDPR."
+    },
+    "badges": {
+      "gdprCompliant": "Cumple con GDPR",
+      "euRegulation": "Reglamento UE 2016/679"
+    },
+    "sections": {
+      "introduction": {
+        "title": "Introducción",
+        "description": "En berichHub respetamos tu privacidad y tratamos tus datos personales de acuerdo con el Reglamento (UE) 2016/679 (GDPR), garantizando transparencia y seguridad en todas las operaciones."
+      },
+      "dataWeCollect": {
+        "title": "Datos que recopilamos",
+        "items": {
+          "personalIdentifiers": {
+            "title": "Identificadores personales",
+            "description": "Nombre y correo mediante Kinde Auth y GitHub OAuth"
+          },
+          "usageData": {
+            "title": "Datos de uso",
+            "description": "Cookies y análisis según nuestra Política de cookies"
+          },
+          "technicalData": {
+            "title": "Datos técnicos",
+            "description": "IP pública y tipo de navegador para monitorización de seguridad y rendimiento"
+          }
+        }
+      },
+      "legalBasis": {
+        "title": "Base legal",
+        "description": "Nos basamos en tu consentimiento (Art. 6(1)(a)) para cookies no esenciales y en intereses legítimos (Art. 6(1)(f)) para el procesamiento de seguridad y rendimiento según GDPR."
+      },
+      "yourRights": {
+        "title": "Tus derechos",
+        "description": "Según GDPR, tienes los siguientes derechos sobre tus datos personales:",
+        "rightsList": {
+          "access": "Derecho de acceso (Art. 15)",
+          "rectification": "Derecho de rectificación (Art. 16)",
+          "erasure": "Derecho de supresión (Art. 17)",
+          "restrictProcessing": "Derecho a restringir el tratamiento (Art. 18)"
+        },
+        "withdrawConsent": "Puedes retirar tu consentimiento en cualquier momento contactándonos."
+      },
+      "dataRetention": {
+        "title": "Retención de datos",
+        "description": "Los datos personales se conservan solo el tiempo necesario para cumplir con los fines descritos aquí, y de conformidad con las decisiones de adecuación de la UE para transferencias a nuestro servidor alojado en Vercel."
+      },
+      "contactInformation": {
+        "title": "Información de contacto",
+        "description": "Para consultas de privacidad, solicitudes de datos o cualquier pregunta sobre esta política, contáctanos en:",
+        "githubAria": "GitHub"
+      }
+    },
+    "footer": {
+      "lastUpdated": "Última actualización: {date}",
+      "effective": "Esta política es efectiva de inmediato y se aplica a todos los usuarios de berichHub."
+    }
   }
 }

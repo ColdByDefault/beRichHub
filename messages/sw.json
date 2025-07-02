@@ -211,5 +211,222 @@
         "answer": "Programmering har en inlärningskurva men är tillgänglig med rätt tillvägagångssätt. Det kräver logiskt tänkande och problemlösningsförmåga mer än avancerad matematik. Nyckeln är tålamod, uthållighet och regelbunden övning. Dela upp komplexa problem i mindre delar och var inte rädd för misstag – de är en del av lärandet."
       }
     }
+  },
+  "TermsOfServicePage": {
+    "page": {
+      "title": "Användarvillkor",
+      "description": "Vänligen läs dessa villkor noggrant innan du använder berichHub. Genom att använda vår tjänst samtycker du till att vara bunden av dessa villkor."
+    },
+    "badges": {
+      "legallyBinding": "Rättsligt bindande",
+      "euGermanLaw": "EU- och tysk lag"
+    },
+    "alert": {
+      "importantLabel": "Viktigt:",
+      "description": "Detta är ett privat, icke-kommersiellt projekt för utbildningsändamål. Dessa villkor återspeglar vårt åtagande för öppenhet och användarskydd."
+    },
+    "sections": {
+      "acceptance": {
+        "title": "1. Godkännande av villkor",
+        "description": "Genom att använda berichHub godkänner du dessa användarvillkor och alla tillämpliga lagar.",
+        "updateNote": "Din fortsatta användning av vår tjänst innebär godkännande av alla uppdateringar av dessa villkor."
+      },
+      "modification": {
+        "title": "2. Ändring av villkor",
+        "description": "Vi förbehåller oss rätten att ändra eller ersätta dessa villkor när som helst, med ändringar som träder i kraft vid publicering.",
+        "noticeLabel": "Meddelande:",
+        "noticeDescription": "Vi kommer att göra rimliga ansträngningar för att informera användare om betydande ändringar via vår plattform eller via e-post."
+      },
+      "responsibilities": {
+        "title": "3. Användaransvar",
+        "description": "Som användare av berichHub accepterar du följande ansvar:",
+        "items": {
+          "accurateInfo": {
+            "title": "Korrekt information",
+            "description": "Ge sanningsenlig och korrekt information vid registrering och användning"
+          },
+          "authorizedUse": {
+            "title": "Behörig användning",
+            "description": "Använd våra tjänster endast för lagliga ändamål och i enlighet med dessa villkor"
+          },
+          "accountSecurity": {
+            "title": "Kontosäkerhet",
+            "description": "Upprätthåll säkerheten för dina kontouppgifter och meddela oss om obehörig åtkomst"
+          }
+        }
+      },
+      "intellectualProperty": {
+        "title": "4. Immateriella rättigheter",
+        "description": "Allt innehåll, kod och immateriella rättigheter på berichHub tillhör utvecklaren om inget annat anges.",
+        "educationalUseLabel": "Utbildningsanvändning:",
+        "educationalUseDescription": "Detta projekt är för inlärningsändamål. All kod eller allt innehåll kan refereras för utbildningsändamål med korrekt erkännande."
+      },
+      "liability": {
+        "title": "5. Ansvarsbegränsning",
+        "disclaimerLabel": "Viktig ansvarsfriskrivning:",
+        "disclaimerDescription": "Tjänsten tillhandahålls ”i befintligt skick” utan någon form av garantier.",
+        "details": "Vi ansvarar inte för några indirekta, tillfälliga, särskilda, påföljande eller straffskadestånd som uppstår på grund av din användning av berichHub. Denna begränsning gäller i den utsträckning som lagen tillåter."
+      },
+      "governingLaw": {
+        "title": "6. Tillämplig lag och jurisdiktion",
+        "description": "Dessa villkor styrs av tysk lag och tillämpliga EU-förordningar.",
+        "jurisdictionLabel": "Jurisdiktion:",
+        "jurisdictionDescription": "Eventuella tvister kommer att lösas enligt tysk jurisdiktion, med EU:s konsumentskyddslagar där tillämpligt."
+      }
+    },
+    "footer": {
+      "lastUpdatedLabel": "Senast uppdaterad:",
+      "effective": "Dessa villkor gäller omedelbart och tillämpas på alla användare av berichHub.",
+      "versionInfo": "Version 1.0 • Detta dokument är en del av vår rättsliga ram som säkerställer öppenhet och användarskydd."
+    }
+  },
+  "Cookies": {
+    "page": {
+      "title": "Cookiepolicy",
+      "description": "Lär dig hur vi använder cookies för att förbättra din upplevelse och säkerställa att vår webbplats fungerar korrekt."
+    },
+    "badges": {
+      "gdprCompliant": "GDPR-kompatibel",
+      "transparentUsage": "Transparent användning"
+    },
+    "sections": {
+      "whatAreCookies": {
+        "title": "Vad är cookies?",
+        "description": "Cookies är små textfiler som lagras på din enhet av din webbläsare när du besöker en webbplats, används för att komma ihåg dina inställningar och förbättra funktionaliteten."
+      },
+      "howWeUseCookies": {
+        "title": "Hur vi använder cookies",
+        "essential": {
+          "label": "Nödvändiga cookies",
+          "badge": "Obligatoriskt",
+          "items": {
+            "authentication": {
+              "title": "Autentiseringscookies",
+              "description": "Kinde Auth-cookies för säkra autentiseringssessioner och hantering av användaridentitet"
+            },
+            "performance": {
+              "title": "Prestandacookies",
+              "description": "Vercel-hosting-cookies för prestandaövervakning och stabilitet vid routing"
+            }
+          }
+        },
+        "functional": {
+          "label": "Funktionella cookies",
+          "badge": "Valfritt",
+          "items": {
+            "themePreferences": {
+              "title": "Temainställningar",
+              "description": "Spara ditt val av användargränssnittstema (ljust/mörkt läge) för en konsekvent upplevelse"
+            },
+            "oauthIntegration": {
+              "title": "OAuth-integration",
+              "description": "GitHub OAuth-cookies för smidiga inloggningsflöden och kontolänkning"
+            },
+            "sessionManagement": {
+              "title": "Sessionshantering",
+              "description": "Håll dig inloggad mellan besök och bevara ditt sessionsstatus"
+            }
+          }
+        }
+      },
+      "yourChoices": {
+        "title": "Dina val och kontroll",
+        "notImplemented": "Inte implementerat ännu!",
+        "description": "Du har full kontroll över dina cookie-inställningar. Du kan hantera eller inaktivera icke-nödvändiga cookies när som helst via din webbläsares inställningar.",
+        "buttons": {
+          "browserSettings": "Webbläsarinställningar",
+          "cookiePreferences": "Cookie-inställningar"
+        },
+        "noteLabel": "Observera:",
+        "noteDescription": "Om du inaktiverar nödvändiga cookies kan eventuell kärnfunktionalitet, såsom autentisering och datalagring, påverkas."
+      }
+    },
+    "footer": {
+      "lastUpdated": "Senast uppdaterad:",
+      "policyDescription": "Denna cookiepolicy är en del av vår omfattande integritetsram och GDPR-efterlevnad."
+    }
+  },
+  "Impressum": {
+    "page": {
+      "title": "Impressum",
+      "description": "Juridiska anmärkningar och information"
+    },
+    "sections": {
+      "legalStatus": {
+        "title": "Juridisk status",
+        "projectInfoTitle": "Projektinformation:",
+        "projectInfoDescription": "Denna webbplats är ett rent privat, icke-kommersiellt projekt och används uteslutande för experimentella och personliga inlärningsändamål. Det sker varken kommersiell användning eller vinstsyfte.",
+        "legalBasisTitle": "Rättslig grund:",
+        "legalBasisDescription": "Enligt § 5 TMG finns det därför ingen skyldighet att tillhandahålla ett impressum."
+      },
+      "anotherProject": {
+        "title": "AnotherProject",
+        "text": "ColdByDefault © {year} beRich.Hub"
+      }
+    },
+    "footer": {
+      "lastUpdated": "Senast uppdaterad: {date}"
+    }
+  },
+  "PrivacyPolicy": {
+    "page": {
+      "title": "Integritetspolicy",
+      "description": "Vi respekterar din integritet och åtar oss att skydda dina personuppgifter i enlighet med GDPR."
+    },
+    "badges": {
+      "gdprCompliant": "GDPR-kompatibel",
+      "euRegulation": "EU-förordning 2016/679"
+    },
+    "sections": {
+      "introduction": {
+        "title": "Introduktion",
+        "description": "På berichHub respekterar vi din integritet och behandlar dina personuppgifter i enlighet med förordning (EU) 2016/679 (GDPR), med transparens och säkerhet i alla processer."
+      },
+      "dataWeCollect": {
+        "title": "Data vi samlar in",
+        "items": {
+          "personalIdentifiers": {
+            "title": "Personliga identifierare",
+            "description": "Namn och e-post via Kinde Auth och GitHub OAuth"
+          },
+          "usageData": {
+            "title": "Användardata",
+            "description": "Cookies och analys enligt vår cookiepolicy"
+          },
+          "technicalData": {
+            "title": "Teknisk data",
+            "description": "Offentlig IP och webbläsartyp för säkerhets- och prestandaövervakning"
+          }
+        }
+      },
+      "legalBasis": {
+        "title": "Rättslig grund",
+        "description": "Vi förlitar oss på ditt samtycke (Art. 6(1)(a)) för icke-väsentliga cookies och på berättigade intressen (Art. 6(1)(f)) för säkerhets- och prestandabehandling enligt GDPR."
+      },
+      "yourRights": {
+        "title": "Dina rättigheter",
+        "description": "Enligt GDPR har du följande rättigheter avseende dina personuppgifter:",
+        "rightsList": {
+          "access": "Rätt till tillgång (Art. 15)",
+          "rectification": "Rätt till rättelse (Art. 16)",
+          "erasure": "Rätt till radering (Art. 17)",
+          "restrictProcessing": "Rätt att begränsa behandling (Art. 18)"
+        },
+        "withdrawConsent": "Du kan när som helst återkalla ditt samtycke genom att kontakta oss."
+      },
+      "dataRetention": {
+        "title": "Lagring av data",
+        "description": "Personuppgifter sparas endast så länge det är nödvändigt för att uppfylla de syften som beskrivs här, i enlighet med EU:s adekvansbeslut vid överföringar till vår server på Vercel."
+      },
+      "contactInformation": {
+        "title": "Kontaktinformation",
+        "description": "För integritetsfrågor, begäran om data eller frågor om denna policy, vänligen kontakta oss:",
+        "githubAria": "GitHub"
+      }
+    },
+    "footer": {
+      "lastUpdated": "Senast uppdaterad: {date}",
+      "effective": "Denna policy gäller omedelbart och tillämpas på alla användare av berichHub."
+    }
   }
 }

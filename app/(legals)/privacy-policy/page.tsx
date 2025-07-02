@@ -2,11 +2,13 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
-import { Shield } from "lucide-react";
+import { Mail, Shield } from "lucide-react";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa6";
+import { useTranslations } from "next-intl";
 
 export default function PrivacyPolicyPage() {
+  const t = useTranslations("PrivacyPolicy");
   return (
     <div className="container mx-auto px-4 py-8 mt-20 max-w-4xl">
       <div className="space-y-6">
@@ -16,14 +18,13 @@ export default function PrivacyPolicyPage() {
               <Shield className="w-6 h-6 text-primary" />
             </div>
           </div>
-          <h1 className="text-4xl font-bold tracking-tight">Privacy Policy</h1>
+          <h1 className="text-4xl font-bold tracking-tight">{t("page.title")}</h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            We respect your privacy and are committed to protecting your
-            personal data in accordance with GDPR regulations.
+            {t("page.description")}
           </p>
           <div className="flex justify-center gap-2">
-            <Badge variant="secondary">GDPR Compliant</Badge>
-            <Badge variant="outline">EU Regulation 2016/679</Badge>
+            <Badge variant="secondary">{t("badges.gdprCompliant")}</Badge>
+            <Badge variant="outline">{t("badges.euRegulation")}</Badge>
           </div>
         </div>
 
@@ -32,14 +33,12 @@ export default function PrivacyPolicyPage() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              Introduction
+              {t("sections.introduction.title")}
             </CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed">
-              At berichHub, we respect your privacy and process your personal
-              data in accordance with Regulation (EU) 2016/679 (GDPR), ensuring
-              transparency and security in all operations.
+              {t("sections.introduction.description")}
             </p>
           </CardContent>
         </Card>
@@ -47,7 +46,7 @@ export default function PrivacyPolicyPage() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              Data We Collect
+              {t("sections.dataWeCollect.title")}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -55,26 +54,25 @@ export default function PrivacyPolicyPage() {
               <div className="grid gap-3">
                 <div className="flex items-start gap-3 p-3 bg-muted/50 rounded-lg">
                   <div>
-                    <p className="font-medium text-sm">Personal Identifiers</p>
+                    <p className="font-medium text-sm">{t("sections.dataWeCollect.items.personalIdentifiers.title")}</p>
                     <p className="text-sm text-muted-foreground">
-                      Name and email via Kinde Auth and GitHub OAuth
+                      {t("sections.dataWeCollect.items.personalIdentifiers.description")}
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3 bg-muted/50 rounded-lg">
                   <div>
-                    <p className="font-medium text-sm">Usage Data</p>
+                    <p className="font-medium text-sm">{t("sections.dataWeCollect.items.usageData.title")}</p>
                     <p className="text-sm text-muted-foreground">
-                      Cookies and analytics as detailed in our Cookie Policy
+                      {t("sections.dataWeCollect.items.usageData.description")}
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3 bg-muted/50 rounded-lg">
                   <div>
-                    <p className="font-medium text-sm">Technical Data</p>
+                    <p className="font-medium text-sm">{t("sections.dataWeCollect.items.technicalData.title")}</p>
                     <p className="text-sm text-muted-foreground">
-                      Public IP and browser type for security and performance
-                      monitoring
+                      {t("sections.dataWeCollect.items.technicalData.description")}
                     </p>
                   </div>
                 </div>
@@ -86,15 +84,13 @@ export default function PrivacyPolicyPage() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              Legal Basis
+              {t("sections.legalBasis.title")}
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="p-4 rounded-lg border border-amber-200 dark:border-amber-800">
               <p className="text-sm leading-relaxed">
-                We rely on your consent (Art. 6(1)(a)) for non-essential cookies
-                and on legitimate interests (Art. 6(1)(f)) for security and
-                performance processing under GDPR.
+                {t("sections.legalBasis.description")}
               </p>
             </div>
           </CardContent>
@@ -103,31 +99,30 @@ export default function PrivacyPolicyPage() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              Your Rights
+              {t("sections.yourRights.title")}
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
               <p className="text-muted-foreground leading-relaxed">
-                Under GDPR, you have the following rights regarding your
-                personal data:
+                {t("sections.yourRights.description")}
               </p>
               <div className="grid sm:grid-cols-2 gap-2">
                 <div className="flex items-center gap-2 text-sm">
-                  <span>Right to access (Art. 15)</span>
+                  <span>{t("sections.yourRights.rightsList.access")}</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
-                  <span>Right to rectification (Art. 16)</span>
+                  <span>{t("sections.yourRights.rightsList.rectification")}</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
-                  <span>Right to erasure (Art. 17)</span>
+                  <span>{t("sections.yourRights.rightsList.erasure")}</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
-                  <span>Right to restrict processing (Art. 18)</span>
+                  <span>{t("sections.yourRights.rightsList.restrictProcessing")}</span>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground">
-                You can withdraw consent at any time by contacting us.
+                {t("sections.yourRights.withdrawConsent")}
               </p>
             </div>
           </CardContent>
@@ -136,15 +131,13 @@ export default function PrivacyPolicyPage() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              Data Retention
+              {t("sections.dataRetention.title")}
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="p-4 rounded-lg border border-indigo-200 dark:border-indigo-800">
               <p className="text-sm leading-relaxed">
-                Personal data is retained only as long as necessary to fulfill
-                the purposes described here, and in compliance with EU adequacy
-                decisions for transfers to our server hosted on Vercel.
+                {t("sections.dataRetention.description")}
               </p>
             </div>
           </CardContent>
@@ -153,24 +146,32 @@ export default function PrivacyPolicyPage() {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              Contact Information
+              {t("sections.contactInformation.title")}
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-3">
               <p className="text-muted-foreground">
-                For privacy inquiries, data requests, or any questions about
-                this policy, please contact us:
+                {t("sections.contactInformation.description")}
               </p>
-              <div className="flex items-center gap-2 p-3 bg-muted/50 rounded-lg">
+              <div className="flex items-center justify-evenly gap-2 p-3 bg-muted/50 rounded-lg">
                 <Link
                   href="https://github.com/ColdByDefault"
                   target="_blanck"
                   rel="noopener noreferrer"
-                  aria-label="GitHub"
+                  aria-label={t("sections.contactInformation.githubAria")}
                 >
-                  <span className="sr-only">GitHub</span>
+                  <span className="sr-only">{t("sections.contactInformation.githubAria")}</span>
                   <FaGithub />
+                </Link>
+                <Link
+                  href="https://github.com/ColdByDefault"
+                  target="_blanck"
+                  rel="noopener noreferrer"
+                  aria-label={t("sections.contactInformation.githubAria")}
+                >
+                  <span className="sr-only">{t("sections.contactInformation.githubAria")}</span>
+                  <Mail />
                 </Link>
               </div>
             </div>
@@ -179,16 +180,16 @@ export default function PrivacyPolicyPage() {
 
         <div className="text-center pt-6 border-t">
           <p className="text-xs text-muted-foreground">
-            Last updated:{" "}
-            {new Date().toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
+            {t("footer.lastUpdated", {
+              date: new Date().toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })
             })}
           </p>
           <p className="text-xs text-muted-foreground mt-1">
-            This policy is effective immediately and applies to all users of
-            berichHub.
+            {t("footer.effective")}
           </p>
         </div>
       </div>

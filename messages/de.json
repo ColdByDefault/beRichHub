@@ -211,5 +211,222 @@
         "answer": "Programmieren hat eine Lernkurve, ist aber mit der richtigen Herangehensweise zugänglich. Es erfordert logisches Denken und Problemlösungsfähigkeiten eher als fortgeschrittene Mathematik. Der Schlüssel ist Geduld, Beharrlichkeit und regelmäßiges Üben. Zerlege komplexe Probleme in kleinere Teile und hab keine Angst vor Fehlern – sie sind Teil des Lernprozesses."
       }
     }
+  },
+  "TermsOfServicePage": {
+    "page": {
+      "title": "Nutzungsbedingungen",
+      "description": "Bitte lesen Sie diese Bedingungen sorgfältig, bevor Sie berichHub nutzen. Durch den Zugriff auf unseren Dienst stimmen Sie diesen Bedingungen zu."
+    },
+    "badges": {
+      "legallyBinding": "Rechtlich bindend",
+      "euGermanLaw": "EU- und deutsches Recht"
+    },
+    "alert": {
+      "importantLabel": "Wichtig:",
+      "description": "Dies ist ein privates, nicht-kommerzielles Projekt zu Bildungszwecken. Diese Bedingungen spiegeln unser Engagement für Transparenz und den Schutz der Nutzer wider."
+    },
+    "sections": {
+      "acceptance": {
+        "title": "1. Akzeptanz der Bedingungen",
+        "description": "Durch den Zugriff auf berichHub stimmen Sie diesen Nutzungsbedingungen und allen geltenden Gesetzen zu.",
+        "updateNote": "Ihre fortgesetzte Nutzung unseres Dienstes gilt als Zustimmung zu allen Aktualisierungen dieser Bedingungen."
+      },
+      "modification": {
+        "title": "2. Änderungen der Bedingungen",
+        "description": "Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern oder zu ersetzen, wobei Änderungen mit der Veröffentlichung wirksam werden.",
+        "noticeLabel": "Hinweis:",
+        "noticeDescription": "Wir werden angemessene Anstrengungen unternehmen, um Benutzer über wesentliche Änderungen über unsere Plattform oder per E-Mail zu benachrichtigen."
+      },
+      "responsibilities": {
+        "title": "3. Benutzerverantwortlichkeiten",
+        "description": "Als Nutzer von berichHub stimmen Sie den folgenden Verantwortlichkeiten zu:",
+        "items": {
+          "accurateInfo": {
+            "title": "Korrekte Angaben",
+            "description": "Geben Sie während der Registrierung und Nutzung wahrheitsgemäße und korrekte Informationen an"
+          },
+          "authorizedUse": {
+            "title": "Autorisierte Nutzung",
+            "description": "Verwenden Sie unsere Dienste nur für rechtmäßige Zwecke und gemäß diesen Bedingungen"
+          },
+          "accountSecurity": {
+            "title": "Kontosicherheit",
+            "description": "Gewährleisten Sie die Sicherheit Ihrer Kontodaten und benachrichtigen Sie uns über unbefugten Zugriff"
+          }
+        }
+      },
+      "intellectualProperty": {
+        "title": "4. Geistiges Eigentum",
+        "description": "Alle Inhalte, der Code und das geistige Eigentum auf berichHub sind Eigentum des Entwicklers, sofern nichts anderes angegeben ist.",
+        "educationalUseLabel": "Bildungsnutzung:",
+        "educationalUseDescription": "Dieses Projekt dient zu Lernzwecken. Jeglicher Code oder Inhalt darf mit angemessener Attribution zu Bildungszwecken verwendet werden."
+      },
+      "liability": {
+        "title": "5. Haftungsbeschränkung",
+        "disclaimerLabel": "Wichtiger Haftungsausschluss:",
+        "disclaimerDescription": "Der Dienst wird „wie besehen“ ohne jegliche Garantien bereitgestellt.",
+        "details": "Wir haften nicht für indirekte, beiläufige, besondere, nachfolgende oder strafende Schäden, die sich aus Ihrer Nutzung von berichHub ergeben. Diese Beschränkung gilt im größtmöglichen gesetzlich zulässigen Umfang."
+      },
+      "governingLaw": {
+        "title": "6. Anwendbares Recht & Gerichtsstand",
+        "description": "Diese Bedingungen unterliegen dem Recht Deutschlands und den geltenden EU-Vorschriften.",
+        "jurisdictionLabel": "Gerichtsstand:",
+        "jurisdictionDescription": "Alle Streitigkeiten werden nach deutschem Gerichtsstand beigelegt, wobei die EU-Verbraucherschutzgesetze, soweit relevant, Anwendung finden."
+      }
+    },
+    "footer": {
+      "lastUpdatedLabel": "Zuletzt aktualisiert:",
+      "effective": "Diese Bedingungen gelten sofort und gelten für alle Nutzer von berichHub.",
+      "versionInfo": "Version 1.0 • Dieses Dokument ist Teil unseres Rechtsrahmens, der Transparenz und den Schutz der Nutzer sicherstellt."
+    }
+  },
+  "Cookies": {
+    "page": {
+      "title": "Cookie-Richtlinie",
+      "description": "Erfahren Sie, wie wir Cookies verwenden, um Ihr Erlebnis zu verbessern und sicherzustellen, dass unsere Website ordnungsgemäß funktioniert."
+    },
+    "badges": {
+      "gdprCompliant": "DSGVO-konform",
+      "transparentUsage": "Transparente Nutzung"
+    },
+    "sections": {
+      "whatAreCookies": {
+        "title": "Was sind Cookies?",
+        "description": "Cookies sind kleine Textdateien, die von Ihrem Browser auf Ihrem Gerät gespeichert werden, wenn Sie eine Website besuchen, um sich Ihre Einstellungen zu merken und die Funktionalität zu verbessern."
+      },
+      "howWeUseCookies": {
+        "title": "Wie wir Cookies verwenden",
+        "essential": {
+          "label": "Erforderliche Cookies",
+          "badge": "Erforderlich",
+          "items": {
+            "authentication": {
+              "title": "Authentifizierungs-Cookies",
+              "description": "Kinde Auth-Cookies für sichere Authentifizierungssitzungen und Benutzeridentitätsverwaltung"
+            },
+            "performance": {
+              "title": "Performance-Cookies",
+              "description": "Vercel-Hosting-Cookies zur Leistungsüberwachung und Stabilität beim Routing"
+            }
+          }
+        },
+        "functional": {
+          "label": "Funktionale Cookies",
+          "badge": "Optional",
+          "items": {
+            "themePreferences": {
+              "title": "Theme-Einstellungen",
+              "description": "Speichern Sie Ihre UI-Themenwahl (Hell/Dunkel) für eine konsistente Erfahrung"
+            },
+            "oauthIntegration": {
+              "title": "OAuth-Integration",
+              "description": "GitHub OAuth-Cookies für nahtlose Anmeldeabläufe und Kontoverknüpfung"
+            },
+            "sessionManagement": {
+              "title": "Sitzungsverwaltung",
+              "description": "Halten Sie Ihre Anmeldung zwischen Besuchen aufrecht und bewahren Sie Ihren Sitzungsstatus"
+            }
+          }
+        }
+      },
+      "yourChoices": {
+        "title": "Ihre Wahl & Kontrolle",
+        "notImplemented": "Noch nicht implementiert!",
+        "description": "Sie haben die volle Kontrolle über Ihre Cookie-Einstellungen. Sie können nicht-essentielle Cookies jederzeit in Ihren Browsereinstellungen verwalten oder deaktivieren.",
+        "buttons": {
+          "browserSettings": "Browser-Einstellungen",
+          "cookiePreferences": "Cookie-Einstellungen"
+        },
+        "noteLabel": "Hinweis:",
+        "noteDescription": "Wenn Sie erforderliche Cookies deaktivieren, kann die Kernfunktionalität wie Authentifizierung und Datenspeicherung beeinträchtigt werden."
+      }
+    },
+    "footer": {
+      "lastUpdated": "Zuletzt aktualisiert:",
+      "policyDescription": "Diese Cookie-Richtlinie ist Teil unseres umfassenden Datenschutzrahmens und der DSGVO-Konformität."
+    }
+  },
+  "Impressum": {
+    "page": {
+      "title": "Impressum",
+      "description": "Rechtliche Hinweise und Informationen"
+    },
+    "sections": {
+      "legalStatus": {
+        "title": "Rechtlicher Status",
+        "projectInfoTitle": "Projektinformationen:",
+        "projectInfoDescription": "Diese Website ist ein rein privates, nicht kommerzielles Projekt und dient ausschließlich experimentellen und persönlichen Lernzwecken. Es erfolgt weder eine geschäftsmäßige Nutzung noch eine Gewinnerzielungsabsicht.",
+        "legalBasisTitle": "Rechtliche Grundlage:",
+        "legalBasisDescription": "Gemäß § 5 TMG besteht daher keine Pflicht zur Angabe eines Impressums."
+      },
+      "anotherProject": {
+        "title": "AnotherProject",
+        "text": "ColdByDefault © {year} beRich.Hub"
+      }
+    },
+    "footer": {
+      "lastUpdated": "Letzte Aktualisierung: {date}"
+    }
+  },
+  "PrivacyPolicy": {
+    "page": {
+      "title": "Datenschutzrichtlinie",
+      "description": "Wir respektieren Ihre Privatsphäre und verpflichten uns, Ihre personenbezogenen Daten gemäß der DSGVO zu schützen."
+    },
+    "badges": {
+      "gdprCompliant": "DSGVO-konform",
+      "euRegulation": "EU-Verordnung 2016/679"
+    },
+    "sections": {
+      "introduction": {
+        "title": "Einführung",
+        "description": "Bei berichHub respektieren wir Ihre Privatsphäre und verarbeiten Ihre personenbezogenen Daten in Übereinstimmung mit der Verordnung (EU) 2016/679 (DSGVO), um Transparenz und Sicherheit in allen Abläufen zu gewährleisten."
+      },
+      "dataWeCollect": {
+        "title": "Daten, die wir erheben",
+        "items": {
+          "personalIdentifiers": {
+            "title": "Persönliche Kennungen",
+            "description": "Name und E-Mail über Kinde Auth und GitHub OAuth"
+          },
+          "usageData": {
+            "title": "Nutzungsdaten",
+            "description": "Cookies und Analysen wie in unserer Cookie-Richtlinie beschrieben"
+          },
+          "technicalData": {
+            "title": "Technische Daten",
+            "description": "Öffentliche IP und Browser-Typ für Sicherheits- und Leistungsüberwachung"
+          }
+        }
+      },
+      "legalBasis": {
+        "title": "Rechtsgrundlage",
+        "description": "Wir stützen uns auf Ihre Einwilligung (Art. 6 Abs. 1 a) für nicht essentielle Cookies und auf berechtigte Interessen (Art. 6 Abs. 1 f) für Sicherheits- und Leistungsprozesse nach DSGVO."
+      },
+      "yourRights": {
+        "title": "Ihre Rechte",
+        "description": "Nach DSGVO haben Sie folgende Rechte in Bezug auf Ihre personenbezogenen Daten:",
+        "rightsList": {
+          "access": "Recht auf Auskunft (Art. 15)",
+          "rectification": "Recht auf Berichtigung (Art. 16)",
+          "erasure": "Recht auf Löschung (Art. 17)",
+          "restrictProcessing": "Recht auf Einschränkung der Verarbeitung (Art. 18)"
+        },
+        "withdrawConsent": "Sie können Ihre Einwilligung jederzeit durch Kontaktaufnahme widerrufen."
+      },
+      "dataRetention": {
+        "title": "Datenspeicherung",
+        "description": "Personenbezogene Daten werden nur so lange aufbewahrt, wie es zur Erfüllung der hier beschriebenen Zwecke erforderlich ist, und in Übereinstimmung mit den Angemessenheitsbeschlüssen der EU bei Übertragungen an unseren auf Vercel gehosteten Server."
+      },
+      "contactInformation": {
+        "title": "Kontaktinformationen",
+        "description": "Für Datenschutzanfragen, Datenanforderungen oder Fragen zu dieser Richtlinie kontaktieren Sie uns bitte:",
+        "githubAria": "GitHub"
+      }
+    },
+    "footer": {
+      "lastUpdated": "Zuletzt aktualisiert: {date}",
+      "effective": "Diese Richtlinie gilt sofort und gilt für alle Benutzer von berichHub."
+    }
   }
 }

@@ -2,8 +2,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Shield, Info } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function Impressum() {
+  const t = useTranslations("Impressum");
   return (
     <div className="container mx-auto px-4 py-8 mt-20 max-w-4xl">
       <div className="space-y-6">
@@ -13,9 +15,9 @@ export default function Impressum() {
               <Shield className="w-6 h-6 text-primary" />
             </div>
           </div>
-          <h1 className="text-4xl font-bold tracking-tight">Impressum</h1>
+          <h1 className="text-4xl font-bold tracking-tight">{t("page.title")}</h1>
           <p className="text-muted-foreground text-lg">
-            Rechtliche Hinweise und Informationen
+            {t("page.description")}
           </p>
         </div>
         <Separator />
@@ -23,27 +25,23 @@ export default function Impressum() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Info className="w-5 h-5" />
-              Rechtlicher Status
+              {t("sections.legalStatus.title")}
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="bg-muted/50 p-4 rounded-lg">
-              <p className="text-sm font-medium mb-2">Projektinformationen:</p>
+              <p className="text-sm font-medium mb-2">{t("sections.legalStatus.projectInfoTitle")}</p>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Diese Website ist ein rein privates, nicht kommerzielles Projekt
-                und dient ausschließlich experimentellen und persönlichen
-                Lernzwecken. Es erfolgt weder eine geschäftsmäßige Nutzung noch
-                eine Gewinnerzielungsabsicht.
+                {t("sections.legalStatus.projectInfoDescription")}
               </p>
             </div>
 
             <div className="bg-blue-50 dark:bg-blue-950/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
               <p className="text-sm font-medium text-blue-900 dark:text-blue-100 mb-2">
-                Rechtliche Grundlage:
+                {t("sections.legalStatus.legalBasisTitle")}
               </p>
               <p className="text-sm text-blue-800 dark:text-blue-200">
-                Gemäß § 5 TMG besteht daher keine Pflicht zur Angabe eines
-                Impressums.
+                {t("sections.legalStatus.legalBasisDescription")}
               </p>
             </div>
           </CardContent>
@@ -51,18 +49,18 @@ export default function Impressum() {
 
         <Card>
           <CardHeader>
-            <CardTitle>AnotherProject</CardTitle>
+            <CardTitle>{t("sections.anotherProject.title")}</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground">
-              ColdByDefault © {new Date().getFullYear()} beRich.Hub
+              {t("sections.anotherProject.text", { year: new Date().getFullYear() })}
             </p>
           </CardContent>
         </Card>
 
         <div className="text-center pt-6">
           <p className="text-xs">
-            Letzte Aktualisierung: {new Date().toLocaleDateString("de-DE")}
+            {t("footer.lastUpdated", { date: new Date().toLocaleDateString("de-DE") })}
           </p>
         </div>
       </div>

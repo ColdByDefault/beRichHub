@@ -211,5 +211,222 @@
         "answer": "Programming has a learning curve, but it's accessible with the right approach. It requires logical thinking and problem-solving skills rather than advanced math. The key is to be patient, persistent, and practice regularly. Break down complex problems into smaller parts, and don't be afraid to make mistakes—they're part of the learning process."
       }
     }
+  },
+  "TermsOfServicePage": {
+    "page": {
+      "title": "Terms of Service",
+      "description": "Please read these terms carefully before using berichHub. By accessing our service, you agree to be bound by these terms."
+    },
+    "badges": {
+      "legallyBinding": "Legally Binding",
+      "euGermanLaw": "EU & German Law"
+    },
+    "alert": {
+      "importantLabel": "Important:",
+      "description": "This is a private, non-commercial project for educational purposes. These terms reflect our commitment to transparency and user protection."
+    },
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptance of Terms",
+        "description": "By accessing berichHub, you agree to these Terms of Service and all applicable laws.",
+        "updateNote": "Your continued use of our service constitutes acceptance of any updates to these terms."
+      },
+      "modification": {
+        "title": "2. Modification of Terms",
+        "description": "We reserve the right to modify or replace these Terms at any time, with changes effective upon posting.",
+        "noticeLabel": "Notice:",
+        "noticeDescription": "We will make reasonable efforts to notify users of significant changes through our platform or via email."
+      },
+      "responsibilities": {
+        "title": "3. User Responsibilities",
+        "description": "As a user of berichHub, you agree to the following responsibilities:",
+        "items": {
+          "accurateInfo": {
+            "title": "Accurate Information",
+            "description": "Provide truthful and accurate information during registration and use"
+          },
+          "authorizedUse": {
+            "title": "Authorized Use",
+            "description": "Use our services only for lawful purposes and in accordance with these terms"
+          },
+          "accountSecurity": {
+            "title": "Account Security",
+            "description": "Maintain the security of your account credentials and notify us of any unauthorized access"
+          }
+        }
+      },
+      "intellectualProperty": {
+        "title": "4. Intellectual Property",
+        "description": "All content, code, and intellectual property on berichHub are the property of the developer unless stated otherwise.",
+        "educationalUseLabel": "Educational Use:",
+        "educationalUseDescription": "This project is for learning purposes. Any code or content may be referenced for educational use with proper attribution."
+      },
+      "liability": {
+        "title": "5. Limitation of Liability",
+        "disclaimerLabel": "Important Disclaimer:",
+        "disclaimerDescription": "The service is provided \"as is\" without warranties of any kind.",
+        "details": "We are not liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of berichHub. This limitation applies to the fullest extent permitted by law."
+      },
+      "governingLaw": {
+        "title": "6. Governing Law & Jurisdiction",
+        "description": "These Terms are governed by the laws of Germany and applicable EU regulations.",
+        "jurisdictionLabel": "Jurisdiction:",
+        "jurisdictionDescription": "Any disputes will be resolved under German jurisdiction, with EU consumer protection laws applying where relevant."
+      }
+    },
+    "footer": {
+      "lastUpdatedLabel": "Last updated:",
+      "effective": "These terms are effective immediately and apply to all users of berichHub.",
+      "versionInfo": "Version 1.0 • This document is part of our legal framework ensuring transparency and user protection."
+    }
+  },
+  "Cookies": {
+    "page": {
+      "title": "Cookie Policy",
+      "description": "Learn about how we use cookies to enhance your experience and ensure our website functions properly."
+    },
+    "badges": {
+      "gdprCompliant": "GDPR Compliant",
+      "transparentUsage": "Transparent Usage"
+    },
+    "sections": {
+      "whatAreCookies": {
+        "title": "What Are Cookies?",
+        "description": "Cookies are small text files stored on your device by your browser when you visit a website, used to remember your preferences and enhance functionality."
+      },
+      "howWeUseCookies": {
+        "title": "How We Use Cookies",
+        "essential": {
+          "label": "Essential Cookies",
+          "badge": "Required",
+          "items": {
+            "authentication": {
+              "title": "Authentication Cookies",
+              "description": "Kinde Auth cookies for secure authentication sessions and user identity management"
+            },
+            "performance": {
+              "title": "Performance Cookies",
+              "description": "Vercel hosting cookies for performance monitoring and routing stability"
+            }
+          }
+        },
+        "functional": {
+          "label": "Functional Cookies",
+          "badge": "Optional",
+          "items": {
+            "themePreferences": {
+              "title": "Theme Preferences",
+              "description": "Store your UI theme choice (light/dark mode) for a consistent experience"
+            },
+            "oauthIntegration": {
+              "title": "OAuth Integration",
+              "description": "GitHub OAuth cookies for seamless sign-in flows and account linking"
+            },
+            "sessionManagement": {
+              "title": "Session Management",
+              "description": "Keep you signed in across visits and maintain your session state"
+            }
+          }
+        }
+      },
+      "yourChoices": {
+        "title": "Your Choices & Control",
+        "notImplemented": "Not Implemented yet!",
+        "description": "You have full control over your cookie preferences. You can manage or disable non-essential cookies at any time through your browser settings.",
+        "buttons": {
+          "browserSettings": "Browser Settings",
+          "cookiePreferences": "Cookie Preferences"
+        },
+        "noteLabel": "Note:",
+        "noteDescription": "Disabling essential cookies may affect core functionality such as authentication and data persistence."
+      }
+    },
+    "footer": {
+      "lastUpdated": "Last updated:",
+      "policyDescription": "This cookie policy is part of our comprehensive privacy framework and GDPR compliance."
+    }
+  },
+  "Impressum": {
+    "page": {
+      "title": "Impressum",
+      "description": "Legal Notice and Information"
+    },
+    "sections": {
+      "legalStatus": {
+        "title": "Legal Status",
+        "projectInfoTitle": "Project Information:",
+        "projectInfoDescription": "This website is a purely private, non-commercial project and serves exclusively for experimental and personal learning purposes. There is neither commercial use nor profit intention.",
+        "legalBasisTitle": "Legal Basis:",
+        "legalBasisDescription": "According to § 5 TMG, there is therefore no obligation to provide an impressum."
+      },
+      "anotherProject": {
+        "title": "AnotherProject",
+        "text": "ColdByDefault © {year} beRich.Hub"
+      }
+    },
+    "footer": {
+      "lastUpdated": "Last updated: {date}"
+    }
+  },
+  "PrivacyPolicy": {
+    "page": {
+      "title": "Privacy Policy",
+      "description": "We respect your privacy and are committed to protecting your personal data in accordance with GDPR regulations."
+    },
+    "badges": {
+      "gdprCompliant": "GDPR Compliant",
+      "euRegulation": "EU Regulation 2016/679"
+    },
+    "sections": {
+      "introduction": {
+        "title": "Introduction",
+        "description": "At berichHub, we respect your privacy and process your personal data in accordance with Regulation (EU) 2016/679 (GDPR), ensuring transparency and security in all operations."
+      },
+      "dataWeCollect": {
+        "title": "Data We Collect",
+        "items": {
+          "personalIdentifiers": {
+            "title": "Personal Identifiers",
+            "description": "Name and email via Kinde Auth and GitHub OAuth"
+          },
+          "usageData": {
+            "title": "Usage Data",
+            "description": "Cookies and analytics as detailed in our Cookie Policy"
+          },
+          "technicalData": {
+            "title": "Technical Data",
+            "description": "Public IP and browser type for security and performance monitoring"
+          }
+        }
+      },
+      "legalBasis": {
+        "title": "Legal Basis",
+        "description": "We rely on your consent (Art. 6(1)(a)) for non-essential cookies and on legitimate interests (Art. 6(1)(f)) for security and performance processing under GDPR."
+      },
+      "yourRights": {
+        "title": "Your Rights",
+        "description": "Under GDPR, you have the following rights regarding your personal data:",
+        "rightsList": {
+          "access": "Right to access (Art. 15)",
+          "rectification": "Right to rectification (Art. 16)",
+          "erasure": "Right to erasure (Art. 17)",
+          "restrictProcessing": "Right to restrict processing (Art. 18)"
+        },
+        "withdrawConsent": "You can withdraw consent at any time by contacting us."
+      },
+      "dataRetention": {
+        "title": "Data Retention",
+        "description": "Personal data is retained only as long as necessary to fulfill the purposes described here, and in compliance with EU adequacy decisions for transfers to our server hosted on Vercel."
+      },
+      "contactInformation": {
+        "title": "Contact Information",
+        "description": "For privacy inquiries, data requests, or any questions about this policy, please contact us:",
+        "githubAria": "GitHub"
+      }
+    },
+    "footer": {
+      "lastUpdated": "Last updated: {date}",
+      "effective": "This policy is effective immediately and applies to all users of berichHub."
+    }
   }
 }
