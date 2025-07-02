@@ -11,67 +11,84 @@ import LanguageSwitcher from "@/components/toggles/language-switcher";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import { UserSearch } from "@/components/search/user-search";
 import { getAvatarUrl, getUserInitials } from "@/utils/avatar";
+import { MobileNavbar } from "@/components/main/mobile-navbar";
+import { MobileBrand } from "@/components/main/mobile-brand";
 
 export async function Navbar() {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
 
   return (
-    <>
-      <NavbarHeader />
-      <ul className="flex items-center justify-between gap-4">
-        <li className="border-r-2 pr-4">
-          {!user ? (
-            <div></div>
-          ) : (
-            <Link href="/dashboard" className="flex items-center gap-2">
-              <Avatar>
-                <AvatarImage src={getAvatarUrl(user.picture)} alt="you" />
-                <AvatarFallback>
-                  {getUserInitials(user.given_name, user.family_name)}
-                </AvatarFallback>
-              </Avatar>
-              <Tooltip>
-                <TooltipTrigger>
-                  {user.given_name || user.username}
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>Profile</p>
-                </TooltipContent>
-              </Tooltip>
-            </Link>
-          )}
-        </li>
-        <li className="flex gap-2 border-r-2 pr-4">
-          {!user ? (
-            <Button variant="ghost">
-              <LoginLink postLoginRedirectURL="/dashboard">Sign In</LoginLink>
-            </Button>
-          ) : (
-            <Tooltip>
-              <TooltipTrigger>
-                <Button variant="ghost" asChild>
-                  <LogoutLink>
-                    <LogOut />
-                  </LogoutLink>
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Log out</p>
-              </TooltipContent>
-            </Tooltip>
-          )}
-        </li>
-        <li>
-          <ModeToggle />
-        </li>
-        <li>
-          <LanguageSwitcher />
-        </li>
-      </ul>
-      <div>
-        <UserSearch />
+    <div className="flex items-center justify-between w-full px-4 py-2 border-b">
+      {/* Mobile Navigation */}
+      <div className="md:hidden flex items-center justify-between w-full">
+        <MobileNavbar user={user} />
+        <div className="flex items-center gap-2">
+          <MobileBrand />
+        </div>
       </div>
-    </>
+
+      {/* Desktop Navigation */}
+      <div className="hidden md:flex items-center justify-between w-full">
+        <NavbarHeader />
+        <div className="flex items-center gap-4">
+          <ul className="flex items-center justify-between gap-4">
+            <li className="border-r-2 pr-4">
+              {!user ? (
+                <div></div>
+              ) : (
+                <Link href="/dashboard" className="flex items-center gap-2">
+                  <Avatar>
+                    <AvatarImage src={getAvatarUrl(user.picture)} alt="you" />
+                    <AvatarFallback>
+                      {getUserInitials(user.given_name, user.family_name)}
+                    </AvatarFallback>
+                  </Avatar>
+                  <Tooltip>
+                    <TooltipTrigger>
+                      {user.given_name || user.username}
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Profile</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </Link>
+              )}
+            </li>
+            <li className="flex gap-2 border-r-2 pr-4">
+              {!user ? (
+                <Button variant="ghost">
+                  <LoginLink postLoginRedirectURL="/dashboard">
+                    Sign In
+                  </LoginLink>
+                </Button>
+              ) : (
+                <Tooltip>
+                  <TooltipTrigger>
+                    <Button variant="ghost" asChild>
+                      <LogoutLink>
+                        <LogOut />
+                      </LogoutLink>
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Log out</p>
+                  </TooltipContent>
+                </Tooltip>
+              )}
+            </li>
+            <li>
+              <ModeToggle />
+            </li>
+            <li>
+              <LanguageSwitcher />
+            </li>
+          </ul>
+          <div>
+            <UserSearch />
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
