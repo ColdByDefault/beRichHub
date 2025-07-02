@@ -158,7 +158,7 @@ export default function Footer() {
                 <Link
                   target="_blanck"
                   rel="noopener noreferrer"
-                  href="hhtps://www.coldbydefault.com"
+                  href="https://www.coldbydefault.com"
                   className="text-gray-600 dark:text-gray-300 hover:text-prime dark:hover:text-white transition-colors duration-200"
                 >
                   ColdByDefault
