@@ -10,7 +10,7 @@ import { LoginLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import LanguageSwitcher from "@/components/toggles/language-switcher";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import { UserSearch } from "@/components/search/user-search";
-
+import { getAvatarUrl, getUserInitials } from "@/utils/avatar";
 
 export async function Navbar() {
   const { getUser } = getKindeServerSession();
@@ -26,11 +26,10 @@ export async function Navbar() {
           ) : (
             <Link href="/dashboard" className="flex items-center gap-2">
               <Avatar>
-                <AvatarImage
-                  src={user.picture || "/avatars/avatar.png"}
-                  alt="you"
-                />
-                <AvatarFallback>YOU</AvatarFallback>
+                <AvatarImage src={getAvatarUrl(user.picture)} alt="you" />
+                <AvatarFallback>
+                  {getUserInitials(user.given_name, user.family_name)}
+                </AvatarFallback>
               </Avatar>
               <Tooltip>
                 <TooltipTrigger>

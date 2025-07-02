@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { Badge } from "@/components/ui/badge";
-import { Rocket } from "lucide-react";
+import { Github, Link, Rocket } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function BeRichHome() {
@@ -73,11 +73,11 @@ export default function BeRichHome() {
         <span className="text-blue-400">.</span>
         <span>Hub</span>
       </div>
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 flex flex-col items-center">
         <div className="text-center mb-12">
           <Badge variant="secondary" className="mb-4">
             <Rocket className="h-4 w-4 mr-2" />
-            beRichHub
+            Open Source
           </Badge>
           <h2 className="text-4xl font-bold tracking-tight mb-4">
             {/* Your Digital Hub for <span className="text-primary">Developer Success</span> */}
@@ -86,6 +86,19 @@ export default function BeRichHome() {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             {t("description")}
           </p>
+        </div>
+        <div className="flex items-center">
+          <Github className="h-4 w-4 mr-2" />
+          Source Code on{" "}
+          <a
+            href="https://github.com/ColdByDefault/beRichHub"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center ml-1 text-blue-500 hover:underline"
+          >
+            <Link className="h-4 w-4 mr-1" />
+            GitHub
+          </a>
         </div>
       </section>
     </div>

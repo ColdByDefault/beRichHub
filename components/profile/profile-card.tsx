@@ -40,6 +40,7 @@ import {
 import { updateUserProfile } from "@/actions/profile";
 import { updateUserBio } from "@/actions/bio";
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
+import { getUserInitials } from "@/utils/avatar";
 
 interface ProfileCardProps {
   user: {
@@ -75,7 +76,9 @@ export function ProfileCard({ user, isOwnProfile = true }: ProfileCardProps) {
     if (!user?.id) return;
     (async () => {
       try {
-        const res = await fetch("/api/bio", { cache: "no-store" });
+        // Use different endpoint based on whether it's own profile or not
+        const endpoint = isOwnProfile ? "/api/bio" : `/api/bio/${user.id}`;
+        const res = await fetch(endpoint, { cache: "no-store" });
         if (res.ok) {
           const data = await res.json();
           setFormData((prev) => ({ ...prev, bio: data.bio || "" }));
@@ -84,10 +87,7 @@ export function ProfileCard({ user, isOwnProfile = true }: ProfileCardProps) {
         console.error("Failed to load bio", err);
       }
     })();
-  }, [user?.id]);
-
-  const getInitials = (first?: string, last?: string) =>
-    `${first?.[0] ?? ""}${last?.[0] ?? ""}`.toUpperCase();
+  }, [user?.id, isOwnProfile]);
 
   const handleSave = async () => {
     if (!user?.id) return;
@@ -157,26 +157,30 @@ export function ProfileCard({ user, isOwnProfile = true }: ProfileCardProps) {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <Avatar className="h-16 w-16">
-              <AvatarImage
-                src={user.picture || "/avatars/avatar.png"}
-                alt="you"
-              />
+              <AvatarImage src={user.picture} alt="you" />
               <AvatarFallback className="text-lg">
-                {getInitials(formData.given_name, formData.family_name)}
+                {getUserInitials(formData.given_name, formData.family_name)}
               </AvatarFallback>
             </Avatar>
             <div className="space-y-2">
               <CardTitle className="text-2xl">
-                Welcome, {formData.given_name}
+                {isOwnProfile
+                  ? `Welcome, ${formData.given_name}`
+                  : `${formData.given_name} ${formData.family_name}`}
               </CardTitle>
               <div className="flex flex-wrap gap-2">
                 <Badge variant="secondary" className="flex items-center gap-1">
                   <UserCheck className="h-3 w-3 text-green-400" /> Verified User
                 </Badge>
-                <Badge variant="secondary" className="flex items-center gap-1">
-                  <UserCheck className="h-3 w-3 text-blue-400" />
-                  {formData.roles || "no role"}
-                </Badge>
+                {isOwnProfile && (
+                  <Badge
+                    variant="secondary"
+                    className="flex items-center gap-1"
+                  >
+                    <UserCheck className="h-3 w-3 text-blue-400" />
+                    {formData.roles || "no role"}
+                  </Badge>
+                )}
               </div>
             </div>
           </div>
