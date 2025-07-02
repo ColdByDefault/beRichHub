@@ -5,9 +5,9 @@ import { BlogList } from "@/components/profile/BlogList";
 import { notFound } from "next/navigation";
 
 interface UserProfilePageProps {
-  params: {
+  params: Promise<{
     userId: string;
-  };
+  }>;
 }
 
 async function getUserById(userId: string) {
@@ -71,7 +71,10 @@ export default async function UserProfilePage({
     notFound();
   }
 
-  const profileUser = await getUserById(params.userId);
+  // Await the params Promise in Next.js 15
+  const { userId } = await params;
+
+  const profileUser = await getUserById(userId);
 
   if (!profileUser) {
     notFound();
@@ -87,7 +90,7 @@ export default async function UserProfilePage({
     roles: "", // We don't expose roles for other users for privacy
   };
 
-  const isOwnProfile = currentUser.id === params.userId;
+  const isOwnProfile = currentUser.id === userId;
 
   return (
     <div className="flex flex-col min-h-screen mt-20 items-center">
@@ -98,7 +101,7 @@ export default async function UserProfilePage({
       </div>
       <ProfileCard user={mappedUser} isOwnProfile={isOwnProfile} />
       <div className="container mx-auto py-10">
-        <BlogList userId={params.userId} />
+        <BlogList userId={userId} />
       </div>
     </div>
   );
