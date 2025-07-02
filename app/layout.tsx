@@ -32,6 +32,7 @@ import { Urbanist as Urbanist } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { CookiesBanner } from "@/components/cookies";
 
 export const metadata: Metadata = {
   title: "beRich-Hub",
@@ -123,6 +124,7 @@ export default async function RootLayout({
             <div className="shadow-md bg-white dark:bg-prime">
               <Footer />
             </div>
+            <CookiesBanner />
           </NextIntlClientProvider>
         </Providers>
         <Analytics />
