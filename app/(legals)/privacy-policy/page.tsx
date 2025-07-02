@@ -161,7 +161,7 @@ export default function PrivacyPolicyPage() {
                   rel="noopener noreferrer"
                   aria-label={t("sections.contactInformation.githubAria")}
                 >
-                  <span className="sr-only">{t("sections.contactInformation.githubAria")}</span>
+                  <span className="sr-only">{t("sections.contactInformation.githubAria")}</span> 
                   <FaGithub />
                 </Link>
                 <Link
