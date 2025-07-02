@@ -31,6 +31,7 @@ import Footer from "@/components/main/Footer";
 import { Urbanist as Urbanist } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "beRich-Hub",
@@ -66,7 +67,7 @@ export default async function RootLayout({
         <meta property="og:title" content="ColdByDefault" />
         <meta property="og:description" content="beRich.Hub" />
         <meta property="og:image" content="/logoDark.png" />
-        <meta property="og:url" content="https://www.berich-hub.org" />
+        <meta property="og:url" content="https://berich-hub.vercel.app/" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="ColdByDefault" />
         <meta name="twitter:description" content="beRich.Hub" />
@@ -75,7 +76,7 @@ export default async function RootLayout({
         <link
           rel="alternate"
           hrefLang={locale}
-          href="https://www.berich-hub.org/de"
+          href="https://berich-hub.vercel.app//de"
         />
         <script type="application/ld+json">
           {`
@@ -83,8 +84,8 @@ export default async function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "ColdByDefault",
-              "url": "https://www.berich-hub.org",
-              "logo": "https://www.berich-hub.org/logoDark.png",
+              "url": "https://berich-hub.vercel.app/",
+              "logo": "https://berich-hub.vercel.app//logoDark.png",
               "sameAs": [
                 "https://github.com/ColdByDefault"
               ]
@@ -94,6 +95,22 @@ export default async function RootLayout({
         <title>beRichHub</title>
       </head>
       <body suppressHydrationWarning className="animated-loader">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `/* 
+      ╔══════════════════════════════════════════════════════════════════╗
+      ║                         beRich-Hub                               ║
+      ║                    by ColdByDefault                              ║
+      ║                                                                  ║
+      ║  Built with Next.js, TypeScript, and Tailwind CSS                ║
+      ║  Open source project - Check us out on GitHub!                   ║
+      ║  https://github.com/ColdByDefault                                ║
+      ║  https://berich-hub.vercel.app/                                  ║
+      ║                                                                  ║
+      ║   Leve Palestina                                                 ║ 
+      ╚══════════════════════════════════════════════════════════════════╝ */`,
+          }}
+        ></script>
         <Providers>
           <NextIntlClientProvider messages={messages}>
             <div
@@ -109,6 +126,7 @@ export default async function RootLayout({
           </NextIntlClientProvider>
         </Providers>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
