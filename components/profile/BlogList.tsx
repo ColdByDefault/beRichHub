@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: LicenseRef-BRH-1.0
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import {
   Card,
   CardHeader,
@@ -27,7 +27,11 @@ interface Post {
   createdAt: string;
 }
 
-export function BlogList() {
+interface BlogListProps {
+  userId?: string; // Optional userId to fetch posts for specific user
+}
+
+export function BlogList({ userId }: BlogListProps) {
   const [posts, setPosts] = useState<Post[]>([]);
   const [error, setError] = useState<string | null>(null);
 
@@ -35,20 +39,18 @@ export function BlogList() {
   const [postToDelete, setPostToDelete] = useState<string | null>(null);
 
   // Fetch posts
-  const load = async () => {
+  const load = useCallback(async () => {
     try {
-      const res = await fetch("/api/posts", { cache: "no-store" });
+      const url = userId ? `/api/posts?userId=${userId}` : "/api/posts";
+      const res = await fetch(url, { cache: "no-store" });
       if (!res.ok) throw new Error("Could not load posts.");
       setPosts(await res.json());
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+      const errorMessage =
+        err instanceof Error ? err.message : "Could not load posts.";
+      setError(errorMessage);
     }
-  };
-
-  useEffect(() => {
-    load();
-  }, []);
+  }, [userId]);
 
   useEffect(() => {
     load();
@@ -59,16 +61,17 @@ export function BlogList() {
     return () => {
       window.removeEventListener("postAdded", onAdded);
     };
-  }, []);
+  }, [load]);
 
   const handleDelete = async (id: string) => {
     try {
       const res = await fetch(`/api/posts/${id}`, { method: "DELETE" });
       if (!res.ok) throw new Error("Delete failed.");
       await load();
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+      const errorMessage =
+        err instanceof Error ? err.message : "Delete failed.";
+      setError(errorMessage);
     }
   };
 

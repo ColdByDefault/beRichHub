@@ -9,6 +9,7 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { LoginLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import LanguageSwitcher from "@/components/toggles/language-switcher";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import { UserSearch } from "@/components/search/user-search";
 
 
 export async function Navbar() {
@@ -69,6 +70,9 @@ export async function Navbar() {
           <LanguageSwitcher />
         </li>
       </ul>
+      <div>
+        <UserSearch />
+      </div>
     </>
   );
 }
