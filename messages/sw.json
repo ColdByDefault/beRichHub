@@ -346,6 +346,17 @@
       "policyDescription": "Denna cookiepolicy är en del av vår omfattande integritetsram och GDPR-efterlevnad."
     }
   },
+  "CookiesBanner": {
+    "title": "Vi värdesätter din integritet",
+    "description": "Denna webbplats använder cookies för att förbättra din surfupplevelse, tillhandahålla personligt innehåll och analysera webbplatstrafik. Din integritet är viktig för oss.",
+    "acceptAll": "Acceptera alla cookies",
+    "decline": "Avvisa",
+    "learnMore": "Läs mer i vår",
+    "privacyPolicy": "Integritetspolicy",
+    "and": "och",
+    "cookiePolicy": "Cookiepolicy",
+    "close": "Stäng banner"
+  },
   "Impressum": {
     "page": {
       "title": "Impressum",

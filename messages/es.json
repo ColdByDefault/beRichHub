@@ -346,6 +346,17 @@
       "policyDescription": "Esta política de cookies forma parte de nuestro marco de privacidad integral y el cumplimiento de GDPR."
     }
   },
+  "CookiesBanner": {
+    "title": "Valoramos tu privacidad",
+    "description": "Este sitio web utiliza cookies para mejorar tu experiencia de navegación, proporcionar contenido personalizado y analizar el tráfico del sitio. Tu privacidad es importante para nosotros.",
+    "acceptAll": "Aceptar todas las cookies",
+    "decline": "Rechazar",
+    "learnMore": "Aprende más en nuestra",
+    "privacyPolicy": "Política de Privacidad",
+    "and": "y",
+    "cookiePolicy": "Política de Cookies",
+    "close": "Cerrar banner"
+  },
   "Impressum": {
     "page": {
       "title": "Aviso legal",

@@ -346,6 +346,17 @@
       "policyDescription": "Diese Cookie-Richtlinie ist Teil unseres umfassenden Datenschutzrahmens und der DSGVO-Konformität."
     }
   },
+  "CookiesBanner": {
+    "title": "Wir schätzen Ihre Privatsphäre",
+    "description": "Diese Website verwendet Cookies, um Ihr Browsing-Erlebnis zu verbessern, personalisierte Inhalte bereitzustellen und den Website-Traffic zu analysieren. Ihre Privatsphäre ist uns wichtig.",
+    "acceptAll": "Alle Cookies akzeptieren",
+    "decline": "Ablehnen",
+    "learnMore": "Erfahren Sie mehr in unserer",
+    "privacyPolicy": "Datenschutzerklärung",
+    "and": "und",
+    "cookiePolicy": "Cookie-Richtlinie",
+    "close": "Banner schließen"
+  },
   "Impressum": {
     "page": {
       "title": "Impressum",

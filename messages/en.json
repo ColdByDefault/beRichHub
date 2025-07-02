@@ -346,6 +346,17 @@
       "policyDescription": "This cookie policy is part of our comprehensive privacy framework and GDPR compliance."
     }
   },
+  "CookiesBanner": {
+    "title": "We value your privacy",
+    "description": "This website uses cookies to enhance your browsing experience, provide personalized content, and analyze site traffic. Your privacy is important to us.",
+    "acceptAll": "Accept All Cookies",
+    "decline": "Decline",
+    "learnMore": "Learn more in our",
+    "privacyPolicy": "Privacy Policy",
+    "and": "and",
+    "cookiePolicy": "Cookie Policy",
+    "close": "Close banner"
+  },
   "Impressum": {
     "page": {
       "title": "Impressum",
