@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { ModeToggle } from "@/components/toggles/toggle-mode";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { LogOut } from "lucide-react";
+import { BrainCircuit, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavbarHeader } from "@/components/navbar/navbar-header";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
@@ -17,9 +17,10 @@ import { MobileBrand } from "@/components/navbar/mobile-brand";
 export async function Navbar() {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
+  
 
   return (
-    <div className="flex items-center justify-between w-full px-4 py-2 border-b">
+    <div className="flex items-center justify-between w-full px-4">
       {/* Mobile Navigation */}
       <div className="md:hidden flex items-center justify-between w-full">
         <MobileNavbar user={user} />
@@ -30,6 +31,27 @@ export async function Navbar() {
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex items-center justify-between w-full">
+        <div className="flex items-center gap-4 justify-between">
+          <Link href="/">
+            <span className="border-r-2 border-gray-500 pr-2">beRich.Hub</span>
+          </Link>
+          <Tooltip>
+            <TooltipTrigger>
+              {" "}
+              <Link
+                href="/berich-llm"
+                aria-label="berich-llm"
+                className="flex items-center gap-2"
+              >
+                <BrainCircuit className="text-blue-400 font-bold drop-shadow" />
+                <span className="text-xs">Try our AI Assistant</span>
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>AI Assistant</p>
+            </TooltipContent>
+          </Tooltip>
+        </div>
         <NavbarHeader />
         <div className="flex items-center gap-4">
           <ul className="flex items-center justify-between gap-4">

@@ -69,10 +69,6 @@ export default async function RootLayout({
         <meta property="og:description" content="beRich.Hub" />
         <meta property="og:image" content="/logoDark.png" />
         <meta property="og:url" content="https://berich-hub.vercel.app/" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="ColdByDefault" />
-        <meta name="twitter:description" content="beRich.Hub" />
-        <meta name="twitter:image" content="/logoDark.png" />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="alternate"
@@ -83,8 +79,8 @@ export default async function RootLayout({
           {`
             {
               "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "ColdByDefault",
+              "@type": "Open Source Platform",
+              "name": "beRichHub",
               "url": "https://berich-hub.vercel.app/",
               "logo": "https://berich-hub.vercel.app//logoDark.png",
               "sameAs": [

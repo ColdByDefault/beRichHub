@@ -2,6 +2,15 @@
   "name": "berichhub-5-0-latest",
   "version": "5.3.1",
   "license": "LicenseRef-BRH-1.0",
+  "author": "ColdByDefault",
+  "description": "BerichHub is a modern, open-source, and self-hostable platform with AI Chatbot, for the developers, by the developers. It is built with Next.js, Prisma, and Radix UI, and it provides a wide range of features including user authentication, AI integration, and a customizable UI.",
+  "keywords": [
+    "AI",
+    "Chatbot",
+    "Next.js",
+    "Prisma",
+    "Radix UI"
+  ],
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",

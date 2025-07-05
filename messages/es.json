@@ -63,7 +63,7 @@
     "brand": "beRich.Hub®",
     "brainAlt": "IA",
     "llm": {
-      "trigger": "LLM",
+      "trigger": "¿Qué es un LLM?",
       "mainTitle": "¿Qué es un modelo de lenguaje grande?",
       "mainDesc": "Un modelo de lenguaje grande (LLM) es un sistema de IA entrenado con enormes conjuntos de texto para comprender y generar lenguaje similar al humano en diversas tareas.",
       "intro": "Introducción",

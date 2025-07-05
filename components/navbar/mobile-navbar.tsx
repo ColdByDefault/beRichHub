@@ -40,7 +40,7 @@ export function MobileNavbar({ user }: MobileNavbarProps) {
   return (
     <div className="md:hidden">
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
-        <SheetTrigger asChild>
+        <SheetTrigger asChild className="-translate-x-8">
           <Button variant="ghost" size="icon">
             <Menu className="h-5 w-5" />
             <span className="sr-only">Toggle menu</span>
@@ -96,7 +96,7 @@ export function MobileNavbar({ user }: MobileNavbarProps) {
                 Search
               </h3>
               <div className="px-1">
-                <UserSearch />
+                <UserSearch preventAutoFocus={true} />
               </div>
             </div>
 
@@ -133,23 +133,19 @@ export function MobileNavbar({ user }: MobileNavbarProps) {
               </h3>
               <div className="space-y-2">
                 <Link
-                  href="/"
+                  href="/llm-starter"
                   onClick={handleClose}
                   className="block p-3 rounded-lg hover:bg-muted transition-colors border"
                 >
                   <div className="font-medium text-sm">{t("llm.intro")}</div>
-                  <div className="text-xs text-muted-foreground mt-1 line-clamp-2">
-                    {t("llm.introDesc")}
-                  </div>
                 </Link>
                 <Link
-                  href="/"
+                  href="/how-to-use"
                   onClick={handleClose}
                   className="block p-3 rounded-lg hover:bg-muted transition-colors border"
                 >
-                  <div className="font-medium text-sm">{t("llm.offline")}</div>
-                  <div className="text-xs text-muted-foreground mt-1 line-clamp-2">
-                    {t("llm.offlineDesc")}
+                  <div className="font-medium text-sm">
+                    beRichHub LLM locally
                   </div>
                 </Link>
               </div>
