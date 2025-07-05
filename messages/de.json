@@ -63,7 +63,7 @@
     "brand": "beRich.Hub®",
     "brainAlt": "KI",
     "llm": {
-      "trigger": "LLM",
+      "trigger": "Was ist ein LLM?",
       "mainTitle": "Was ist ein Large Language Model?",
       "mainDesc": "Ein Large Language Model (LLM) ist ein KI-System, das mit riesigen Textdatensätzen trainiert wurde, um menschliche Sprache zu verstehen und in vielfältigen Anwendungsfällen zu erzeugen.",
       "intro": "Einführung",

@@ -20,7 +20,11 @@ interface SearchUser {
   picture?: string;
 }
 
-export function UserSearch() {
+interface UserSearchProps {
+  preventAutoFocus?: boolean;
+}
+
+export function UserSearch({ preventAutoFocus = false }: UserSearchProps) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchUser[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -143,6 +147,18 @@ export function UserSearch() {
           onChange={(e) => handleQueryChange(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleSearch()}
           disabled={isLoading}
+          autoFocus={false}
+          {...(preventAutoFocus && {
+            inputMode: "none",
+            autoComplete: "off",
+            onFocus: (e) => {
+              // Prevent keyboard from appearing on mobile
+              e.target.setAttribute("readonly", "true");
+              setTimeout(() => {
+                e.target.removeAttribute("readonly");
+              }, 100);
+            },
+          })}
         />
         <Button
           onClick={handleSearch}

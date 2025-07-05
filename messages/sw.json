@@ -63,7 +63,7 @@
     "brand": "beRich.Hub®",
     "brainAlt": "AI",
     "llm": {
-      "trigger": "LLM",
+      "trigger": "Vad är en LLM?",
       "mainTitle": "Vad är en stor språkmodell?",
       "mainDesc": "En stor språkmodell (LLM) är ett AI-system tränat på enorma textmängder för att förstå och generera mänskligt liknande språk i olika uppgifter.",
       "intro": "Introduktion",
